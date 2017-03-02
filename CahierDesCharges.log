@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.7)  28 FEB 2017 20:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.9.7)  2 MAR 2017 09:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -301,18 +301,13 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 130.
+Package color Info: Driver file: dvips.def on input line 130.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count99
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
@@ -324,7 +319,7 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 LaTeX Warning: Unused global option(s):
     [a4].
 
-No file CahierDesCharges.aux.
+(./CahierDesCharges.aux)
 \openout1 = `CahierDesCharges.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
@@ -343,25 +338,12 @@ LaTeX Info: Redefining \degres on input line 65.
 LaTeX Info: Redefining \dots on input line 65.
 LaTeX Info: Redefining \up on input line 65.
 
+
 Package frenchb.ldf Warning: OT1 encoding should not be used for French. 
 (frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
 (frenchb.ldf)                of your document, on input line 65.
 
-\c@lstlisting=\count100
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count101
-\scratchdimen=\dimen110
-\scratchbox=\box28
-\nofMPsegments=\count102
-\nofMParguments=\count103
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count104
-\MPscratchDim=\dimen111
-\MPnumerator=\count105
-\makeMPintoPDFobject=\count106
-\everyMPtoPDFconversion=\toks19
-)
+\c@lstlisting=\count99
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 66.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -372,33 +354,32 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 69.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 69.
- [1
+[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+]
 Overfull \hbox (21.66599pt too wide) in paragraph at lines 122--122
 []\OT1/cmr/bx/n/10 Facteurs in-fluen^^Xcant le pro-duit, mais qui ne sont pas d
 es contraintes
  []
 
-[2] [3] (./CahierDesCharges.aux) ) 
+
+Overfull \hbox (0.16394pt too wide) in paragraph at lines 133--133
+[]\OT1/cmr/bx/n/12 Maintenance, sup-port, por-ta-bi-lit^^Se, ins-tal-la-tion du
+ pro-
+ []
+
+[2]
+Overfull \vbox (285.19366pt too high) has occurred while \output is active []
+
+
+[3] (./CahierDesCharges.aux) ) 
 Here is how much of TeX's memory you used:
- 3495 strings out of 494999
- 47433 string characters out of 6180229
- 136069 words of memory out of 5000000
- 6717 multiletter control sequences out of 15000+600000
+ 3021 strings out of 495000
+ 41310 string characters out of 6180255
+ 131976 words of memory out of 5000000
+ 6252 multiletter control sequences out of 15000+600000
  7895 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  26i,6n,49p,293b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on CahierDesCharges.pdf (3 pages, 90967 bytes).
-PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
+Output written on CahierDesCharges.dvi (3 pages, 9716 bytes).
