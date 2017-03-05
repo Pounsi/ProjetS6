@@ -143,9 +143,45 @@
 		\subsection{Fonctionnement du produit}
 		\subsection{Adéquation du produit avec son environnement}
 		\subsection{Maintenance, support, portabilité, installation du produit}
+			a. Maintenance du produit
+Le système doit pouvoir être maintenu par des développeurs qui ne sont pas les
+développeurs d’origine.
+Mettre en place une gestion des erreurs/bugs. (test unitaire, indicateurs comme des variables, outils de debugs comme valgrind);..
+			b. Conditions spéciales concernant la maintenance du produit
+Site internet avec des informations sur l'application.
+Permettre également un dialogue avec d'autres utilisateurs de la même application.
+Demande d'aides au developpeur charger de la maintenance de l'application.
+			c. Exigences en matière de support
+L'utilisateur doit pouvoir communiquer avec d'autres utilisateurs et/ou les developpeurs en charge de la maintenance.
+			d. Exigences de portabilité
+L'application peut fonctionner sur plusieurs environnements car "un makefile est fournis et permet a l'utilisateur de buid en fonction de son environnement linux/windows/..
+			e. Installation du système
+L'application doit pouvoir être installer très facilement sur n'importe quel environnement.
+Le site internet doit permettre de repondre a certaines interrogations.
 		\subsection{Sécurité}
+			a. Accès au système
+Besoin d'un mot de passe pour consulter le message en clair (l'application ayant déja enregistrer les clefs(donnees sensibles)). ?
+-> Definition de deux profils pour utiliser l'application ?
+			b. Intégrité
+Definition d'un niveau d'importance de "l'exactitude" necessaire au dechiffrage du message.
+(exemple : les coordonnées pour envoyer un missile nucleaire doivent etre ultra precise)/
+			c. Protection des données à caractère personnel
+Message d'information a l'ouverture de l'application qui permet d'informer l'utilisateur de ses droits/devoirs.
+			d. Audit et traçabilité
+Definition d'un repertoire de sauvegarde avec les dates des messages.
+			e. Protection contre les infections
+Hacher les textes sauvegarder afin de proteger l'utilisateur d'une attaque informatique.
 		\subsection{Exigences culturelles et politiques}
+			a. Exigences culturelles
+L'application pourra gerer plusieurs langues (plusieurs tableaux de frequencages de lettres)
+			b. Exigence politiques
+L'application et notamment les informations obtenue via l'application devront être hermétique vis a vis de n'importe quel états/organisation.
 		\subsection{Lois et standards influençant le produit}
+		a. Conformité avec la loi
+Les informations personnelles seront soumis a la loi sur la protection des données
+personnelles (la loi informatique et libertés)
+		b. Conformité avec des standards
+		"on utilise un standard ?"
 	\section{AUTRES ASPECTS DU PROJET}
 		\subsection{Questions sans réponse}
 		\subsection{COTS : progiciels et composants commerciaux}
