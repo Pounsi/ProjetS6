@@ -1,0 +1,66 @@
+
+Numéro de l’exigence: 01
+
+Type d’exigence:
+
+Evénements / Cas d’utilisation :
+
+Description: nous devrions mesurer le temps de cryptage et de décryptage des différentes fonction.
+
+
+Justification: Il sera alors possible de les ajuster afin de remplir le critere de la convivialité
+
+
+Origine: 
+
+
+Critère de satisfaction : affichage du temps de calcule de la fonction
+
+
+Contentement du maître d’ouvrage:
+
+
+Mécontentement du maître d’ouvrage:
+
+
+Exigences dépendantes: 
+
+Exigences conflictuelles: 
+
+Documents relatifs: 
+
+Historique: 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Numéro de l’exigence: 02
+
+Type d’exigence:
+
+Evénements / Cas d’utilisation :
+
+Description: La fonction de cryptage devra également générer un fichier.text contenant la clef de cryptage.
+
+
+Justification: l'utilisateur pourra soi même décripter le texte si il le désire. Deplus nous pourons vérifier par nous même si le cryptage a été correctement executé.
+
+
+Origine: 
+
+
+Critère de satisfaction : Texte avec la clef de cryptage correcte généré
+
+
+Contentement du maître d’ouvrage:
+
+
+Mécontentement du maître d’ouvrage:
+
+
+Exigences dépendantes: 
+
+Exigences conflictuelles: 
+
+Documents relatifs: 
+
+Historique: 
