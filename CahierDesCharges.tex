@@ -90,11 +90,7 @@
 				
 		\section{fiche d'exigence}
 		\section{numerotation des exigences}
-		\section{definition utilisee dans ce modele}
-			Les personnages Alice et Bob sont des figures classiques en cryptologie. Ces noms sont utilisés au lieu de « personne A » et « personne B » ; Alice et Bob cherchent dans la plupart des cas à communiquer de manière sécurisée.
-			Alice est la personne qui envoie le message.
-			Bob est celui qui veut recevoir le message.
-			Oscar est celui qui essaye d'attaquer le message.
+		
 	\section{fondament du projet}
 		\subsection{But Du Projet} 
 			\subsubsection{Probleme de l'utilisation ou contexte du projet}
@@ -110,25 +106,21 @@
 		\subsection{utilisateurs du produit}
 			
 	\section{contraintes sur le projet}
-		\subsection{contraintes imposees non negociables} 
-			\subsubsection{contraintes sur la conseption de la solution}
+		\subsection{contraintes imposées non negociables} 
+			\subsubsection{contraintes sur la conception de la solution}
 				-Le produit doit permettre à l'utilisateur de décrypter une partie d'un message crypté.
 
-				-Le produit doit décrypter un chiffrement de Vignère et un chiffrement par substitution
+				-Le produit doit crypter, décrypter un chiffrement de Vignère et un chiffrement par substitution.
 
-				-Toutes les deadlines concernant l'application et son cahier des charges doivent être respectées
-			\subsubsection{ Environnement de fonctionnement du système actuel }
+				-Toutes les deadlines concernant l'application et son cahier des charges doivent être respectées.
+			\subsubsection{Environnement de fonctionnement du système actuel }
 				Le produit sera développé sous forme d'application. 
-				Le programme s'appuiera essentiellement sur des recherches fréquentielles pour décrypter le message.
-			\subsubsection{Applications « partenaires » (avec lesquelles le produit doit collaborer)}
-				Aucun partenaires nécessaires pour le moment.
-			\subsubsection{« COTS » : Progiciels ou composants commerciaux}
-				Aucun progiciels ou composants commerciaux imposés dans le projet.
+				Le programme s'appuiera essentiellement sur des recherches fréquentielles pour décrypter un chiffrement par substitution et utiliser le test de Kasiski et les indices de coincidences pour déchiffrer vigenère le message.
 			\subsubsection{Lieux de fonctionnement prévus}
 				Le produit étant une application, il faudra un ordinateur afin de le lancer.
 				Il est préférable que l'utilisateur utilise un ordinateur moderne pour sa rapidité et sa fluidité
 			\subsubsection{ De combien de temps les développeurs disposent-ils pour le projet ?}
-				La deadline pour les développeurs est le 
+				La deadline pour les développeurs est le Vendredi 12 Juin 2017.
 			\subsubsection{ Quel est le budget affecté au projet ?}
 				Le client ne nous a pas référé son budget.
 		\subsection{Glossaire et conventions de dénomination}
@@ -136,17 +128,22 @@
 
 			k est la clé
 
-			n est la taille de la clé
+			m est la taille de la clé
 
-			m est la taille de message chiffré
+			n est la taille de message chiffré
+			
+			Les personnages Alice et Bob sont des figures classiques en cryptologie. Ces noms sont utilisés au lieu de « personne A » et « personne B » ; Alice et Bob cherchent dans la plupart des cas à communiquer de manière sécurisée.
+			Alice est la personne qui envoie le message.
+			Bob est celui qui veut recevoir le message.
+			Oscar est celui qui essaye d'attaquer le message.
 		\subsection{Faits et hypothèses utiles}	
 			\subsubsection{Facteurs influençant le produit, mais qui ne sont pas des contraintes imposées sur les exigences}
+			Exigences NON FONCTIONNELLE
 				-Le developpement d'un site web présentant le produit ainsi que toutes ces carectéristiques. Ce site web pourra également 
 				disposer d'un forum permettant aux internautes de proposer certaines amélioration à faire sur l'application et également 
 				critiquer certaines fonctionnalités de l'application.
 
 				-Mettre en place une interface facile d'utilisation sur l'application de manière a ce que même un enfant puisse lancer le décryptage.
-			\subsubsection{Hypothèses que l’équipe fait sur le projet}
 	\section{EXIGENCES FONCTIONNELLES}
 		\subsection{Portée du travail}
 			\subsubsection{la situation actuelle}
@@ -155,14 +152,12 @@
 			\subsubsection{contenu du travail}
 				il est nessaissaire de connaitre le cryptage et le decryptage avec 
 				le code de vigenere et la methode de substitution
-			\subsubsection{division du travail en évènnement metier}
-				je n'ai pas compris !!!
 		\subsection{Portée du produit : cas d’utilisation}
 			subsub le diagramme de cas d'utilisation
-				\includegraphics{chemin de l'image}
+				%\includegraphics{chemin de l'image}
 			subsub description de ce diagramme
 				dans cette application il n'ya qu'un seul type d'utilisateur qui est le client 
-				et qui peut crypter ? et decrypter avec deux methode differentes
+				et qui peut crypter et decrypter avec deux methode differentes
 		\subsection{Exigences fonctionnelles et exigences sur les données}
 			subsub Exigences fonctionnelles
 				je crois quil faut mettre les numeros des exigences fonctionnelles (pas sur)
@@ -258,10 +253,22 @@ personnelles (la loi informatique et libertés)
 		"on utilise un standard ?"
 	\section{AUTRES ASPECTS DU PROJET}
 		\subsection{Questions sans réponse}
+		Nous pensons avoir abordé la totalité des aspects du projet et repondu a toutes les attentes du client.
 		\subsection{COTS : progiciels et composants commerciaux}
+		Il existe sur le marché pas mal de produits pouvant etre des solutions potentielles/de remplacement. En effet, sur internet
+		("en ligne"), il existe des sites proposant de decrypter votre texte. Nous avons par exemple tester le site www.dcode.fr, qui
+		pour le dechiffrement avec Vigenere, fonctionne trés bien.
+		Il y'a aussi une application (Decrypto) sur le Google Play Store (parmi plusieurs applis),qui est gratuite et qui permet aussi de dechiffrer Vigenere par exemple.
+		Enfin, on peut telecharger des logiciels gratuits comme Axcrypt. Des logiciels payants/privés existe surement a l'usage des
+		professionnels ou encore des services de police.
 		\subsection{Nouveaux problèmes, créés par le nouveau système}
+		-pb de place/mémoire (appli lourde)
+		-virus
+		-ralentissement de "l'environnement"
 		\subsection{Tâches à faire pour livrer le système}
+		phases de developpement de l'appli?
 		\subsection{Contrôle final de qualité sur site (Cutover)}
+		controle final sur un texte test
 		\subsection{Risques liés au projet}
 		\subsection{Estimation des coûts du projet}
 		 	Pour une estimation precise des coûts du projet il faut estimer le coût en taille, 
