@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2015.9.7)  7 MAR 2017 09:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.9.7)  7 MAR 2017 15:00
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **CahierDesCharges.tex
 (./CahierDesCharges.tex
@@ -301,13 +300,18 @@ Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: dvips.def on input line 130.
+Package color Info: Driver file: pdftex.def on input line 130.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
-File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count99
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
@@ -321,7 +325,7 @@ Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: dvips.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 )
 \Gin@req@height=\dimen110
 \Gin@req@width=\dimen111
@@ -360,7 +364,68 @@ Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 (frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
 (frenchb.ldf)                of your document, on input line 66.
 
-\c@lstlisting=\count99
+\c@lstlisting=\count100
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count101
+\scratchdimen=\dimen112
+\scratchbox=\box28
+\nofMPsegments=\count102
+\nofMParguments=\count103
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count104
+\MPscratchDim=\dimen113
+\MPnumerator=\count105
+\makeMPintoPDFobject=\count106
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 67.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -371,41 +436,227 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 70.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 70.
+
 [1
 
-] [2]
-Overfull \hbox (4.30603pt too wide) in paragraph at lines 115--116
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<FichesExigences.pdf, id=11, page=1, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 1>
+Package pdftex.def Info: FichesExigences.pdf, page1 used on input line 92.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=12, page=2, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 2>
+Package pdftex.def Info: FichesExigences.pdf, page2 used on input line 93.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=13, page=3, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 3>
+Package pdftex.def Info: FichesExigences.pdf, page3 used on input line 94.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=14, page=4, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 4>
+Package pdftex.def Info: FichesExigences.pdf, page4 used on input line 95.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=15, page=5, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 5>
+Package pdftex.def Info: FichesExigences.pdf, page5 used on input line 96.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=16, page=6, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 6>
+Package pdftex.def Info: FichesExigences.pdf, page6 used on input line 97.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=17, page=7, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 7>
+Package pdftex.def Info: FichesExigences.pdf, page7 used on input line 98.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=18, page=8, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 8>
+Package pdftex.def Info: FichesExigences.pdf, page8 used on input line 99.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=19, page=9, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 9>
+Package pdftex.def Info: FichesExigences.pdf, page9 used on input line 100.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=20, page=10, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 10>
+Package pdftex.def Info: FichesExigences.pdf, page10 used on input line 101.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=21, page=11, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 11>
+Package pdftex.def Info: FichesExigences.pdf, page11 used on input line 102.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=22, page=12, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 12>
+Package pdftex.def Info: FichesExigences.pdf, page12 used on input line 103.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=23, page=13, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 13>
+Package pdftex.def Info: FichesExigences.pdf, page13 used on input line 104.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=24, page=14, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 14>
+Package pdftex.def Info: FichesExigences.pdf, page14 used on input line 105.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=25, page=15, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 15>
+Package pdftex.def Info: FichesExigences.pdf, page15 used on input line 106.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=26, page=16, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 16>
+Package pdftex.def Info: FichesExigences.pdf, page16 used on input line 107.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+<FichesExigences.pdf, id=27, page=17, 597.23125pt x 845.1575pt>
+File: FichesExigences.pdf Graphic file (type pdf)
+
+<use FichesExigences.pdf, page 17>
+Package pdftex.def Info: FichesExigences.pdf, page17 used on input line 108.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--109
+
+ []
+
+[2 <./FichesExigences.pdf>] [3 <./FichesExigences.pdf>] [4 <./FichesExigences.p
+df>] [5 <./FichesExigences.pdf>] [6 <./FichesExigences.pdf>] [7 <./FichesExigen
+ces.pdf>] [8 <./FichesExigences.pdf>] [9 <./FichesExigences.pdf>] [10 <./Fiches
+Exigences.pdf>] [11 <./FichesExigences.pdf>] [12 <./FichesExigences.pdf>]
+[13 <./FichesExigences.pdf>] [14 <./FichesExigences.pdf>] [15 <./FichesExigence
+s.pdf>] [16 <./FichesExigences.pdf>] [17 <./FichesExigences.pdf>]
+<Untit.pdf, id=105, 597.23125pt x 845.1575pt>
+File: Untit.pdf Graphic file (type pdf)
+ <use Untit.pdf>
+Package pdftex.def Info: Untit.pdf used on input line 110.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+[18 <./FichesExigences.pdf>] [19 <./Untit.pdf>]
+Overfull \hbox (4.30603pt too wide) in paragraph at lines 133--134
 []\OT1/cmr/m/n/10 -Toutes les dead-lines concer-nant l'ap-pli-ca-tion et son ca
 -hier des charges doivent
  []
 
-[3]
-Overfull \hbox (21.66599pt too wide) in paragraph at lines 140--140
+[20]
+Overfull \hbox (21.66599pt too wide) in paragraph at lines 158--158
 []\OT1/cmr/bx/n/10 Facteurs in-fluen^^Xcant le pro-duit, mais qui ne sont pas d
 es contraintes
  []
 
+[21]
+Package epstopdf Info: Source file: <dia.eps>
+(epstopdf)                    date: 2017-03-07 14:47:02
+(epstopdf)                    size: 1038332 bytes
+(epstopdf)             Output file: <dia-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-03-07 14:47:02
+(epstopdf)                    size: 15565 bytes
+(epstopdf)             Command: <repstopdf --outfile=dia-eps-converted-to.pdf d
+ia.eps>
+(epstopdf)             \includegraphics on input line 169.
+Package epstopdf Info: Output file is already uptodate.
+ <dia-eps-converted-to.pdf, id=128, 519.9425pt x 329.23pt>
+File: dia-eps-converted-to.pdf Graphic file (type pdf)
 
-Overfull \hbox (17.8317pt too wide) in paragraph at lines 141--145
-[]\OT1/cmr/m/n/10 Exigences NON FONC-TION-NELLE -Le de-ve-lop-pe-ment d'un site
- web pr^^Sesentant
+<use dia-eps-converted-to.pdf>
+Package pdftex.def Info: dia-eps-converted-to.pdf used on input line 169.
+(pdftex.def)             Requested size: 259.97061pt x 164.6146pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
  []
 
-File: dia.eps Graphic file (type eps)
-<dia.eps> [4] [5]
-Overfull \hbox (0.16394pt too wide) in paragraph at lines 214--214
+[22 <./dia-eps-converted-to.pdf>] [23]
+Overfull \hbox (0.16394pt too wide) in paragraph at lines 219--219
 []\OT1/cmr/bx/n/12 Maintenance, sup-port, por-ta-bi-lit^^Se, ins-tal-la-tion du
  pro-
  []
 
-[6] [7] [8] (./CahierDesCharges.aux) ) 
+
+Overfull \hbox (21.88951pt too wide) in paragraph at lines 220--224
+[]\OT1/cmr/m/n/10 aintenance du pro-duit Le syst^^Reme doit pou-voir ^etre main
+-tenu par des d^^Seveloppeurs
+ []
+
+
+Overfull \hbox (2.1673pt too wide) in paragraph at lines 224--228
+\OT1/cmr/m/n/10 des in-for-ma-tions sur l'ap-pli-ca-tion. Per-mettre ^^Segaleme
+nt un dia-logue avec d'autres
+ []
+
+[24] [25]
+Overfull \hbox (11.75069pt too wide) in paragraph at lines 248--250
+\OT1/cmr/m/n/10 l'ap-pli-ca-tion de-vront ^etre herm^^Setique vis a vis de n'im
+-porte quel ^^Setats/organisation.
+ []
+
+[26] [27] [28] (./CahierDesCharges.aux) ) 
 Here is how much of TeX's memory you used:
- 3212 strings out of 495000
- 43777 string characters out of 6180255
- 132206 words of memory out of 5000000
- 6430 multiletter control sequences out of 15000+600000
+ 4077 strings out of 494999
+ 57812 string characters out of 6180229
+ 139667 words of memory out of 5000000
+ 7250 multiletter control sequences out of 15000+600000
  7895 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 26i,6n,49p,293b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,6n,49p,352b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
+>
+Output written on CahierDesCharges.pdf (28 pages, 211005 bytes).
+PDF statistics:
+ 176 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 96 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on CahierDesCharges.dvi (8 pages, 23012 bytes).
