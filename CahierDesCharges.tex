@@ -193,83 +193,90 @@ A voir avec les autres
 La réponse sera assez rapide pour éviter d’interrompre le flux de pensée de l’utilisateur.
 b. Exigences critiques de sûreté
 c. Précision et exactitude
-C'est un programme d'aide au décryptage donc il ne donnera jamais un texte complet en sortie mais un texte à trou rempli au mieux avec le resultats du décryptage.
+C'est un programme d'aide au décryptage donc il ne donnera jamais un texte complet en sortie mais un texte à trou rempli au mieux avec le resultat du décryptage.
 d. Fiabilité et disponibilité
 Le programme devrait être disponible pour une utilisation de 24 heures par jour et 365 jours
-par an. 
-e. Robustesse ou tolérance à un emploi erroné
-f. Capacité de stockage et montée en charge
-Le programme ne pourra pas stocker des données.
-g. Adaptation du produit à une augmentation de volume à traiter
+par an. Et ce de maniere illimité.
 h. Longévité
+La longevité du programme dependra de l'evolution de la langue des textes en question.
 
 		\subsection{Adéquation du produit avec son environnement}
 		a. Environnement physique prévu
 Le programme sera utilisé sur un ordinateur.
 b. Environnement technologique prévu
-Le programme pourra fonctionner sur Windows et Linux ( MAC ?)
-c. Applications « partenaires » (avec lesquelles le produit doit collaborer)
+Le programme pourra fonctionner sur Windows, Linux et a priori Mac.
 d. Approche « produit » prêt à être commercialisé
 Le programme sera distribué sous forme d'archive correspondant au système d'exploitation du client.
 		\subsection{Maintenance, support, portabilité, installation du produit}
 			a. Maintenance du produit
 Le système doit pouvoir être maintenu par des développeurs qui ne sont pas les
 développeurs d’origine.
-Mettre en place une gestion des erreurs/bugs. (test unitaire, indicateurs comme des variables, outils de debugs comme valgrind);..
+Mettre en place une gestion des erreurs ou bugs (par exemple a l'aide de tests unitaire, d'indicateurs comme des variables..etc).
 			b. Conditions spéciales concernant la maintenance du produit
 Site internet avec des informations sur l'application.
 Permettre également un dialogue avec d'autres utilisateurs de la même application.
-Demande d'aides au developpeur charger de la maintenance de l'application.
+Demandes d'aide au developpeur charger de la maintenance de l'application.
 			c. Exigences en matière de support
 L'utilisateur doit pouvoir communiquer avec d'autres utilisateurs et/ou les developpeurs en charge de la maintenance.
 			d. Exigences de portabilité
-L'application peut fonctionner sur plusieurs environnements car "un makefile est fournis et permet a l'utilisateur de buid en fonction de son environnement linux/windows/..
+L'application peut fonctionner sur plusieurs environnements car "un makefile est fourni et permet a l'utilisateur de build en fonction de son environnement"(commelinux, windows ou autre).
 			e. Installation du système
-L'application doit pouvoir être installer très facilement sur n'importe quel environnement.
+L'application doit pouvoir être installée très facilement sur n'importe quel environnement.
 Le site internet doit permettre de repondre a certaines interrogations.
 		\subsection{Sécurité}
-			a. Accès au système
-Besoin d'un mot de passe pour consulter le message en clair (l'application ayant déja enregistrer les clefs(donnees sensibles)). ?
--> Definition de deux profils pour utiliser l'application ?
 			b. Intégrité
 Definition d'un niveau d'importance de "l'exactitude" necessaire au dechiffrage du message.
-(exemple : les coordonnées pour envoyer un missile nucleaire doivent etre ultra precise)/
+(exemple : les coordonnées pour envoyer un missile nucleaire doivent etre ultra precise)
 			c. Protection des données à caractère personnel
-Message d'information a l'ouverture de l'application qui permet d'informer l'utilisateur de ses droits/devoirs.
+Message d'information a l'ouverture de l'application qui permet d'informer l'utilisateur des precautions a prendre.
 			d. Audit et traçabilité
 Definition d'un repertoire de sauvegarde avec les dates des messages.
 			e. Protection contre les infections
-Hacher les textes sauvegarder afin de proteger l'utilisateur d'une attaque informatique.
+Il faudra conserver les fichiers de maniere securisée et prudente ou alors les supprimer une fois que ce celui-ci n'a plus d'utilité.
 		\subsection{Exigences culturelles et politiques}
 			a. Exigences culturelles
-L'application pourra gerer plusieurs langues (plusieurs tableaux de frequencages de lettres)
+L'application pourra gerer plusieurs langues (plusieurs tableaux de frequencages de lettres).
 			b. Exigence politiques
-L'application et notamment les informations obtenue via l'application devront être hermétique vis a vis de n'importe quel états/organisation.
+L'application et notamment les informations obtenues via l'application devront être hermétique vis a vis de n'importe quel états/organisation. a supprimer????
 		\subsection{Lois et standards influençant le produit}
 		a. Conformité avec la loi
-Les informations personnelles seront soumis a la loi sur la protection des données
-personnelles (la loi informatique et libertés)
+Les informations personnelles seront soumises a la loi sur la protection des données
+personnelles (la loi informatique et libertés).
 		b. Conformité avec des standards
-		"on utilise un standard ?"
-	\section{AUTRES ASPECTS DU PROJET}
+La notion de conventions de codage (coding style) désigne un ensemble de règles et de conseils 
+adoptés par les membres d’un projet logiciel pour écrire et mettre en forme du code.
+Les conventions de codage visent essentiellement à améliorer la lisibilité du code : elles doivent 
+permettre au programmeur d’identifier « du premier coup d’œil » un maximum de choses dans 
+le  code, de se repérer facilement, de savoir ou trouver les choses, etc.Une fois adoptés, elles
+facilitent grandement l’écriture, la maintenance et aident à éviter certaines erreurs.
+Dès lors qu’on travaille sur un projet logiciel d’une certaine ampleur, qui plus est à
+plusieurs, l’expérience montre qu’il est très important de se mettre d’accord sur les
+conventions de codage.	\section{AUTRES ASPECTS DU PROJET}
 		\subsection{Questions sans réponse}
-		Nous pensons avoir abordé la totalité des aspects du projet et repondu a toutes les attentes du client.
+		Nous pensons avoir abordé une grande partie des aspects du projet et es attentes du client.
 		\subsection{COTS : progiciels et composants commerciaux}
 		Il existe sur le marché pas mal de produits pouvant etre des solutions potentielles/de remplacement. En effet, sur internet
 		("en ligne"), il existe des sites proposant de decrypter votre texte. Nous avons par exemple tester le site www.dcode.fr, qui
 		pour le dechiffrement avec Vigenere, fonctionne trés bien.
 		Il y'a aussi une application (Decrypto) sur le Google Play Store (parmi plusieurs applis),qui est gratuite et qui permet aussi de dechiffrer Vigenere par exemple.
 		Enfin, on peut telecharger des logiciels gratuits comme Axcrypt. Des logiciels payants/privés existe surement a l'usage des
-		professionnels ou encore des services de police.
+		professionnels ou encore des services de police spécialisés.
 		\subsection{Nouveaux problèmes, créés par le nouveau système}
-		-pb de place/mémoire (appli lourde)
-		-virus
-		-ralentissement de "l'environnement"
+		-Il peut y avoir un probleme de place ou memoire lors de l'installation du "systeme" malgré que l'application soit legere.
+		
+		-Un ralentissement de "l'environnement" peut aussi etre constaté a la suite de l'utilisation du nouveau systeme.
 		\subsection{Tâches à faire pour livrer le système}
-		phases de developpement de l'appli?
+		Phase I: Identification du projet : La demande du client est clarifiée, les objectifs précisés et dans sa globalité le projet (ou service a livrer) est identifié. De plus, les contraintes a respecter sont evaluées et la strategie de realisation est mise en place
+		Phase II: Definition du projet : Son contenu est defini de maniere tres precise et la planification des echeances et de la repartition du travail est etablie.
+		Phase III: Realisation : On realise le projet en adequation avec les exigences du clients et selon le plan de travail defini au prealable
+		Phase IV: Finalisation : Le produit est evalué puis remis au client.
+		
+		
+		
 		\subsection{Contrôle final de qualité sur site (Cutover)}
-		controle final sur un texte test
+		Controle final sur un texte test. Un texte chiffré par vigenere et par substitution seront preparés, ainsi que leur version dechiffrées. Le resultat de ceux-ci via l'utilisation de l'application sera comparé au resultat preparé "sur feuille". 
 		\subsection{Risques liés au projet}
+		Aprés utilisation de l'application, certains risques existent. En effet, une personne etrangère peut avoir acces a l'ordinateur et ainsi recuperer les fichiers decryptés telechargés.
 		\subsection{Estimation des coûts du projet}
 		 	Pour une estimation precise des coûts du projet il faut estimer le coût en taille, 
 			le coût en charge de travail, le coût des délais et le prix. Dans ce projet on vas surtout 
@@ -283,8 +290,9 @@ personnelles (la loi informatique et libertés)
 			Bien que le programme ait été demandé que pour les langues francaise et anglaise, 
 			il sera sans doute possible d'ajouter d'autre langues dans des versions futurs. 
 			Il pourras étre également possible d'ajouter une option permettant à l'utilisateur
-			d'entrer un type de texte (poéme, roman, ordre militaire,...) pouvant aider au décryptage. 
+			d'entrer un type de texte (poéme, roman, ordre militaire,...) pouvant aider au décryptage. Ou meme encore conserver un historique des "dechiffrements" ou aussi permettre a l'application de savoir directement si l'on va crypter ou decrypter un texte.
 		\subsection{Idées de solutions}
 		 	Il s'agiras de rentrer un nouvaux tableau de données pour chaque nouvelles langues et pour 
 			chaque nouveau style.
+			Au vu de l'agencement des caracteres dans le texte, l'application pourra savoir automatiquement quelle operation le client chercher a effectuer (cryptage ou decryptage).
 \end{document}
