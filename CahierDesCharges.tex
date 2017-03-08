@@ -4,6 +4,8 @@
 \usepackage{listings}
 \usepackage{color}
 \usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{pdfpages}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -90,25 +92,9 @@
 				connaitre la clé quotidienne de certains jours pour attaquer les messages.
 				
 		\section{Fiches d'exigence}
-				\includegraphics[scale=0.5,page = 1]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 2]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 3]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 4]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 5]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 6]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 7]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 8]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 9]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 10]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 11]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 12]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 13]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 14]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 15]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 16]{FichesExigences.pdf} \\
-				\includegraphics[scale=0.5,page = 17]{FichesExigences.pdf} \\
+				\includepdf[scale=0.5,pages = {1-17}]{FichesExigences.pdf} 
 	\section{Numerotation des exigences}
-				\includegraphics[scale=0.5]{Untit.pdf} \\
+				\includepdf[scale=0.5]{Untit.pdf} 
 		
 	\section{Fondement du projet}
 		\subsection{But du projet} 
@@ -156,7 +142,7 @@
 			Bob est celui qui veut recevoir le message.
 			Oscar est celui qui essaye d'attaquer le message.
 		\subsection{Faits et hypothèses utiles}	
-			\subsubsection{Facteurs influençant le produit, mais qui ne sont pas des contraintes imposées sur les 				exigences}
+			\subsubsection{Facteurs influençant le produit, mais qui ne sont pas des contraintes imposées sur les exigences}
 	
 				-Mettre en place une interface facile d'utilisation sur l'application de manière a ce que même 					un enfant puisse lancer le décryptage.
 	\section{EXIGENCES FONCTIONNELLES}
@@ -166,8 +152,8 @@
 			\subsubsection{Contenu du travail}
 				Il est nécessaire de connaitre le chiffrement et le déchiffrement (avec et sans clé) de 				Vigenère et de substitution.
 		\subsection{Portée du produit : cas d’utilisation}
-			\subsubsection {Le diagramme de cas d'utilisation} \\
-				\includegraphics[scale=0.5]{dia.eps} \\
+			\subsubsection {Le diagramme de cas d'utilisation} 
+				\includegraphics[scale=0.5]{dia.eps} 
 			\subsubsection {Description de ce diagramme}
 				Dans cette application il n'y a qu'un seul type d'utilisateur qui est le client 
 				et qui peut crypter et decrypter avec deux methodes différentes.
@@ -243,7 +229,7 @@
 			\subsubsection {Protection contre les infections}
 				Il faudra conserver les fichiers de maniere securisée et prudente ou alors les supprimer une 					fois que ce ceux-ci n'aient plus d'utilité.
 		\subsection{Exigences culturelles et politiques}
-			\subsubsection {Exigences culturelles
+			\subsubsection {Exigences culturelles}
 				L'application pourra gérer plusieurs langues (plusieurs tableaux de frequencages de lettres).
 			\subsubsection {Exigence politiques}
 				L'application et notamment les informations obtenues via l'application devront être 					hermétiques vis a vis de n'importe quels états/organisations. a supprimer???? A VOIR
