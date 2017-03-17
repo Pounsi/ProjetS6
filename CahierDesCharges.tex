@@ -86,13 +86,14 @@
 				La cryptographie, ainsi que la cryptanalyse(tout simplement l'art de rendre clair un texte crypté sans avoir connaissance de la clef utilisée) constituent la cryptologie.
 				C'est un art ancien qui a commencé au 16eme siècle avant J-C par un potier qui avait gravé sa recette secrète en supprimant des consonnes et en modifiant l'orthographe des mots.
 				C'est egalement une science nouvelle car elle est encore utilisée de nos jours dans plusieurs domaines tels que les banques(cartes), le web(navigateurs)..etc
-				La cryptologie était utilisée lors des deux guerres mondiales. Lors de la Premiere tout d'abord, où la maitrise cryptographique des francais les a avantagés par rapport a leurs
-				ennemis. De plus, cela a même precipité l'entrée en guerre des Etats-Unis a cause du télegramme Zummerman intercepté en 1917 par le Royaume-Uni.
-				Pendant la Seconde, le chiffre Enigma etait utilisé tout comme le chiffre Lorenz, mais il n'a jamais été cassé. Ainsi, des chiffreurs ont été utilisés de meme que des bombes afin de 
-				connaitre la clé quotidienne de certains jours pour attaquer les messages.
+				L'importance de la cryptologie se mesure par le faite qu'elle a été utilisée lors des deux guerres mondiales. Lors de la Premiere tout d'abord, où la maitrise cryptographique des francais les a avantagés par rapport a leurs
+				ennemis. De plus, cela a même precipité l'entrée en guerre des Etats-Unis a cause du télegramme Zummerman intercepté en 1917 par le Royaume-Uni. Selon certains spécialistes,
+				les exploits des alliées en matière de cryptanalyse auraient permis d'écourter la guerre d'un a deux ans.
+				Après les guerres, une nouvelle forme de cryptographie liée a l'ère de l'informatique est apparue.
 				
-				RAJOUTER EXPLICATIONS SUBSTITUTION ET VIGENERE?
-				REVOIR FIN INTRODUCTION
+				Ci-dessous un tableau récapitulatif résumant les différents chiffrements les plus connus :
+				
+				\includepdf[scale=0.5]{tab.pdf}
 				
 		\section{Fiches d'exigence}
 				\includepdf[scale=0.5,pages = {1-17}]{FichesExigences.pdf} 
@@ -105,12 +106,12 @@
 				Dans le cadre de notre L3, nous devons concevoir un programme d'aide au decryptage.
 				Grace a notre programme le client(ici le professeur) va évaluer notre travail.
 			\subsubsection{Objectif de la section}
-				L'objectif de ce module est de nous apprendre a travailler en equipe pour fournir un travail 					commun.
+				L'objectif de ce module est de nous apprendre a travailler en equipe pour fournir un travail commun.
 			\subsubsection{Objectif du projet}
-				Le but du projet est de réaliser un logiciel automatique d'aide au décryptage, capable de retrouver une 					grande partie du texte d'origine à partir d'un texte chiffré. Il devra etre capable de 					déchiffrer le chiffrement de Vigenère et le chiffrement par substitution.
+				Le but du projet est de réaliser un logiciel automatique d'aide au décryptage, capable de retrouver une grande partie du texte d'origine à partir d'un texte chiffré. Il devra etre capable de déchiffrer le chiffrement de Vigenère et le chiffrement par substitution.
 		\subsection{Personnes et organismes impliqués dans les enjeux du projet} 
 			\subsubsection{Maitre d'ouvrage}
-				Ce projet fait partie du module projet de la 3eme annee d'info dirigé par Mme Kloul qui 				travaille au sein de l'uvsq.			
+				Ce projet fait partie du module projet de la 3eme année d'informatique dirigé par Mme Kloul qui travaille au sein de l'uvsq.			
 		\subsection{Utilisateurs du produit}
 			
 	\section{Contraintes sur le projet}
@@ -118,27 +119,25 @@
 			\subsubsection{Contraintes sur la conception de la solution}
 				-Le produit doit permettre à l'utilisateur de décrypter une partie d'un message crypté.
 
-				-Le produit doit crypter ou décrypter un chiffrement de Vigenère et un chiffrement par 					substitution.
+				-Le produit doit crypter ou décrypter un chiffrement de Vigenère et un chiffrement par substitution.
 
-				-Toutes les deadlines concernant l'application et son cahier des charges doivent être 					respectées.
+				-Toutes les deadlines concernant l'application et son cahier des charges doivent être respectées.
 			\subsubsection{Environnement de fonctionnement du système actuel}
 				Le produit sera développé sous forme d'application. 
-				Le programme s'appuiera essentiellement sur des recherches fréquentielles pour décrypter un 					chiffrement par substitution et utiliser le test de Kasiski et les indices de coincidences 					pour déchiffrer par Vigenere.
+				Le programme s'appuiera essentiellement sur des recherches fréquentielles pour décrypter un chiffrement par substitution et utiliser le test de Kasiski et les indices de coincidences pour déchiffrer par Vigenere.
 			\subsubsection{Lieux de fonctionnement prévus}
-				Le produit étant une application, il faudra un ordinateur afin de le lancer.
-				Il est préférable que l'utilisateur utilise un ordinateur moderne pour sa rapidité et sa 					fluidité.
+				Il est préférable que l'utilisateur utilise un ordinateur moderne pour sa rapidité et sa fluidité.
 			\subsubsection{ De combien de temps les développeurs disposent-ils pour le projet ?}
 				La deadline pour les développeurs est le Vendredi 12 Juin 2017.
 			\subsubsection{ Quel est le budget affecté au projet ?}
 				Le client ne nous a pas référé son budget.
 		\subsection{Glossaire et conventions de dénomination}
-			Cette section donne les définitions de tous les termes et acronymes utilisés dans le projet.
-
+		
 			k est la clé
 
 			m est la taille de la clé
 
-			n est la taille de message chiffré
+			n est la taille du message chiffré
 			
 			Les personnages Alice et Bob sont des figures classiques en cryptologie. Ces noms sont utilisés au lieu de « personne A » et « personne B » ; Alice et Bob cherchent dans la plupart des cas à communiquer de manière sécurisée.
 			Alice est la personne qui envoie le message.
@@ -147,13 +146,13 @@
 		\subsection{Faits et hypothèses utiles}	
 			\subsubsection{Facteurs influençant le produit, mais qui ne sont pas des contraintes imposées sur les exigences}
 	
-				-Mettre en place une interface facile d'utilisation sur l'application de manière a ce que même 					un enfant puisse lancer le décryptage.
+				-Mettre en place une interface facile d'utilisation sur l'application de manière a ce que même un enfant puisse lancer le décryptage.
 	\section{EXIGENCES FONCTIONNELLES}
 		\subsection{Portée du travail}
 			\subsubsection{Situation actuelle}
 				Nous n'avons aucune base pour notre application, nous allons la créer de toutes pièces.
 			\subsubsection{Contenu du travail}
-				Il est nécessaire de connaitre le chiffrement et le déchiffrement (avec et sans clé) de 				Vigenère et de substitution.
+				Il est nécessaire de connaitre le chiffrement et le déchiffrement (avec et sans clé) de Vigenère et de substitution.
 		\subsection{Portée du produit : cas d’utilisation}
 			\subsubsection {Le diagramme de cas d'utilisation} 
 				\includegraphics[scale=0.5]{dia.eps} 
@@ -162,29 +161,29 @@
 				et qui peut crypter et decrypter avec deux methodes différentes.
 		\subsection{Exigences fonctionnelles et exigences sur les données}
 			\subsubsection {Exigences fonctionnelles}
-				Fiches d'exigences numero : METTRE NUMERO DES FICHES D'EXIGENCES FONCTIONNELLES
+				Fiches d'exigences numero : 2.1 / 3.1 / 3.2 / 3.3 / 5.1
 	\section{EXIGENCES NON FONCTIONNELLES}
 		\subsection{Ergonomie et convivialité du produit}
 			\subsubsection {L'interface}
-				L'interface permettra de rentrer facilement le texte à décrypter, par copier-coller par 				exemple.
-				De plus, l'interface permettra de choisir la langue (anglais, français) grâce à un simple menu 					déroulant.
+				L'interface permettra de rentrer facilement le texte à décrypter, par copier-coller par exemple.
+				De plus, l'interface permettra de choisir la langue (anglais, français) grâce à un simple menu.
 				Enfin, l'interface permettra aussi d'afficher facilement le resultat obtenu.
 			\subsubsection {Le style du produit}
-				Le programme sera évalué par la responsable du module Projet de la L3 donc il doit apparaître 					simple et effiace (pas de superflu).
-				Le programme ne doit pas être trop gros en terme de resolution, on doit pouvoir l'afficher sur 					tous les types d'écrans d'ordinateurs.
+				Le programme sera évalué par la responsable du module Projet de la L3 donc il doit apparaître simple et effiace (pas de superflu).
+				Le programme ne doit pas être trop gros en terme de resolution, on doit pouvoir l'afficher sur 	tous les types d'écrans d'ordinateurs.
 
 		\subsection{Facilité d’utilisation et facteurs humains}
 			\subsubsection {Facilité d'utilisation}
 				Le programme sera simple à utiliser même pour un enfant.
 
-				Le programme pourra etre utilisé par des personnes sans qu'ils y soient formés.
+				Le programme pourra etre utilisé par des personnes sans qu'elles y soient formées.
 			\subsubsection {Personnalisation et internationalisation}
-				Le programme sera trop simple pour etre personnalisable et il sera en anglais(simple a la 					compréhension).
+				Le programme sera trop simple pour etre personnalisable et il sera en anglais(simple a la compréhension).
 			\subsubsection {Facilité d'apprentissage}
-				-Le developpement d'un site web présentant le produit ainsi que toutes ses caractéristiques. 				Ce site web pourra également disposer d'un forum permettant aux internautes de proposer certaines 				améliorations à faire sur l'application et également critiquer certaines fonctionnalités de 					l'application.
+				-Le developpement d'un site web présentant le produit ainsi que toutes ses caractéristiques. Ce site web pourra également disposer d'un forum permettant aux internautes de proposer certaines 	améliorations à faire sur l'application et également critiquer certaines fonctionnalités de l'application.
 				Il sera possible au grand public d’utiliser le programme sans formation.
 			\subsubsection {Facilité de compréhension et politesse}
-				Le produit devrait utiliser des symboles et des mots naturellement compréhensibles par les
+				Le produit devra utiliser des symboles et des mots naturellement compréhensibles par les
 				utilisateurs potentiels.
 				Le produit doit cacher les détails de sa construction à l’utilisateur.
 
@@ -274,9 +273,42 @@ conventions de codage. Ainsi, nous avons décidé de définir nous même les rè
 		Controle final sur un texte test. Un texte chiffré par vigenere et par substitution seront preparés, ainsi que 			leurs versions dechiffrées. Le resultat de ceux-ci via l'utilisation de l'application sera comparé a celui resultat 				preparé "sur feuille"(resultat theorique). 
 		\subsection{Risques liés au projet}
 		Avec l'utilisation de l'application, certains risques existent. En effet, une personne etrangère peut avoir 			accés a l'ordinateur et ainsi recuperer les fichiers decryptés telechargés ou les fichiers originals( avannt cryptage).
+		\subsection{Organigramme}
+		\includepdf[scale=0.5]{organigramme.pdf}
+		lister fleches avec numeros
+		Interface graphique :
+			- bouton cryptage
+			- bouton decryptage
+			- bouton substitution
+			- bouton Vigenère
+			- affichage de texte(complet et partiel)
+			- affichage pour la clé de substitution
+			- bouton Francais(decryptage)
+			- bouton Anglais(decryptage)
+			- affichage pour l'analyse fréquentielle
+			- charger un fichier texte
+			- sauvegarder un fichier texte
+			- créer un nouveau fichier texte(resultats)
+			- Demander clef de Vigenère
+			
+		Cryptage Substitution :
+			- créer une clé aleatoirement
+			- crypter le message
+			
+		Cryptage Vigenère :
+			- crypter le message
+			
+		Decryptage Substitution :
+			- decrypter le message
+			
+		Analyse fréquentielle :
+			- analyse frequentielle sur texte donné
+			
+		Decryptage Vigenère :
+			-decrypter le message
+		
 		\subsection{Estimation des coûts du projet}
-		 	1) Cout en heure:
-			2) cout en lignes de code
+		\includepdf[scale=0.5]{tabcout.pdf} 
 		\subsection{Manuel utilisateur et formations à envisager}
 			L'utilisateur aura accés à un menu lui permettant de choisir de crypter ou décrypter un texte,
 			puis la méthode qu'il veut utiliser pour ce faire (vigenere ou substitution), il ne lui restera 
@@ -286,14 +318,16 @@ conventions de codage. Ainsi, nous avons décidé de définir nous même les rè
 			il sera sans doute possible d'ajouter d'autres langues dans des versions futurs. 
 			Il pourra être également possible d'ajouter une option permettant à l'utilisateur
 
-			d'entrer un type de texte (poéme, roman, ordre militaire,...) pouvant aider au décryptage. Ou meme 				encore conserver un historique des "dechiffrements" ou aussi permettre a l'application de savoir 			directement si l'on va crypter ou decrypter un texte.
+			d'entrer un type de texte (poème, roman, ordre militaire,...) pouvant aider au décryptage. Ou même encore conserver un historique des "dechiffrements" ou aussi permettre a l'application de savoir directement si l'on va crypter ou decrypter un texte.
 
 		\subsection{Idées de solutions}
-		 	Il s'agira de rentrer un nouveau tableau de données pour chaques nouvelles langue et pour 
-			chaque nouveau style.
-			Au vu de l'agencement des caractères dans le texte, l'application pourra savoir automatiquement quelle 				operation le client cherche à effectuer (cryptage ou decryptage).
+		 	Il s'agira de rentrer un nouveau tableau de données pour chaques nouvelles langues et pour chaque nouveau style.
+			Au vu de l'agencement des caractères dans le texte, l'application pourra savoir automatiquement quelle operation le client cherche à effectuer (cryptage ou décryptage).
 			
 			\section{Conclusion}
-			FAIRE CONCLUSION
+			 Nous avons choisi d'utiliser le langage C pour developper l'application car après analyse des besoins, nous avons constaté qu'il n'y avait pas 
+			 de POO. Nous nous sommes donc dirigés sur un langage procédurale. De plus, c'est un langage performant que toute l'équipe maitrise (ce qui entraine une diminution des couts liée au temps de formation).
+			 La bibliothèque graphique que nous avons décider d'utiliser avec ce langage est GTK+ parce qu'elle permet d'implémenter des boutons, des zones de texte et du traitement de fichier.
+			 Elle nous semblait donc adaptée au developement de notre application.
 			
 \end{document}
