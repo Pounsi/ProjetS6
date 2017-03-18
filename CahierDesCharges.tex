@@ -180,7 +180,7 @@
 			\subsubsection {Personnalisation et internationalisation}
 				Le programme sera trop simple pour etre personnalisable et il sera en anglais(simple a la compréhension).
 			\subsubsection {Facilité d'apprentissage}
-				-Le developpement d'un site web présentant le produit ainsi que toutes ses caractéristiques. Ce site web pourra également disposer d'un forum permettant aux internautes de proposer certaines 	améliorations à faire sur l'application et également critiquer certaines fonctionnalités de l'application.
+				Le developpement d'un site web présentant le produit ainsi que toutes ses caractéristiques. Ce site web pourra également disposer d'un forum permettant aux internautes de proposer certaines	améliorations à faire sur l'application et également critiquer certaines fonctionnalités de l'application.
 				Il sera possible au grand public d’utiliser le programme sans formation.
 			\subsubsection {Facilité de compréhension et politesse}
 				Le produit devra utiliser des symboles et des mots naturellement compréhensibles par les
@@ -232,7 +232,7 @@
 				Il faudra conserver les fichiers de maniere securisée et prudente ou alors les supprimer une 					fois que ce ceux-ci n'aient plus d'utilité.
 		\subsection{Exigences culturelles et politiques}
 			\subsubsection {Exigences culturelles}
-				L'application pourra gérer plusieurs langues (plusieurs tableaux de frequencages de lettres).
+				L'application pourra gérer plusieurs langues (plusieurs tableaux de frequences de lettres).
 		\subsection{Lois et standards influençant le produit}
 			\subsubsection {Conformité avec la loi}
 				Les informations personnelles seront soumises a la loi sur la protection des données
@@ -246,7 +246,7 @@ le  code, de se repérer facilement, de savoir ou trouver les choses, etc.Une fo
 facilitent grandement l’écriture, la maintenance et aident à éviter certaines erreurs.
 Dès lors qu’on travaille sur un projet logiciel d’une certaine ampleur, qui plus est à
 plusieurs, l’expérience montre qu’il est très important de se mettre d’accord sur les
-conventions de codage. Ainsi, nous avons décidé de définir nous même les règles a respecter durant le codage. Par exemple l'indentation, les noms des variables, des fonctions..etc
+conventions de codage. Ainsi, nous avons décidé de définir nous même les règles a respecter durant le codage. Comme par exemple pour l'indentation, les noms des variables,les noms des fonctions..etc
 \section{AUTRES ASPECTS DU PROJET}
 		\subsection{Questions sans réponse}
 		Nous pensons avoir abordé une grande partie des aspects du projet et des attentes du client.
@@ -275,7 +275,36 @@ conventions de codage. Ainsi, nous avons décidé de définir nous même les rè
 		Avec l'utilisation de l'application, certains risques existent. En effet, une personne etrangère peut avoir 			accés a l'ordinateur et ainsi recuperer les fichiers decryptés telechargés ou les fichiers originals( avannt cryptage).
 		\subsection{Organigramme}
 		\includepdf[scale=0.5]{organigramme.pdf}
-		lister fleches avec numeros
+
+Détails des flèches:\\
+1 un ensemble de données contenant le texte crypté
+2 un nom du fichier
+3 un ensemble de données contenant le texte crypté
+4 un nom du fichier
+5 un nom du fichier
+6 fichier texte : clair , crypter ,decrypter ou analyse frequentielle
+7 un ensemble de donnees contenant le texte en clair
+8 un nom du fichier
+9 un ensemble de données contenant l'analyse frequentielle
+10 un nom du fichier
+11 un ensemble de données contenant le texte decrypté ou le texte clair
+12 un nom du fichier
+13 un nom du fichier
+14 fichier texte clair
+15 un nom du fichier
+16 fichier texte clair
+17 un fichier texte crypté
+18 un nom du fichier
+19 un ensemble de données contenant l'analyse frequentielle
+20 un nom du fichier
+21 un nom du fichier
+22 un ensemble de données contenant l'analyse frequentielle
+23 un nom du fichier
+24 un fichier texte crypté
+25 un fichier texte en crypté ou en clair
+26 un ensemble de donnees contenant l'analyse frequentielle
+
+Détails des modules:\\
 		Interface graphique :
 			- bouton cryptage
 			- bouton decryptage
@@ -325,9 +354,12 @@ conventions de codage. Ainsi, nous avons décidé de définir nous même les rè
 			Au vu de l'agencement des caractères dans le texte, l'application pourra savoir automatiquement quelle operation le client cherche à effectuer (cryptage ou décryptage).
 			
 			\section{Conclusion}
-			 Nous avons choisi d'utiliser le langage C pour developper l'application car après analyse des besoins, nous avons constaté qu'il n'y avait pas 
-			 de POO. Nous nous sommes donc dirigés sur un langage procédurale. De plus, c'est un langage performant que toute l'équipe maitrise (ce qui entraine une diminution des couts liée au temps de formation).
-			 La bibliothèque graphique que nous avons décider d'utiliser avec ce langage est GTK+ parce qu'elle permet d'implémenter des boutons, des zones de texte et du traitement de fichier.
-			 Elle nous semblait donc adaptée au developement de notre application.
+	
+			 Après l'analyse des besoins et après avoir constaté que la programmation orienté-objet n'etait pas nécessaire, nous avons donc choisi d'utiliser le langage C.
+C'est en effet un langage procédurale et performant.
+De plus, toute l'equipe le maitrise, entrainant ainsi une diminution des couts liée a un eventuel temps de formation.
+
+			 La bibliothèque graphique que nous avons décidée d'utiliser avec ce langage est GTK+ parce qu'elle permet d'implémenter des boutons, des zones de texte et du traitement de fichier.
+			 Elle nous semblait donc la plus adaptée au developement de notre application.
 			
 \end{document}
