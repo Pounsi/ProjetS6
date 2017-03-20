@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage[T1]{fontenc}
 \usepackage{pdfpages}
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=2.5cm}
 
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
@@ -96,7 +98,7 @@
 				\includepdf[scale=0.5]{tab.pdf}
 				
 		\section{Fiches d'exigence}
-				\includepdf[scale=0.5,pages = {1-17}]{FichesExigences.pdf} 
+				Vous trouverez les fiches d'exigences en annexe.
 	\section{Numerotation des exigences}
 				\includepdf[scale=0.5]{Untit.pdf} 
 		
@@ -277,7 +279,7 @@ conventions de codage. Ainsi, nous avons décidé de définir nous même les rè
 		\includepdf[scale=0.5]{organigramme.pdf}
 
 Détails des flèches:\\
-1 un ensemble de données contenant le texte crypté
+1 un ensemble de données contenant le texte crypté\\
 2 un nom du fichier
 3 un ensemble de données contenant le texte crypté
 4 un nom du fichier
@@ -354,12 +356,15 @@ Détails des modules:\\
 			Au vu de l'agencement des caractères dans le texte, l'application pourra savoir automatiquement quelle operation le client cherche à effectuer (cryptage ou décryptage).
 			
 			\section{Conclusion}
-	
+			Notre application, qui permettra au client de manière simple de crypter ou decrypter des textes
+			à l'aide de Vigenère ou du procédé de substitution, s'appelera Dcrypt. 
+			
+			
 			 Après l'analyse des besoins et après avoir constaté que la programmation orienté-objet n'etait pas nécessaire, nous avons donc choisi d'utiliser le langage C.
-C'est en effet un langage procédurale et performant.
-De plus, toute l'equipe le maitrise, entrainant ainsi une diminution des couts liée a un eventuel temps de formation.
-
-			 La bibliothèque graphique que nous avons décidée d'utiliser avec ce langage est GTK+ parce qu'elle permet d'implémenter des boutons, des zones de texte et du traitement de fichier.
-			 Elle nous semblait donc la plus adaptée au developement de notre application.
+			C'est en effet un langage procédurale et performant.
+			De plus, toute l'equipe le maitrise, entrainant ainsi une diminution des coûts liée a un eventuel temps de formation.
+			La bibliothèque graphique que nous avons décidée d'utiliser avec ce langage est GTK+ parce qu'elle permet d'implémenter des boutons, des zones de texte et du traitement de fichier.
+			Elle nous semblait donc la plus adaptée au developement de notre application.
+			 
 			
 \end{document}
