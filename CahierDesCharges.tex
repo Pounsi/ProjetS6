@@ -94,13 +94,13 @@
 				Après les guerres, une nouvelle forme de cryptographie liée a l'ère de l'informatique est apparue.
 				
 				Ci-dessous un tableau récapitulatif résumant les différents chiffrements les plus connus :
-				
-				\includepdf[scale=0.5]{tab.pdf}
+				\\
+				\includegraphics[scale=1]{Tab1.jpg}
 				
 		\section{Fiches d'exigence}
 				Vous trouverez les fiches d'exigences en annexe.
 	\section{Numerotation des exigences}
-				\includepdf[scale=0.5]{Untit.pdf} 
+				\includegraphics[scale=0.5]{Arbre.jpg} 
 		
 	\section{Fondement du projet}
 		\subsection{But du projet} 
@@ -157,7 +157,7 @@
 				Il est nécessaire de connaitre le chiffrement et le déchiffrement (avec et sans clé) de Vigenère et de substitution.
 		\subsection{Portée du produit : cas d’utilisation}
 			\subsubsection {Le diagramme de cas d'utilisation} 
-				\includegraphics[scale=0.5]{dia.eps} 
+				\includegraphics[scale=0.5]{dia.png} 
 			\subsubsection {Description de ce diagramme}
 				Dans cette application il n'y a qu'un seul type d'utilisateur qui est le client 
 				et qui peut crypter et decrypter avec deux methodes différentes.
@@ -276,70 +276,43 @@ conventions de codage. Ainsi, nous avons décidé de définir nous même les rè
 		\subsection{Risques liés au projet}
 		Avec l'utilisation de l'application, certains risques existent. En effet, une personne etrangère peut avoir 			accés a l'ordinateur et ainsi recuperer les fichiers decryptés telechargés ou les fichiers originals( avannt cryptage).
 		\subsection{Organigramme}
-		\includepdf[scale=0.5]{organigramme.pdf}
-
-Détails des flèches:\\
-1 un ensemble de données contenant le texte crypté\\
-2 un nom du fichier
-3 un ensemble de données contenant le texte crypté
-4 un nom du fichier
-5 un nom du fichier
-6 fichier texte : clair , crypter ,decrypter ou analyse frequentielle
-7 un ensemble de donnees contenant le texte en clair
-8 un nom du fichier
-9 un ensemble de données contenant l'analyse frequentielle
-10 un nom du fichier
-11 un ensemble de données contenant le texte decrypté ou le texte clair
-12 un nom du fichier
-13 un nom du fichier
-14 fichier texte clair
-15 un nom du fichier
-16 fichier texte clair
-17 un fichier texte crypté
-18 un nom du fichier
-19 un ensemble de données contenant l'analyse frequentielle
-20 un nom du fichier
-21 un nom du fichier
-22 un ensemble de données contenant l'analyse frequentielle
-23 un nom du fichier
-24 un fichier texte crypté
-25 un fichier texte en crypté ou en clair
-26 un ensemble de donnees contenant l'analyse frequentielle
-
-Détails des modules:\\
-		Interface graphique :
-			- bouton cryptage
-			- bouton decryptage
-			- bouton substitution
-			- bouton Vigenère
-			- affichage de texte(complet et partiel)
-			- affichage pour la clé de substitution
-			- bouton Francais(decryptage)
-			- bouton Anglais(decryptage)
-			- affichage pour l'analyse fréquentielle
-			- charger un fichier texte
-			- sauvegarder un fichier texte
-			- créer un nouveau fichier texte(resultats)
-			- Demander clef de Vigenère
+Détails des modules:\\ \\
+		Interface graphique :\\
+			- bouton cryptage\\
+			- bouton decryptage\\
+			- bouton substitution\\
+			- bouton Vigenère\\
+			- affichage de texte(complet et partiel)\\
+			- affichage pour la clé de substitution\\
+			- bouton Francais(decryptage)\\
+			- bouton Anglais(decryptage)\\
+			- affichage pour l'analyse fréquentielle\\
+			- charger un fichier texte\\
+			- sauvegarder un fichier texte\\
+			- créer un nouveau fichier texte(resultats)\\
+			- Demander clef de Vigenère\\
 			
-		Cryptage Substitution :
-			- créer une clé aleatoirement
+		Cryptage Substitution :\\
+			- créer une clé aleatoirement\\
+			- crypter le message\\
+			
+		Cryptage Vigenère :\\
 			- crypter le message
 			
-		Cryptage Vigenère :
-			- crypter le message
+		Decryptage Substitution :\\
+			- decrypter le message\\
 			
-		Decryptage Substitution :
-			- decrypter le message
+		Analyse fréquentielle :\\
+			- analyse frequentielle sur texte donné\\
 			
-		Analyse fréquentielle :
-			- analyse frequentielle sur texte donné
-			
-		Decryptage Vigenère :
+		Decryptage Vigenère :\\
 			-decrypter le message
 		
+		\includepdf[scale=0.7]{organigramme_final.pdf}
+
+
 		\subsection{Estimation des coûts du projet}
-		\includepdf[scale=0.5]{tabcout.pdf} 
+		\includegraphics[scale=0.5]{Tableau_cout.jpg} 
 		\subsection{Manuel utilisateur et formations à envisager}
 			L'utilisateur aura accés à un menu lui permettant de choisir de crypter ou décrypter un texte,
 			puis la méthode qu'il veut utiliser pour ce faire (vigenere ou substitution), il ne lui restera 

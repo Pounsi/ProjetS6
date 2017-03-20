@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  20 MAR 2017 10:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  20 MAR 2017 11:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -527,475 +527,112 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 71.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 71.
-<tab.pdf, id=1, 597.23125pt x 845.1575pt>
-File: tab.pdf Graphic file (type pdf)
- <use tab.pdf>
-Package pdftex.def Info: tab.pdf used on input line 98.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: tab.pdf Graphic file (type pdf)
- <use tab.pdf>
-Package pdftex.def Info: tab.pdf used on input line 98.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+<Tab1.jpg, id=1, 297.36093pt x 146.04562pt>
+File: Tab1.jpg Graphic file (type jpg)
+ <use Tab1.jpg>
+Package pdftex.def Info: Tab1.jpg used on input line 98.
+(pdftex.def)             Requested size: 297.3602pt x 146.04524pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<tab.pdf, id=13, page=1, 597.23125pt x 845.1575pt>
-File: tab.pdf Graphic file (type pdf)
- <use tab.pdf, page 1>
-Package pdftex.def Info: tab.pdf, page1 used on input line 98.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Tab1.jpg>]
+<Arbre.jpg, id=11, 597.432pt x 845.0772pt>
+File: Arbre.jpg Graphic file (type jpg)
+ <use Arbre.jpg>
+Package pdftex.def Info: Arbre.jpg used on input line 103.
+(pdftex.def)             Requested size: 298.71527pt x 422.53757pt.
+ [2 <./Arbre.jpg>]
+[3] <dia.png, id=20, 413.545pt x 387.4475pt>
+File: dia.png Graphic file (type png)
+ <use dia.png>
+Package pdftex.def Info: dia.png used on input line 160.
+(pdftex.def)             Requested size: 206.77199pt x 193.72327pt.
+ [4 <./dia.png>]
+[5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 279--294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 295--298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
+
+ []
+
+<organigramme_final.pdf, id=36, 597.23125pt x 845.1575pt>
+File: organigramme_final.pdf Graphic file (type pdf)
+
+<use organigramme_final.pdf>
+Package pdftex.def Info: organigramme_final.pdf used on input line 311.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: tab.pdf Graphic file (type pdf)
-
-<use tab.pdf, page 1>
-Package pdftex.def Info: tab.pdf, page1 used on input line 98.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: tab.pdf Graphic file (type pdf)
- <use tab.pdf, page 1>
-Package pdftex.def Info: tab.pdf, page1 used on input line 98.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: tab.pdf Graphic file (type pdf)
- <use tab.pdf, page 1>
-Package pdftex.def Info: tab.pdf, page1 used on input line 98.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: tab.pdf Graphic file (type pdf)
-
-<use tab.pdf, page 1>
-Package pdftex.def Info: tab.pdf, page1 used on input line 98.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [2 <./tab.pdf>]
-<FichesExigences.pdf, id=39, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf>
-Package pdftex.def Info: FichesExigences.pdf used on input line 101.
+File: organigramme_final.pdf Graphic file (type pdf)
+ <use organigramme_final.pdf>
+Package pdftex.def Info: organigramme_final.pdf used on input line 311.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf>
-Package pdftex.def Info: FichesExigences.pdf used on input line 101.
+ [8]
+<organigramme_final.pdf, id=42, page=1, 597.23125pt x 845.1575pt>
+File: organigramme_final.pdf Graphic file (type pdf)
+
+<use organigramme_final.pdf, page 1>
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 311.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- [3]
-<FichesExigences.pdf, id=45, page=1, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
+File: organigramme_final.pdf Graphic file (type pdf)
+ <use organigramme_final.pdf, page 1>
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 311.
+(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
+File: organigramme_final.pdf Graphic file (type pdf)
 
-<use FichesExigences.pdf, page 1>
-Package pdftex.def Info: FichesExigences.pdf, page1 used on input line 101.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 1>
-Package pdftex.def Info: FichesExigences.pdf, page1 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
+<use organigramme_final.pdf, page 1>
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 311.
+(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
+File: organigramme_final.pdf Graphic file (type pdf)
+ <use organigramme_final.pdf, page 1>
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 311.
+(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
+File: organigramme_final.pdf Graphic file (type pdf)
 
-<use FichesExigences.pdf, page 1>
-Package pdftex.def Info: FichesExigences.pdf, page1 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 1>
-Package pdftex.def Info: FichesExigences.pdf, page1 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
+<use organigramme_final.pdf, page 1>
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 311.
+(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
+ [9 <./organigramme_final.pdf>]
+<Tableau_cout.jpg, id=53, 298.11375pt x 250.68657pt>
+File: Tableau_cout.jpg Graphic file (type jpg)
+ <use Tableau_cout.jpg>
+Package pdftex.def Info: Tableau_cout.jpg used on input line 315.
+(pdftex.def)             Requested size: 149.0565pt x 125.34297pt.
 
-<use FichesExigences.pdf, page 1>
-Package pdftex.def Info: FichesExigences.pdf, page1 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [4 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=61, page=2, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 2>
-Package pdftex.def Info: FichesExigences.pdf, page2 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 2>
-Package pdftex.def Info: FichesExigences.pdf, page2 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 2>
-Package pdftex.def Info: FichesExigences.pdf, page2 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [5 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=66, page=3, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 3>
-Package pdftex.def Info: FichesExigences.pdf, page3 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 3>
-Package pdftex.def Info: FichesExigences.pdf, page3 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 3>
-Package pdftex.def Info: FichesExigences.pdf, page3 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [6 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=71, page=4, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 4>
-Package pdftex.def Info: FichesExigences.pdf, page4 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 4>
-Package pdftex.def Info: FichesExigences.pdf, page4 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 4>
-Package pdftex.def Info: FichesExigences.pdf, page4 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [7 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=77, page=5, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 5>
-Package pdftex.def Info: FichesExigences.pdf, page5 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 5>
-Package pdftex.def Info: FichesExigences.pdf, page5 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 5>
-Package pdftex.def Info: FichesExigences.pdf, page5 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [8 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=82, page=6, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 6>
-Package pdftex.def Info: FichesExigences.pdf, page6 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 6>
-Package pdftex.def Info: FichesExigences.pdf, page6 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 6>
-Package pdftex.def Info: FichesExigences.pdf, page6 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [9 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=87, page=7, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 7>
-Package pdftex.def Info: FichesExigences.pdf, page7 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 7>
-Package pdftex.def Info: FichesExigences.pdf, page7 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 7>
-Package pdftex.def Info: FichesExigences.pdf, page7 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [10 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=92, page=8, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 8>
-Package pdftex.def Info: FichesExigences.pdf, page8 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 8>
-Package pdftex.def Info: FichesExigences.pdf, page8 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 8>
-Package pdftex.def Info: FichesExigences.pdf, page8 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [11 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=97, page=9, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 9>
-Package pdftex.def Info: FichesExigences.pdf, page9 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 9>
-Package pdftex.def Info: FichesExigences.pdf, page9 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 9>
-Package pdftex.def Info: FichesExigences.pdf, page9 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [12 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=102, page=10, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 10>
-Package pdftex.def Info: FichesExigences.pdf, page10 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 10>
-Package pdftex.def Info: FichesExigences.pdf, page10 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 10>
-Package pdftex.def Info: FichesExigences.pdf, page10 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [13 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=108, page=11, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 11>
-Package pdftex.def Info: FichesExigences.pdf, page11 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 11>
-Package pdftex.def Info: FichesExigences.pdf, page11 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 11>
-Package pdftex.def Info: FichesExigences.pdf, page11 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [14 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=113, page=12, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 12>
-Package pdftex.def Info: FichesExigences.pdf, page12 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 12>
-Package pdftex.def Info: FichesExigences.pdf, page12 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 12>
-Package pdftex.def Info: FichesExigences.pdf, page12 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [15 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=118, page=13, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 13>
-Package pdftex.def Info: FichesExigences.pdf, page13 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 13>
-Package pdftex.def Info: FichesExigences.pdf, page13 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 13>
-Package pdftex.def Info: FichesExigences.pdf, page13 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [16 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=123, page=14, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 14>
-Package pdftex.def Info: FichesExigences.pdf, page14 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 14>
-Package pdftex.def Info: FichesExigences.pdf, page14 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 14>
-Package pdftex.def Info: FichesExigences.pdf, page14 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [17 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=128, page=15, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 15>
-Package pdftex.def Info: FichesExigences.pdf, page15 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 15>
-Package pdftex.def Info: FichesExigences.pdf, page15 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 15>
-Package pdftex.def Info: FichesExigences.pdf, page15 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [18 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=133, page=16, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 16>
-Package pdftex.def Info: FichesExigences.pdf, page16 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 16>
-Package pdftex.def Info: FichesExigences.pdf, page16 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 16>
-Package pdftex.def Info: FichesExigences.pdf, page16 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [19 <./FichesExigences.pdf>]
-<FichesExigences.pdf, id=139, page=17, 597.23125pt x 845.1575pt>
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 17>
-Package pdftex.def Info: FichesExigences.pdf, page17 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
- <use FichesExigences.pdf, page 17>
-Package pdftex.def Info: FichesExigences.pdf, page17 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: FichesExigences.pdf Graphic file (type pdf)
-
-<use FichesExigences.pdf, page 17>
-Package pdftex.def Info: FichesExigences.pdf, page17 used on input line 101.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [20 <./FichesExigences.pdf>]
-<Untit.pdf, id=144, 597.23125pt x 845.1575pt>
-File: Untit.pdf Graphic file (type pdf)
- <use Untit.pdf>
-Package pdftex.def Info: Untit.pdf used on input line 103.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: Untit.pdf Graphic file (type pdf)
- <use Untit.pdf>
-Package pdftex.def Info: Untit.pdf used on input line 103.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-
-[21] <Untit.pdf, id=150, page=1, 597.23125pt x 845.1575pt>
-File: Untit.pdf Graphic file (type pdf)
-
-<use Untit.pdf, page 1>
-Package pdftex.def Info: Untit.pdf, page1 used on input line 103.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: Untit.pdf Graphic file (type pdf)
- <use Untit.pdf, page 1>
-Package pdftex.def Info: Untit.pdf, page1 used on input line 103.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: Untit.pdf Graphic file (type pdf)
- <use Untit.pdf, page 1>
-Package pdftex.def Info: Untit.pdf, page1 used on input line 103.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: Untit.pdf Graphic file (type pdf)
-
-<use Untit.pdf, page 1>
-Package pdftex.def Info: Untit.pdf, page1 used on input line 103.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: Untit.pdf Graphic file (type pdf)
- <use Untit.pdf, page 1>
-Package pdftex.def Info: Untit.pdf, page1 used on input line 103.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [22 <./Untit.pdf>] [23]
-Package epstopdf Info: Source file: <dia.eps>
-(epstopdf)                    date: 2017-03-19 15:47:48
-(epstopdf)                    size: 1038332 bytes
-(epstopdf)             Output file: <dia-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-03-19 15:47:48
-(epstopdf)                    size: 15565 bytes
-(epstopdf)             Command: <repstopdf --outfile=dia-eps-converted-to.pdf d
-ia.eps>
-(epstopdf)             \includegraphics on input line 160.
-Package epstopdf Info: Output file is already uptodate.
-
-<dia-eps-converted-to.pdf, id=166, 519.9425pt x 329.23pt>
-File: dia-eps-converted-to.pdf Graphic file (type pdf)
-
-<use dia-eps-converted-to.pdf>
-Package pdftex.def Info: dia-eps-converted-to.pdf used on input line 160.
-(pdftex.def)             Requested size: 259.97061pt x 164.6146pt.
- [24 <./dia-eps-converted-to.pdf>] [25] [26]
-[27] <organigramme.pdf, id=184, 597.23125pt x 845.1575pt>
-File: organigramme.pdf Graphic file (type pdf)
-
-<use organigramme.pdf>
-Package pdftex.def Info: organigramme.pdf used on input line 279.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: organigramme.pdf Graphic file (type pdf)
- <use organigramme.pdf>
-Package pdftex.def Info: organigramme.pdf used on input line 279.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- [28]
-<organigramme.pdf, id=190, page=1, 597.23125pt x 845.1575pt>
-File: organigramme.pdf Graphic file (type pdf)
-
-<use organigramme.pdf, page 1>
-Package pdftex.def Info: organigramme.pdf, page1 used on input line 279.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: organigramme.pdf Graphic file (type pdf)
- <use organigramme.pdf, page 1>
-Package pdftex.def Info: organigramme.pdf, page1 used on input line 279.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: organigramme.pdf Graphic file (type pdf)
-
-<use organigramme.pdf, page 1>
-Package pdftex.def Info: organigramme.pdf, page1 used on input line 279.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: organigramme.pdf Graphic file (type pdf)
- <use organigramme.pdf, page 1>
-Package pdftex.def Info: organigramme.pdf, page1 used on input line 279.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: organigramme.pdf Graphic file (type pdf)
-
-<use organigramme.pdf, page 1>
-Package pdftex.def Info: organigramme.pdf, page1 used on input line 279.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [29 <./organigramme.pdf>]
-<tabcout.pdf, id=197, 597.23125pt x 845.1575pt>
-File: tabcout.pdf Graphic file (type pdf)
- <use tabcout.pdf>
-Package pdftex.def Info: tabcout.pdf used on input line 342.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: tabcout.pdf Graphic file (type pdf)
-
-<use tabcout.pdf>
-Package pdftex.def Info: tabcout.pdf used on input line 342.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- [30] <tabcout.pdf, id=203, page=1, 597.23125pt x 845.1575pt>
-File: tabcout.pdf Graphic file (type pdf)
-
-<use tabcout.pdf, page 1>
-Package pdftex.def Info: tabcout.pdf, page1 used on input line 342.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: tabcout.pdf Graphic file (type pdf)
- <use tabcout.pdf, page 1>
-Package pdftex.def Info: tabcout.pdf, page1 used on input line 342.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: tabcout.pdf Graphic file (type pdf)
- <use tabcout.pdf, page 1>
-Package pdftex.def Info: tabcout.pdf, page1 used on input line 342.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: tabcout.pdf Graphic file (type pdf)
-
-<use tabcout.pdf, page 1>
-Package pdftex.def Info: tabcout.pdf, page1 used on input line 342.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
-File: tabcout.pdf Graphic file (type pdf)
- <use tabcout.pdf, page 1>
-Package pdftex.def Info: tabcout.pdf, page1 used on input line 342.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [31 <./tabcout.pdf>]
-[32] (./CahierDesCharges.aux) ) 
+[10 <./Tableau_cout.jpg>] (./CahierDesCharges.aux) ) 
 Here is how much of TeX's memory you used:
- 5558 strings out of 494999
- 79211 string characters out of 6180228
+ 5490 strings out of 494999
+ 77437 string characters out of 6180228
  167286 words of memory out of 5000000
- 8683 multiletter control sequences out of 15000+600000
+ 8619 multiletter control sequences out of 15000+600000
  11766 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,19n,49p,338b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/user/.texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200
-.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </ho
-me/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/user/.tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/user/.texmf-var/fonts
-/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on CahierDesCharges.pdf (32 pages, 320446 bytes).
+ 40i,19n,49p,338b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/user/.texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecbx1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecrm1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.60
+0pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/
+user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on CahierDesCharges.pdf (10 pages, 357839 bytes).
 PDF statistics:
- 554 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
+ 378 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
