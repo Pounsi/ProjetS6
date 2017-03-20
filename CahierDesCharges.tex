@@ -73,8 +73,7 @@
 				Tout d'abord, nous allons parler de la steganographie, qui est "l'ancêtre" de la cryptographie. Elle se définit comme l'art de cacher un message dans un autre message. Cet "art"
 				est appelé art de la dissimulation. Le mot steganographie vient du grec 	ancien 'steganós' qui veut dire "étanche" et 'graphein' qui signifie « écriture ». 		
 				Exemples d'utilisation: 
-				encre invisible sur une feuille, lettre de Georges Sand à Alfred Musset( la subtilité réside ici dans le fait qu'il faut lire une ligne sur deux de la lettre pour découvrir le vrai message),
-				image(manipulation des indicateurs numeriques de couleurs RVB)..etc
+				encre invisible sur une feuille, lettre de Georges Sand à Alfred Musset( la subtilité réside ici dans le fait qu'il faut lire une ligne sur deux de la lettre pour découvrir le vrai message)...etc
 				Cependant, cet art présente une importante contre-mesure. En effet, si le message dissimulé est decouvert, le contenu secret esr revelé.
 
 				Ainsi, un autre "art" s'impose: il est appelé art du secret et c'est justement la cryptographie. Ce dernier vient des mots en grec ancien 'kruptos', signifiant "caché" et 'graphein'
@@ -88,14 +87,19 @@
 				La cryptographie, ainsi que la cryptanalyse(tout simplement l'art de rendre clair un texte crypté sans avoir connaissance de la clef utilisée) constituent la cryptologie.
 				C'est un art ancien qui a commencé au 16eme siècle avant J-C par un potier qui avait gravé sa recette secrète en supprimant des consonnes et en modifiant l'orthographe des mots.
 				C'est egalement une science nouvelle car elle est encore utilisée de nos jours dans plusieurs domaines tels que les banques(cartes), le web(navigateurs)..etc
-				L'importance de la cryptologie se mesure par le faite qu'elle a été utilisée lors des deux guerres mondiales. Lors de la Premiere tout d'abord, où la maitrise cryptographique des francais les a avantagés par rapport a leurs
-				ennemis. De plus, cela a même precipité l'entrée en guerre des Etats-Unis a cause du télegramme Zummerman intercepté en 1917 par le Royaume-Uni. Selon certains spécialistes,
-				les exploits des alliées en matière de cryptanalyse auraient permis d'écourter la guerre d'un a deux ans.
+				L'importance de la cryptologie se mesure par le fait qu'elle aie été utilisée lors des deux Guerres Mondiales. Selon certains spécialistes, les exploits des alliées en matière de cryptanalyse auraient même permis d'écourter la 2ème Guerre Mondiale d'un a deux ans.
+
 				Après les guerres, une nouvelle forme de cryptographie liée a l'ère de l'informatique est apparue.
 				
-				Ci-dessous un tableau récapitulatif résumant les différents chiffrements les plus connus :
+				Voici ci-dessous un tableau récapitulatif des différents chiffrements les plus connus :
 				\\
 				\includegraphics[scale=1]{Tab1.jpg}
+				\\
+				Nous allons lors de nôtre projet nous interesser à deux suivants:\\
+				-Vigenère:\\
+				-Substitution:
+				
+				
 				
 		\section{Fiches d'exigence}
 				Vous trouverez les fiches d'exigences en annexe.
@@ -106,14 +110,14 @@
 		\subsection{But du projet} 
 			\subsubsection{Problème de l'utilisation ou contexte du projet}
 				Dans le cadre de notre L3, nous devons concevoir un programme d'aide au decryptage.
-				Grace a notre programme le client(ici le professeur) va évaluer notre travail.
+				Grace a notre programme le client(ici le professeur) va évaluer nôtre travail.
 			\subsubsection{Objectif de la section}
-				L'objectif de ce module est de nous apprendre a travailler en equipe pour fournir un travail commun.
+				L'objectif de ce module est de nous apprendre a travailler efficacement en equipe afin de fournir un travail commun.
 			\subsubsection{Objectif du projet}
-				Le but du projet est de réaliser un logiciel automatique d'aide au décryptage, capable de retrouver une grande partie du texte d'origine à partir d'un texte chiffré. Il devra etre capable de déchiffrer le chiffrement de Vigenère et le chiffrement par substitution.
+				Le but du projet est de réaliser un logiciel automatique d'aide au décryptage, capable de retrouver une grande partie du texte d'origine à partir d'un texte chiffré. Il devra aussi être capable de déchiffrer le chiffrement de Vigenère et le chiffrement par substitution.
 		\subsection{Personnes et organismes impliqués dans les enjeux du projet} 
 			\subsubsection{Maitre d'ouvrage}
-				Ce projet fait partie du module projet de la 3eme année d'informatique dirigé par Mme Kloul qui travaille au sein de l'uvsq.			
+				Ce projet fait partie du module projet de la 3eme année d'informatique dirigé par Mme Kloul qui travaille au sein de l'UVSQ.			
 		\subsection{Utilisateurs du produit}
 			
 	\section{Contraintes sur le projet}
@@ -148,7 +152,7 @@
 		\subsection{Faits et hypothèses utiles}	
 			\subsubsection{Facteurs influençant le produit, mais qui ne sont pas des contraintes imposées sur les exigences}
 	
-				-Mettre en place une interface facile d'utilisation sur l'application de manière a ce que même un enfant puisse lancer le décryptage.
+		Mettre en place une interface facile d'utilisation sur l'application de manière a ce que même un enfant puisse lancer le décryptage.
 	\section{EXIGENCES FONCTIONNELLES}
 		\subsection{Portée du travail}
 			\subsubsection{Situation actuelle}
@@ -160,7 +164,7 @@
 				\includegraphics[scale=0.5]{dia.png} 
 			\subsubsection {Description de ce diagramme}
 				Dans cette application il n'y a qu'un seul type d'utilisateur qui est le client 
-				et qui peut crypter et decrypter avec deux methodes différentes.
+				et qui peut crypter et decrypter avec deux méthodes différentes à disposition.
 		\subsection{Exigences fonctionnelles et exigences sur les données}
 			\subsubsection {Exigences fonctionnelles}
 				Fiches d'exigences numero : 2.1 / 3.1 / 3.2 / 3.3 / 5.1
@@ -234,7 +238,7 @@
 				Il faudra conserver les fichiers de maniere securisée et prudente ou alors les supprimer une 					fois que ce ceux-ci n'aient plus d'utilité.
 		\subsection{Exigences culturelles et politiques}
 			\subsubsection {Exigences culturelles}
-				L'application pourra gérer plusieurs langues (plusieurs tableaux de frequences de lettres).
+				L'application pourra gérer plusieurs langues (plusieurs tableaux de frequences des lettres).
 		\subsection{Lois et standards influençant le produit}
 			\subsubsection {Conformité avec la loi}
 				Les informations personnelles seront soumises a la loi sur la protection des données
@@ -253,28 +257,28 @@ conventions de codage. Ainsi, nous avons décidé de définir nous même les rè
 		\subsection{Questions sans réponse}
 		Nous pensons avoir abordé une grande partie des aspects du projet et des attentes du client.
 		\subsection{COTS : progiciels et composants commerciaux}
-		Il existe sur le marché pas mal de produits pouvant etre des solutions potentielles/de remplacement. En effet, 			sur internet
+		Il existe sur le marché pas mal de produits pouvant être des solutions potentielles/de remplacement. En effet, 			sur internet
 		("en ligne"), il existe des sites proposant de decrypter votre texte. Nous avons par exemple testé le site 			www.dcode.fr, qui
 		pour le dechiffrement avec Vigenere, fonctionne trés bien.
 		Il y'a aussi une application (Decrypto) sur le Google Play Store (parmi plusieurs applis),qui est gratuite et 			qui permet aussi de dechiffrer Vigenere par exemple.
 		Enfin, on peut telecharger des logiciels gratuits comme Axcrypt. Des logiciels payants/privés existent surement 			a l'usage des
 		professionnels ou encore des services de police spécialisés.
 		\subsection{Nouveaux problèmes, créés par le nouveau système}
-		-Il peut y avoir un problème de place ou mémoire lors de l'installation du "systeme" malgré que l'application 			soit légère.
+		Il peut y avoir un problème de place ou mémoire lors de l'installation du "systeme" malgré que l'application 			soit légère.
 		
-		-Un ralentissement de "l'environnement" peut aussi etre constaté a la suite de l'utilisation du nouveau 			système.
+		Un ralentissement de "l'environnement" peut aussi etre constaté a la suite de l'utilisation du nouveau 			système.
 		\subsection{Tâches à faire pour livrer le système}
-		Phase I: Identification du projet : La demande du client est clarifiée, les objectifs précisés et dans sa 			globalité le projet (ou service a livrer) est identifié. De plus, les contraintes a respecter sont 				evaluées et la strategie de realisation est mise en place
-		Phase II: Definition du projet : Son contenu est defini de maniere tres precise et la planification des 			echeances et de la repartition du travail est etablie.
-		Phase III: Realisation : On realise le projet en adequation avec les exigences du clients et selon le plan de 			travail defini au prealable
+		Phase I: Identification du projet : La demande du client est clarifiée, les objectifs précisés et dans sa 			globalité le projet (ou service a livrer) est identifié. De plus, les contraintes a respecter sont 				evaluées et la strategie de realisation est mise en place.\\
+		Phase II: Definition du projet : Son contenu est defini de maniere tres precise et la planification des 			echeances et de la repartition du travail est etablie.\\
+		Phase III: Realisation : On realise le projet en adequation avec les exigences du clients et selon le plan de 			travail defini au prealable.\\
 		Phase IV: Finalisation : Le produit est evalué puis remis au client.
 		
 		
 		
 		\subsection{Contrôle final de qualité sur site (Cutover)}
-		Controle final sur un texte test. Un texte chiffré par vigenere et par substitution seront preparés, ainsi que 			leurs versions dechiffrées. Le resultat de ceux-ci via l'utilisation de l'application sera comparé a celui resultat 				preparé "sur feuille"(resultat theorique). 
+		Controle final sur un texte test. Un texte chiffré par vigenere et par substitution seront preparés, ainsi que 			leurs versions dechiffrées. Le resultat de ceux-ci via l'utilisation de l'application sera comparé a celui resultat 				preparé "sur feuille"(résultat théorique). 
 		\subsection{Risques liés au projet}
-		Avec l'utilisation de l'application, certains risques existent. En effet, une personne etrangère peut avoir 			accés a l'ordinateur et ainsi recuperer les fichiers decryptés telechargés ou les fichiers originals( avannt cryptage).
+		Avec l'utilisation de l'application, certains risques existent. En effet, une personne etrangère peut avoir 			accés a l'ordinateur et ainsi récupérer les fichiers decryptés telechargés ou les fichiers originals( avant cryptage).
 		\subsection{Organigramme}
 Détails des modules:\\ \\
 		Interface graphique :\\
