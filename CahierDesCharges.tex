@@ -70,14 +70,13 @@
 \begin{document}
 \maketitle
 		\section{Preambule}
-				Tout d'abord, nous allons parler de la steganographie, qui est "l'ancêtre" de la cryptographie. Elle se définit comme l'art de cacher un message dans un autre message. Cet "art"
-				est appelé art de la dissimulation. Le mot steganographie vient du grec 	ancien 'steganós' qui veut dire "étanche" et 'graphein' qui signifie « écriture ». 		
-				Exemples d'utilisation: 
-				encre invisible sur une feuille, lettre de Georges Sand à Alfred Musset( la subtilité réside ici dans le fait qu'il faut lire une ligne sur deux de la lettre pour découvrir le vrai message)...etc
+				La steganographie, qui est "l'ancêtre" de la cryptographie. Elle se définit comme l'art de cacher un message dans un autre message. Cet "art"
+				est appelé art de la dissimulation. 
+				Par exemple ,la lettre de Georges Sand à Alfred Musset( la subtilité réside ici dans le fait qu'il faut lire une ligne sur deux de la lettre pour découvrir le vrai message).
 				Cependant, cet art présente une importante contre-mesure. En effet, si le message dissimulé est decouvert, le contenu secret esr revelé.
 
-				Ainsi, un autre "art" s'impose: il est appelé art du secret et c'est justement la cryptographie. Ce dernier vient des mots en grec ancien 'kruptos', signifiant "caché" et 'graphein'
-				signifiant lui "écrire". Globalement, cela consiste à protéger des messages. En effet, comme le dit Ronald Rivest, grand cryptologue américain et l'un des 3 inventeurs de l'algo
+				Ainsi, un autre "art" s'impose: il est appelé art du secret et c'est justement la cryptographie.
+				signifiant lui "écrire". En effet, comme le dit Ronald Rivest, grand cryptologue américain et l'un des 3 inventeurs de l'algo
 				de crypto à clé publique RSA, la crypto est la pratique et études des techniques pour assurer des communications sûres en présence d'adversaires.
 				Trois critères doivent etre respectés : 
 				-confidentialité : personne ne doit lire le message et on doit protéger le contenu.
@@ -85,24 +84,21 @@
 				-intégrité : personne ne doit modifier le message et on doit s'assurer de la non-modification 							de celui-ci.
 
 				La cryptographie, ainsi que la cryptanalyse(tout simplement l'art de rendre clair un texte crypté sans avoir connaissance de la clef utilisée) constituent la cryptologie.
-				C'est un art ancien qui a commencé au 16eme siècle avant J-C par un potier qui avait gravé sa recette secrète en supprimant des consonnes et en modifiant l'orthographe des mots.
-				C'est egalement une science nouvelle car elle est encore utilisée de nos jours dans plusieurs domaines tels que les banques(cartes), le web(navigateurs)..etc
-				L'importance de la cryptologie se mesure par le fait qu'elle aie été utilisée lors des deux Guerres Mondiales. Selon certains spécialistes, les exploits des alliées en matière de cryptanalyse auraient même permis d'écourter la 2ème Guerre Mondiale d'un a deux ans.
-
-				Après les guerres, une nouvelle forme de cryptographie liée a l'ère de l'informatique est apparue.
+				C'est un art ancien qui a commencé au 16eme siècle avant J-C et c'est egalement une science nouvelle car elle est encore utilisée de nos jours dans plusieurs domaines tels que les banques(cartes), le web(navigateurs)..etc
+				Au 21éme siecle, une nouvelle forme de cryptographie liée a l'ère de l'informatique est apparue.
 				
 				Voici ci-dessous un tableau récapitulatif des différents chiffrements les plus connus :
 				\\
-				\includegraphics[scale=1]{Tab1.jpg}
-				\\
+				\begin{center}\includegraphics[scale=0.7]{Tab1.jpg}\end{center}
+				
 				Nous allons lors de nôtre projet nous interesser aux deux suivants:\\
-			Soit pour chaque lettre de l'alphabet son indice lui correspondant(a=0,b=1..z=25)			
-			-Vigenère:
-Le chiffrement de Vigenère consiste à faire une addition du texte en clair avec la clé(faire modulo 26).
-Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide du test de Kasiski et de l'indice de coincidence si on ne connait pas la clé.
-				-Substitution:
+			Soit pour chaque lettre de l'alphabet son indice lui correspondant(a=0,b=1..z=25)\\
+			-Vigenère:\\
+			Le chiffrement de Vigenère consiste à faire une addition du texte en clair avec la clé(faire modulo 26).\\
+			Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide du test de Kasiski et de l'indice de coincidence si on ne connait pas la clé.\\
+				-Substitution:\\
 				Son chiffrement génère un nouvel alphabet: une lettre correspondra à une seule nouvelle lettre. Puis on utilise ce nouvel alphabet pour remplacer les lettres du texte clair.
-				Le dechiffrement(avec connaissance de l'alphabet) consiste à effectuer l'operation précedente dans le sens inverse(chiffrement a->t,dechiffrement t->a). Sinon on effectue une analyse frequentielle afin de retrouver l'alphabet.
+				Le dechiffrement(avec connaissance de l'alphabet) consiste à effectuer l'operation précedente dans le sens inverse(chiffrement a->t,dechiffrement t->a). Sinon on effectue une analyse frequentielle afin de retrouver l'alphabet.\\
 				
 				
 		\section{Fiches d'exigence}
@@ -122,7 +118,6 @@ Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide
 		\subsection{Personnes et organismes impliqués dans les enjeux du projet} 
 			\subsubsection{Maitre d'ouvrage}
 				Ce projet fait partie du module projet de la 3eme année d'informatique dirigé par Mme Kloul qui travaille au sein de l'UVSQ.			
-		\subsection{Utilisateurs du produit}
 			
 	\section{Contraintes sur le projet}
 		\subsection{Contraintes imposées non negociables} 
@@ -135,12 +130,8 @@ Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide
 			\subsubsection{Environnement de fonctionnement du système actuel}
 				Le produit sera développé sous forme d'application. 
 				Le programme s'appuiera essentiellement sur des recherches fréquentielles pour décrypter un chiffrement par substitution et utiliser le test de Kasiski et les indices de coincidences pour déchiffrer par Vigenere.
-			\subsubsection{Lieux de fonctionnement prévus}
-				Il est préférable que l'utilisateur utilise un ordinateur moderne pour sa rapidité et sa fluidité.
 			\subsubsection{ De combien de temps les développeurs disposent-ils pour le projet ?}
 				La deadline pour les développeurs est le Vendredi 12 Juin 2017.
-			\subsubsection{ Quel est le budget affecté au projet ?}
-				Le client ne nous a pas référé son budget.
 		\subsection{Glossaire et conventions de dénomination}
 		
 			k est la clé
@@ -149,18 +140,12 @@ Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide
 
 			n est la taille du message chiffré
 			
-			Les personnages Alice et Bob sont des figures classiques en cryptologie. Ces noms sont utilisés au lieu de « personne A » et « personne B » ; Alice et Bob cherchent dans la plupart des cas à communiquer de manière sécurisée.
-			Alice est la personne qui envoie le message.
-			Bob est celui qui veut recevoir le message.
-			Oscar est celui qui essaye d'attaquer le message.
 		\subsection{Faits et hypothèses utiles}	
 			\subsubsection{Facteurs influençant le produit, mais qui ne sont pas des contraintes imposées sur les exigences}
 	
 		Mettre en place une interface facile d'utilisation sur l'application de manière a ce que même un enfant puisse lancer le décryptage.
 	\section{EXIGENCES FONCTIONNELLES}
 		\subsection{Portée du travail}
-			\subsubsection{Situation actuelle}
-				Nous n'avons aucune base pour notre application, nous allons la créer de toutes pièces.
 			\subsubsection{Contenu du travail}
 				Il est nécessaire de connaitre le chiffrement et le déchiffrement (avec et sans clé) de Vigenère et de substitution.
 		\subsection{Portée du produit : cas d’utilisation}
@@ -203,13 +188,9 @@ Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide
 
 			\subsubsection {Précision et exactitude}
 				C'est un programme d'aide au décryptage donc il ne donnera jamais un texte complet en sortie 					mais un "texte à trou" rempli au mieux avec le résultat du décryptage.
-			\subsubsection {Fiabilité et disponibilité}
-				Le programme devrait être disponible pour une utilisation de 24 heures par jour et 365 jours
-				par an. 
+
 
 		\subsection{Adéquation du produit avec son environnement}
-			\subsubsection {Environnement physique prévu}
-				Le programme sera utilisé sur un ordinateur.
 			\subsubsection {Environnement technologique prévu}
 				Le programme pourra fonctionner sur Windows, Linux et Mac.
 			\subsubsection {Approche « produit » prêt à être commercialisé}
@@ -223,8 +204,6 @@ Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide
 				Site internet avec des informations sur l'application.
 				Permettre également un dialogue avec d'autres utilisateurs de la même application.
 				Demandes d'aide aux développeurs chargés de la maintenance de l'application.
-			\subsubsection {Exigences en matière de support}
-				L'utilisateur doit pouvoir communiquer avec d'autres utilisateurs et/ou les developpeurs en 					charge de la maintenance.
 			\subsubsection {Exigences de portabilité}
 				L'application peut fonctionner sur plusieurs environnements car "un makefile est fourni et 				permet a l'utilisateur de build en fonction de son environnement"(comme linux, windows ou autre).
 			\subsubsection {Installation du système}
@@ -234,43 +213,24 @@ Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide
 			\subsubsection {Intégrité}
 				Definition d'un niveau d'importance de "l'exactitude" nécessaire au dechiffrage du message.
 				(exemple : les coordonnées pour envoyer un missile nucléaire doivent être ultras-précises)
-			\subsubsection {Protection des données à caractère personnel}
-				Message d'information a l'ouverture de l'application qui permet d'informer l'utilisateur des 					précautions à prendre.
-			\subsubsection {Audit et traçabilité}
-				Définition d'un repertoire de sauvegarde avec les dates des messages.
 			\subsubsection {Protection contre les infections}
 				Il faudra conserver les fichiers de maniere securisée et prudente ou alors les supprimer une 					fois que ce ceux-ci n'aient plus d'utilité.
-		\subsection{Exigences culturelles et politiques}
-			\subsubsection {Exigences culturelles}
-				L'application pourra gérer plusieurs langues (plusieurs tableaux de frequences des lettres).
-		\subsection{Lois et standards influençant le produit}
-			\subsubsection {Conformité avec la loi}
-				Les informations personnelles seront soumises a la loi sur la protection des données
-				personnelles (Loi informatique et libertés).
+		\subsection{Standards influençant le produit}
 			\subsubsection {Conformité avec des standards}
-La notion de conventions de codage (coding style) désigne un ensemble de règles et de conseils 
-adoptés par les membres d’un projet logiciel pour écrire et mettre en forme du code.
-Les conventions de codage visent essentiellement à améliorer la lisibilité du code : elles doivent 
-permettre au programmeur d’identifier « du premier coup d’œil » un maximum de choses dans 
-le  code, de se repérer facilement, de savoir ou trouver les choses, etc.Une fois adoptés, elles
-facilitent grandement l’écriture, la maintenance et aident à éviter certaines erreurs.
-Dès lors qu’on travaille sur un projet logiciel d’une certaine ampleur, qui plus est à
-plusieurs, l’expérience montre qu’il est très important de se mettre d’accord sur les
-conventions de codage. Ainsi, nous avons décidé de définir nous même les règles a respecter durant le codage. Comme par exemple pour l'indentation, les noms des variables,les noms des fonctions..etc
+			Pour concevoir le projet, l'equipe de developpement s'est mis d'accord sur les conventions de codage a respecter.
 \section{AUTRES ASPECTS DU PROJET}
-		\subsection{Questions sans réponse}
-		Nous pensons avoir abordé une grande partie des aspects du projet et des attentes du client.
 		\subsection{COTS : progiciels et composants commerciaux}
-		Il existe sur le marché pas mal de produits pouvant être des solutions potentielles/de remplacement. En effet, 			sur internet
-		("en ligne"), il existe des sites proposant de decrypter votre texte. Nous avons par exemple testé le site 			www.dcode.fr, qui
-		pour le dechiffrement avec Vigenere, fonctionne trés bien.
-		Il y'a aussi une application (Decrypto) sur le Google Play Store (parmi plusieurs applis),qui est gratuite et 			qui permet aussi de dechiffrer Vigenere par exemple.
-		Enfin, on peut telecharger des logiciels gratuits comme Axcrypt. Des logiciels payants/privés existent surement 			a l'usage des
-		professionnels ou encore des services de police spécialisés.
+		Il existe sur le marché pas mal de produits pouvant être des solutions potentielles/de remplacement:
+		-www.dcode.fr: site proposant de decrypter votre texte. Nous avons testé le site qui par exemple
+		pour le dechiffrement avec Vigenere, fonctionne trés bien.\\
+		-Decrypto: disponible sur le Google Play Store et gratuit.\\
+		-Axcrypt: logiciel gratuit.\\
+		 Des logiciels payants/privés existent surement a l'usage des professionnels ou encore des services de police spécialisés.
 		\subsection{Nouveaux problèmes, créés par le nouveau système}
 		Il peut y avoir un problème de place ou mémoire lors de l'installation du "systeme" malgré que l'application 			soit légère.
 		
 		Un ralentissement de "l'environnement" peut aussi etre constaté a la suite de l'utilisation du nouveau 			système.
+		\\ \\ \\ \\ \\ \\ \\
 		\subsection{Tâches à faire pour livrer le système}
 		Phase I: Identification du projet : La demande du client est clarifiée, les objectifs précisés et dans sa 			globalité le projet (ou service a livrer) est identifié. De plus, les contraintes a respecter sont 				evaluées et la strategie de realisation est mise en place.\\
 		Phase II: Definition du projet : Son contenu est defini de maniere tres precise et la planification des 			echeances et de la repartition du travail est etablie.\\
@@ -285,42 +245,29 @@ conventions de codage. Ainsi, nous avons décidé de définir nous même les rè
 		Avec l'utilisation de l'application, certains risques existent. En effet, une personne etrangère peut avoir 			accés a l'ordinateur et ainsi récupérer les fichiers decryptés telechargés ou les fichiers originals( avant cryptage).
 		\subsection{Organigramme}
 Détails des modules:\\ \\
-		Interface graphique :\\
-			- bouton cryptage\\
-			- bouton decryptage\\
+		\underline{Interface graphique :}     \hspace{5cm}  \underline{Cryptage Substitution :}\\
+			- bouton cryptage            \hspace{5.5cm}       -créer une clé aleatoirement\\
+			- bouton decryptage         \hspace{5cm}        -crypter le message\\
 			- bouton substitution\\
-			- bouton Vigenère\\
-			- affichage de texte(complet et partiel)\\
+			- bouton Vigenère           \hspace{5.2cm}       \underline{Cryptage Vigenère :}\\
+			- affichage de texte(complet et partiel)  \hspace{2.2cm} -crypter le message\\
 			- affichage pour la clé de substitution\\
-			- bouton Francais(decryptage)\\
-			- bouton Anglais(decryptage)\\
+			- bouton Francais(decryptage)   \hspace{3.5cm}     \underline{Decryptage Substitution :}\\
+			- bouton Anglais(decryptage)    \hspace{3.5cm}     -decrypter le message\\
 			- affichage pour l'analyse fréquentielle\\
-			- charger un fichier texte\\
-			- sauvegarder un fichier texte\\
+			- charger un fichier texte       \hspace{4.2cm}  \underline{Analyse fréquentielle :}\\
+			- sauvegarder un fichier texte     \hspace{3.8cm}  -analyse frequentielle sur texte donné\\
 			- créer un nouveau fichier texte(resultats)\\
 			- Demander clef de Vigenère\\
 			
-		Cryptage Substitution :\\
-			- créer une clé aleatoirement\\
-			- crypter le message\\
-			
-		Cryptage Vigenère :\\
-			- crypter le message
-			
-		Decryptage Substitution :\\
-			- decrypter le message\\
-			
-		Analyse fréquentielle :\\
-			- analyse frequentielle sur texte donné\\
-			
-		Decryptage Vigenère :\\
+		\underline{Decryptage Vigenère :}\\
 			-decrypter le message
 		
 		\includepdf[scale=0.7]{organigramme_final.pdf}
 
 
 		\subsection{Estimation des coûts du projet}
-		\includegraphics[scale=0.5]{Tableau_cout.jpg} 
+		\begin{center}\includegraphics[scale=0.5]{Tableau_cout.jpg}\end{center} 
 		\subsection{Manuel utilisateur et formations à envisager}
 			L'utilisateur aura accés à un menu lui permettant de choisir de crypter ou décrypter un texte,
 			puis la méthode qu'il veut utiliser pour ce faire (vigenere ou substitution), il ne lui restera 
