@@ -95,10 +95,14 @@
 				\\
 				\includegraphics[scale=1]{Tab1.jpg}
 				\\
-				Nous allons lors de nôtre projet nous interesser à deux suivants:\\
-				-Vigenère:\\
+				Nous allons lors de nôtre projet nous interesser aux deux suivants:\\
+			Soit pour chaque lettre de l'alphabet son indice lui correspondant(a=0,b=1..z=25)			
+			-Vigenère:
+Le chiffrement de Vigenère consiste à faire une addition du texte en clair avec la clé(faire modulo 26).
+Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide du test de Kasiski et de l'indice de coincidence si on ne connait pas la clé.
 				-Substitution:
-				
+				Son chiffrement génère un nouvel alphabet: une lettre correspondra à une seule nouvelle lettre. Puis on utilise ce nouvel alphabet pour remplacer les lettres du texte clair.
+				Le dechiffrement(avec connaissance de l'alphabet) consiste à effectuer l'operation précedente dans le sens inverse(chiffrement a->t,dechiffrement t->a). Sinon on effectue une analyse frequentielle afin de retrouver l'alphabet.
 				
 				
 		\section{Fiches d'exigence}
