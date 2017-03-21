@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  21 MAR 2017 14:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  21 MAR 2017 16:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -411,21 +411,21 @@ LaTeX Warning: Unused global option(s):
 (./CahierDesCharges.aux)
 \openout1 = `CahierDesCharges.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
-LaTeX Font Info:    ... okay on input line 70.
-LaTeX Info: Redefining \degres on input line 70.
-LaTeX Info: Redefining \dots on input line 70.
-LaTeX Info: Redefining \up on input line 70.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Info: Redefining \degres on input line 65.
+LaTeX Info: Redefining \dots on input line 65.
+LaTeX Info: Redefining \up on input line 65.
 \c@lstlisting=\count107
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -522,152 +522,127 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 71.
+(Font)              <12> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 71.
+(Font)              <8> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 71.
+(Font)              <6> on input line 77.
+<logo_uvsq.jpg, id=1, 142.131pt x 85.2786pt>
+File: logo_uvsq.jpg Graphic file (type jpg)
+ <use logo_uvsq.jpg>
+Package pdftex.def Info: logo_uvsq.jpg used on input line 79.
+(pdftex.def)             Requested size: 142.13063pt x 85.27837pt.
+ [1
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--92
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo_uvsq.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
-<Tab1.jpg, id=1, 297.36093pt x 146.04562pt>
+<Tab1.jpg, id=10, 297.36093pt x 146.04562pt>
 File: Tab1.jpg Graphic file (type jpg)
  <use Tab1.jpg>
-Package pdftex.def Info: Tab1.jpg used on input line 92.
-(pdftex.def)             Requested size: 208.15123pt x 102.23122pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--102
-
- []
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Tab1.jpg>]
-<Arbre.jpg, id=11, 597.432pt x 845.0772pt>
+Package pdftex.def Info: Tab1.jpg used on input line 101.
+(pdftex.def)             Requested size: 178.41792pt x 87.62804pt.
+ [1 <./Tab1.jpg>]
+<Arbre.jpg, id=16, 597.432pt x 845.0772pt>
 File: Arbre.jpg Graphic file (type jpg)
  <use Arbre.jpg>
-Package pdftex.def Info: Arbre.jpg used on input line 107.
-(pdftex.def)             Requested size: 298.71527pt x 422.53757pt.
+Package pdftex.def Info: Arbre.jpg used on input line 137.
+(pdftex.def)             Requested size: 185.202pt x 261.97122pt.
  [2 <./Arbre.jpg>]
-[3] <dia.png, id=20, 413.545pt x 387.4475pt>
+<dia.png, id=20, 413.545pt x 387.4475pt>
 File: dia.png Graphic file (type png)
  <use dia.png>
-Package pdftex.def Info: dia.png used on input line 153.
-(pdftex.def)             Requested size: 206.77199pt x 193.72327pt.
- [4 <./dia.png>]
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--234
-
- []
-
-[6]
+Package pdftex.def Info: dia.png used on input line 166.
+(pdftex.def)             Requested size: 144.7429pt x 135.60864pt.
+ [3 <./dia.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 248.
+(Font)              <7> on input line 196.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 248.
+(Font)              <5> on input line 196.
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--262
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 247--262
+Underfull \hbox (badness 10000) in paragraph at lines 196--210
 
  []
 
-<organigramme_final.pdf, id=32, 597.23125pt x 845.1575pt>
+<organigramme_final.pdf, id=26, 597.23125pt x 845.1575pt>
 File: organigramme_final.pdf Graphic file (type pdf)
 
 <use organigramme_final.pdf>
-Package pdftex.def Info: organigramme_final.pdf used on input line 266.
+Package pdftex.def Info: organigramme_final.pdf used on input line 214.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: organigramme_final.pdf Graphic file (type pdf)
  <use organigramme_final.pdf>
-Package pdftex.def Info: organigramme_final.pdf used on input line 266.
+Package pdftex.def Info: organigramme_final.pdf used on input line 214.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- [7]
-<organigramme_final.pdf, id=39, page=1, 597.23125pt x 845.1575pt>
+ [4]
+<organigramme_final.pdf, id=32, page=1, 597.23125pt x 845.1575pt>
 File: organigramme_final.pdf Graphic file (type pdf)
 
 <use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 266.
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 214.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: organigramme_final.pdf Graphic file (type pdf)
  <use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 266.
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 214.
 (pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
 File: organigramme_final.pdf Graphic file (type pdf)
 
 <use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 266.
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 214.
 (pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
 File: organigramme_final.pdf Graphic file (type pdf)
  <use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 266.
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 214.
 (pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
 File: organigramme_final.pdf Graphic file (type pdf)
 
 <use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 266.
+Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 214.
 (pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
- [8 <./organigramme_final.pdf>]
-<Tableau_cout.jpg, id=50, 298.11375pt x 250.68657pt>
+ [5 <./organigramme_final.pdf>]
+<Tableau_cout.jpg, id=43, 298.11375pt x 250.68657pt>
 File: Tableau_cout.jpg Graphic file (type jpg)
  <use Tableau_cout.jpg>
-Package pdftex.def Info: Tableau_cout.jpg used on input line 270.
+Package pdftex.def Info: Tableau_cout.jpg used on input line 218.
 (pdftex.def)             Requested size: 149.0565pt x 125.34297pt.
 
-[9 <./Tableau_cout.jpg>] (./CahierDesCharges.aux) ) 
+Overfull \hbox (152.40327pt too wide) in paragraph at lines 242--253
+[]\T1/cmr/m/n/10 fr.wikipedia.org/wiki/cryptographie fr.wikipedia.org/wiki/cryp
+tanalyse fr.wikipedia.org/cryptologie e-campus.uvsq.fr/cours/chribour/cours-
+ []
+
+
+Overfull \hbox (33.81746pt too wide) in paragraph at lines 242--253
+\T1/cmr/m/n/10 com-prendre les codes se-crets, de Pierre Vi-gou-reux www.thawte
+.fr/assets/documents/guides/history-cryptography.pdf
+ []
+
+
+Overfull \hbox (29.31856pt too wide) in paragraph at lines 242--253
+\T1/cmr/m/n/10 man-tis.free.fr/articles/analyse.htm https ://fr.slideshare.net/
+mobile/antoningaunaud/les-4-phases-du-management-
+ []
+
+[6 <./Tableau_cout.jpg>] (./CahierDesCharges.aux) ) 
 Here is how much of TeX's memory you used:
- 5490 strings out of 494999
- 77442 string characters out of 6180228
+ 5497 strings out of 494999
+ 77553 string characters out of 6180228
  167286 words of memory out of 5000000
- 8619 multiletter control sequences out of 15000+600000
- 11766 words of font info for 30 fonts, out of 8000000 for 9000
+ 8624 multiletter control sequences out of 15000+600000
+ 12536 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,19n,49p,338b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,19n,49p,417b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/user/.texmf-var/font
-s/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/
-jknappen/ec/ecbx1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecrm1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600
-pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/u
-ser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on CahierDesCharges.pdf (9 pages, 351727 bytes).
+s/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/
+jknappen/ec/ecbx1440.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecrm1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600
+pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk>
+Output written on CahierDesCharges.pdf (7 pages, 407370 bytes).
 PDF statistics:
- 364 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 299 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

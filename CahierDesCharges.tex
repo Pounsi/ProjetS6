@@ -62,13 +62,22 @@
 	stringstyle=\color{black},
 }
 
-\author{Alabi Steve - Benyamna Younes - Capdenat Nicolas- \\
-		Chouipe Thibaut - El Harti Zakaria - Lienhardt Florian}
-\title{Cahier Des Charges}
-\date{\today}
-
 \begin{document}
+\title{\Huge{\textbf{Cahier Des Charges}}}
+  \author{Alabi Steve - Benyamna Younes - Capdenat Nicolas- \\
+		Chouipe Thibaut - El Harti Zakaria - Lienhardt Florian \\ \\ \\
+		Chef de projet : Benyamna Younes \\ \\ \\ 
+		Sous la direction de Mme Kloul \\ \\ \\ \\
+		Outil automatique de décryptage \\ \\ \\}
+		
+
+\begin{titlepage}
+ 
+
 \maketitle
+\vspace{20em}
+ \begin{center}\includegraphics{logo_uvsq.jpg}\end{center}
+\end{titlepage}
 		\section{Preambule}
 				La steganographie, qui est "l'ancêtre" de la cryptographie. Elle se définit comme l'art de cacher un message dans un autre message. Cet "art"
 				est appelé art de la dissimulation. 
@@ -89,162 +98,101 @@
 				
 				Voici ci-dessous un tableau récapitulatif des différents chiffrements les plus connus :
 				\\
-				\begin{center}\includegraphics[scale=0.7]{Tab1.jpg}\end{center}
-				
-				Nous allons lors de nôtre projet nous interesser aux deux suivants:\\
-			Soit pour chaque lettre de l'alphabet son indice lui correspondant(a=0,b=1..z=25)\\
-			-Vigenère:\\
-			Le chiffrement de Vigenère consiste à faire une addition du texte en clair avec la clé(faire modulo 26).\\
-			Le dechiffrement lui se fait par soustraction du texte avec la clé ou à l'aide du test de Kasiski et de l'indice de coincidence si on ne connait pas la clé.\\
-				-Substitution:\\
-				Son chiffrement génère un nouvel alphabet: une lettre correspondra à une seule nouvelle lettre. Puis on utilise ce nouvel alphabet pour remplacer les lettres du texte clair.
-				Le dechiffrement(avec connaissance de l'alphabet) consiste à effectuer l'operation précedente dans le sens inverse(chiffrement a->t,dechiffrement t->a). Sinon on effectue une analyse frequentielle afin de retrouver l'alphabet.\\
-				
-				
-		\section{Fiches d'exigence}
-				Vous trouverez les fiches d'exigences en annexe.
+				\begin{center}\includegraphics[scale=0.6]{Tab1.jpg}\end{center}
+	\section{explications}
+		\subsection{vigenere}
+			PRECONDITION : AVOIR UN TEXTE SUFFISAMENT GRAND
+
+Vigenere
+Chaque lettre possède son équivalent numérique (a = 0, b = 1, ...).
+
+CHIFFREMENT
+Le chiffrement de Vigenere consiste a additionner les valeurs de chaque lettres du texte claire avec celle d'un mot clé
+qui va se repeter. Le résultat sera modulo 26 afin d'être sure de retomber sur une valeur numérique correspondant a une lettre.
+
+
+DECHIFFREMENT
+Le dechiffrement de Vigenère est basée sur une méthode d'attaque statistique.
+On commence par effectuer le test de Kasiski : on cherche des paires de segments identiques de longueur > 2 dans le texte chiffré et on note la distance entre les premiers caractères d1. Si l'on obtient plusieurs distances d1, d2, .. di alors
+on peut conjecturer que le PGCD des di est la taille m de la clef.
+Ensuite, on va chercher les caractères qui compose notre mot clef. Nous allons utiliser l'indice de coincidences. (ou MG ????)
+Pour chaque caractères du mot clé, on va calculer l'indice de coincidence des 26 caractères possibles.
+Cette indice doit être de 0,065 si c'est effectivement le bon caractèsre et de 0,038 si c'est le mauvais (1/26 = 0,038).
+On va donc obtenir un tableau de m lignes contenant chacune 26 valeurs et remarquer que une seule valeur par colonne se
+rapproche de 0,065.
+On va donc pouvoir conjecturer les valeurs des caractères du mot clé.
+Pour finir, on va soustraire le mot clef (on le repete autant de fois que necessaire) au texte chiffré afin d'obtenir le texte claire.
+		\subsection{substitution}
+			La méthode de cryptage par substitution  monoalphabétique consiste a remplacer dans un message en claire chaque lettre de l’alphabet de ce message par une lettre d’un alphabet donné. Deux lettres distincts de l’alphabet du message en claire doivent être chiffrés par deux lettres distincts de l’alphabet donné afin d’éviter toute ambiguïté lors du déchiffrement.
+	
+	Le  décryptage de la substitution monoalphabétique est basé sur une  méthode d’attaque statistique utilisant l’analyse fréquentielle. Il faut donc que le texte crypter soit assez long pour une analyse statistique.
+
+	On compare ensuite les résultats de l’analyse fréquentielle aux nombre d’occurrences
+de chaque lettre de l’alphabet en clair. Il faut donc connaître la langue correspondant au texte à décrypter. 
+
+	On conjecture alors les correspondances entre les lettres de l’alphabet en claire et de l’alphabet crypté. On complète ensuite cette correspondance grace a une analyse des digrammes et des trigrammes les plus utilisé dans la langue de l’alphabet en clair.
+
+On possède alors un message partiellement décrypter du message en clair.
 	\section{Numerotation des exigences}
-				\includegraphics[scale=0.5]{Arbre.jpg} 
+				\includegraphics[scale=0.31]{Arbre.jpg} 
 		
 	\section{Fondement du projet}
-		\subsection{But du projet} 
-			\subsubsection{Problème de l'utilisation ou contexte du projet}
+			\subsection{Problème de l'utilisation ou contexte du projet}
 				Dans le cadre de notre L3, nous devons concevoir un programme d'aide au decryptage.
-				Grace a notre programme le client(ici le professeur) va évaluer nôtre travail.
-			\subsubsection{Objectif de la section}
+				Grace a notre programme le client(ici notre enseignante Mme Kloul) va évaluer nôtre travail.
+			\subsection{Objectif de la section}
 				L'objectif de ce module est de nous apprendre a travailler efficacement en equipe afin de fournir un travail commun.
-			\subsubsection{Objectif du projet}
+			\subsection{Objectif du projet}
 				Le but du projet est de réaliser un logiciel automatique d'aide au décryptage, capable de retrouver une grande partie du texte d'origine à partir d'un texte chiffré. Il devra aussi être capable de déchiffrer le chiffrement de Vigenère et le chiffrement par substitution.
-		\subsection{Personnes et organismes impliqués dans les enjeux du projet} 
-			\subsubsection{Maitre d'ouvrage}
-				Ce projet fait partie du module projet de la 3eme année d'informatique dirigé par Mme Kloul qui travaille au sein de l'UVSQ.			
-			
-	\section{Contraintes sur le projet}
-		\subsection{Contraintes imposées non negociables} 
-			\subsubsection{Contraintes sur la conception de la solution}
+\section{Contraintes sur le projet}
+			\subsection{Contraintes sur la conception de la solution}
 				-Le produit doit permettre à l'utilisateur de décrypter une partie d'un message crypté.
 
 				-Le produit doit crypter ou décrypter un chiffrement de Vigenère et un chiffrement par substitution.
 
 				-Toutes les deadlines concernant l'application et son cahier des charges doivent être respectées.
-			\subsubsection{Environnement de fonctionnement du système actuel}
-				Le produit sera développé sous forme d'application. 
-				Le programme s'appuiera essentiellement sur des recherches fréquentielles pour décrypter un chiffrement par substitution et utiliser le test de Kasiski et les indices de coincidences pour déchiffrer par Vigenere.
-			\subsubsection{ De combien de temps les développeurs disposent-ils pour le projet ?}
+			\subsection{ De combien de temps les développeurs disposent-ils pour le projet ?}
 				La deadline pour les développeurs est le Vendredi 12 Juin 2017.
-		\subsection{Glossaire et conventions de dénomination}
+		\subsection{Conventions de dénomination}
 		
 			k est la clé
 
 			m est la taille de la clé
 
 			n est la taille du message chiffré
-			
-		\subsection{Faits et hypothèses utiles}	
-			\subsubsection{Facteurs influençant le produit, mais qui ne sont pas des contraintes imposées sur les exigences}
-	
-		Mettre en place une interface facile d'utilisation sur l'application de manière a ce que même un enfant puisse lancer le décryptage.
+
 	\section{EXIGENCES FONCTIONNELLES}
-		\subsection{Portée du travail}
-			\subsubsection{Contenu du travail}
-				Il est nécessaire de connaitre le chiffrement et le déchiffrement (avec et sans clé) de Vigenère et de substitution.
 		\subsection{Portée du produit : cas d’utilisation}
-			\subsubsection {Le diagramme de cas d'utilisation} 
-				\includegraphics[scale=0.5]{dia.png} 
-			\subsubsection {Description de ce diagramme}
+				\includegraphics[scale=0.35]{dia.png} \\
 				Dans cette application il n'y a qu'un seul type d'utilisateur qui est le client 
 				et qui peut crypter et decrypter avec deux méthodes différentes à disposition.
-		\subsection{Exigences fonctionnelles et exigences sur les données}
-			\subsubsection {Exigences fonctionnelles}
-				Fiches d'exigences numero : 2.1 / 3.1 / 3.2 / 3.3 / 5.1
+				Il pourra également faire une analyse fréquentielle sur le texte donné.
 	\section{EXIGENCES NON FONCTIONNELLES}
 		\subsection{Ergonomie et convivialité du produit}
-			\subsubsection {L'interface}
 				L'interface permettra de rentrer facilement le texte à décrypter, par copier-coller par exemple.
 				De plus, l'interface permettra de choisir la langue (anglais, français) grâce à un simple menu.
 				Enfin, l'interface permettra aussi d'afficher facilement le resultat obtenu.
-			\subsubsection {Le style du produit}
+
 				Le programme sera évalué par la responsable du module Projet de la L3 donc il doit apparaître simple et effiace (pas de superflu).
 				Le programme ne doit pas être trop gros en terme de resolution, on doit pouvoir l'afficher sur 	tous les types d'écrans d'ordinateurs.
 
-		\subsection{Facilité d’utilisation et facteurs humains}
-			\subsubsection {Facilité d'utilisation}
+		\subsection{Facilité d’utilisation}
 				Le programme sera simple à utiliser même pour un enfant.
 
 				Le programme pourra etre utilisé par des personnes sans qu'elles y soient formées.
-			\subsubsection {Personnalisation et internationalisation}
-				Le programme sera trop simple pour etre personnalisable et il sera en anglais(simple a la compréhension).
-			\subsubsection {Facilité d'apprentissage}
-				Le developpement d'un site web présentant le produit ainsi que toutes ses caractéristiques. Ce site web pourra également disposer d'un forum permettant aux internautes de proposer certaines	améliorations à faire sur l'application et également critiquer certaines fonctionnalités de l'application.
-				Il sera possible au grand public d’utiliser le programme sans formation.
-			\subsubsection {Facilité de compréhension et politesse}
-				Le produit devra utiliser des symboles et des mots naturellement compréhensibles par les
-				utilisateurs potentiels.
-				Le produit doit cacher les détails de sa construction à l’utilisateur.
-
-		\subsection{Fonctionnement du produit}
-			\subsubsection {Rapidité d’exécution et temps de latence}
-				La réponse sera assez rapide pour éviter d’interrompre le flux de pensée de l’utilisateur.
-
-			\subsubsection {Précision et exactitude}
-				C'est un programme d'aide au décryptage donc il ne donnera jamais un texte complet en sortie 					mais un "texte à trou" rempli au mieux avec le résultat du décryptage.
-
-
-		\subsection{Adéquation du produit avec son environnement}
-			\subsubsection {Environnement technologique prévu}
-				Le programme pourra fonctionner sur Windows, Linux et Mac.
-			\subsubsection {Approche « produit » prêt à être commercialisé}
-					Le programme sera distribué sous forme d'archive correspondant au système 						d'exploitation du client.
-		\subsection{Maintenance, support, portabilité, installation du produit}
-			\subsubsection {Maintenance du produit}
-				Le système doit pouvoir être maintenu par des développeurs qui ne sont pas les
-				développeurs d’origine.
-				Mettre en place une gestion des erreurs ou bugs (par exemple a l'aide de tests unitaire, 				d'indicateurs comme des variables..etc).
-			\subsubsection {Conditions spéciales concernant la maintenance du produit}
-				Site internet avec des informations sur l'application.
-				Permettre également un dialogue avec d'autres utilisateurs de la même application.
-				Demandes d'aide aux développeurs chargés de la maintenance de l'application.
-			\subsubsection {Exigences de portabilité}
-				L'application peut fonctionner sur plusieurs environnements car "un makefile est fourni et 				permet a l'utilisateur de build en fonction de son environnement"(comme linux, windows ou autre).
-			\subsubsection {Installation du système}
-				L'application doit pouvoir être installée très facilement sur n'importe quel environnement.
-				Le site internet doit permettre de répondre à certaines interrogations.
-		\subsection{Sécurité}
-			\subsubsection {Intégrité}
-				Definition d'un niveau d'importance de "l'exactitude" nécessaire au dechiffrage du message.
-				(exemple : les coordonnées pour envoyer un missile nucléaire doivent être ultras-précises)
-			\subsubsection {Protection contre les infections}
-				Il faudra conserver les fichiers de maniere securisée et prudente ou alors les supprimer une 					fois que ce ceux-ci n'aient plus d'utilité.
-		\subsection{Standards influençant le produit}
-			\subsubsection {Conformité avec des standards}
-			Pour concevoir le projet, l'equipe de developpement s'est mis d'accord sur les conventions de codage a respecter.
-\section{AUTRES ASPECTS DU PROJET}
+		\section{AUTRES ASPECTS DU PROJET}
 		\subsection{COTS : progiciels et composants commerciaux}
 		Il existe sur le marché pas mal de produits pouvant être des solutions potentielles/de remplacement:
-		-www.dcode.fr: site proposant de decrypter votre texte. Nous avons testé le site qui par exemple
-		pour le dechiffrement avec Vigenere, fonctionne trés bien.\\
+		-www.dcode.fr: site proposant de decrypter votre texte. \\
 		-Decrypto: disponible sur le Google Play Store et gratuit.\\
-		-Axcrypt: logiciel gratuit.\\
-		 Des logiciels payants/privés existent surement a l'usage des professionnels ou encore des services de police spécialisés.
-		\subsection{Nouveaux problèmes, créés par le nouveau système}
-		Il peut y avoir un problème de place ou mémoire lors de l'installation du "systeme" malgré que l'application 			soit légère.
-		
-		Un ralentissement de "l'environnement" peut aussi etre constaté a la suite de l'utilisation du nouveau 			système.
-		\\ \\ \\ \\ \\ \\ \\
+		-Axcrypt: logiciel gratuit.
 		\subsection{Tâches à faire pour livrer le système}
-		Phase I: Identification du projet : La demande du client est clarifiée, les objectifs précisés et dans sa 			globalité le projet (ou service a livrer) est identifié. De plus, les contraintes a respecter sont 				evaluées et la strategie de realisation est mise en place.\\
-		Phase II: Definition du projet : Son contenu est defini de maniere tres precise et la planification des 			echeances et de la repartition du travail est etablie.\\
-		Phase III: Realisation : On realise le projet en adequation avec les exigences du clients et selon le plan de 			travail defini au prealable.\\
+		Phase I: Identification du projet : La demande du client est clarifiée, les objectifs précisés et dans sa globalité le projet est identifié.\\
+		Phase II: Definition du projet : Son contenu est defini de maniere tres precise et la planification des echeances et de la repartition du travail est etablie.\\
+		Phase III: Realisation : On realise le projet en adequation avec les exigences du clients et selon le plan de travail defini au prealable.\\
 		Phase IV: Finalisation : Le produit est evalué puis remis au client.
 		
-		
-		
-		\subsection{Contrôle final de qualité sur site (Cutover)}
-		Controle final sur un texte test. Un texte chiffré par vigenere et par substitution seront preparés, ainsi que 			leurs versions dechiffrées. Le resultat de ceux-ci via l'utilisation de l'application sera comparé a celui resultat 				preparé "sur feuille"(résultat théorique). 
-		\subsection{Risques liés au projet}
-		Avec l'utilisation de l'application, certains risques existent. En effet, une personne etrangère peut avoir 			accés a l'ordinateur et ainsi récupérer les fichiers decryptés telechargés ou les fichiers originals( avant cryptage).
 		\subsection{Organigramme}
-Détails des modules:\\ \\
 		\underline{Interface graphique :}     \hspace{5cm}  \underline{Cryptage Substitution :}\\
 			- bouton cryptage            \hspace{5.5cm}       -créer une clé aleatoirement\\
 			- bouton decryptage         \hspace{5cm}        -crypter le message\\
@@ -276,14 +224,9 @@ Détails des modules:\\ \\
 			Bien que le programme ait été demandé que pour la langue francaise et anglaise, 
 			il sera sans doute possible d'ajouter d'autres langues dans des versions futurs. 
 			Il pourra être également possible d'ajouter une option permettant à l'utilisateur
-
 			d'entrer un type de texte (poème, roman, ordre militaire,...) pouvant aider au décryptage. Ou même encore conserver un historique des "dechiffrements" ou aussi permettre a l'application de savoir directement si l'on va crypter ou decrypter un texte.
-
-		\subsection{Idées de solutions}
-		 	Il s'agira de rentrer un nouveau tableau de données pour chaques nouvelles langues et pour chaque nouveau style.
-			Au vu de l'agencement des caractères dans le texte, l'application pourra savoir automatiquement quelle operation le client cherche à effectuer (cryptage ou décryptage).
-			
-			\section{Conclusion}
+		
+		\section{Conclusion}
 			Notre application, qui permettra au client de manière simple de crypter ou decrypter des textes
 			à l'aide de Vigenère ou du procédé de substitution, s'appelera Dcrypt. 
 			
@@ -294,5 +237,17 @@ Détails des modules:\\ \\
 			La bibliothèque graphique que nous avons décidée d'utiliser avec ce langage est GTK+ parce qu'elle permet d'implémenter des boutons, des zones de texte et du traitement de fichier.
 			Elle nous semblait donc la plus adaptée au developement de notre application.
 			 
-			
+			\section{Sources}
+
+fr.wikipedia.org/wiki/cryptographie
+fr.wikipedia.org/wiki/cryptanalyse
+fr.wikipedia.org/cryptologie
+e-campus.uvsq.fr/cours/chribour/cours-chribour-20140220133009
+Cryptographie: Théorie et pratique, de Douglas Stinson
+Cryptologie et codage: comprendre les codes secrets, de Pierre Vigoureux
+%www.bibmath.net/crypto/index.php?action=affiche_quoi=modern/clepub
+www.thawte.fr/assets/documents/guides/history-cryptography.pdf
+mantis.free.fr/articles/analyse.htm
+https://fr.slideshare.net/mobile/antoningaunaud/les-4-phases-du-management-de-projet-2889991
+www.volere.co.uk>template-fr
 \end{document}
