@@ -93,46 +93,63 @@
 				-intégrité : personne ne doit modifier le message et on doit s'assurer de la non-modification 							de celui-ci.
 
 				La cryptographie, ainsi que la cryptanalyse(tout simplement l'art de rendre clair un texte crypté sans avoir connaissance de la clef utilisée) constituent la cryptologie.
-				C'est un art ancien qui a commencé au 16eme siècle avant J-C et c'est egalement une science nouvelle car elle est encore utilisée de nos jours dans plusieurs domaines tels que les banques(cartes), le web(navigateurs)..etc
+				C'est un art ancien qui a commencé au 16eme siècle avant J-C et c'est egalement une science nouvelle car elle est encore utilisée de nos jours dans plusieurs domaines tels que les banques(cartes), le web(navigateurs)..etc\\
 				Au 21éme siecle, une nouvelle forme de cryptographie liée a l'ère de l'informatique est apparue.
 				
 				Voici ci-dessous un tableau récapitulatif des différents chiffrements les plus connus :
 				\\
 				\begin{center}\includegraphics[scale=0.6]{Tab1.jpg}\end{center}
-	\section{explications}
-		\subsection{vigenere}
-			PRECONDITION : AVOIR UN TEXTE SUFFISAMENT GRAND
+				
+	\section{Explications du chiffre de Vigenère et du chiffrement par substitution}
+	 Nous allons lors de nôtre projet nous interesser aux deux chiffrements suivants.
+		\subsection{Vigenère}
+			Pré-condition : Avoir un texte suffisament grand.\\			    
+			\subsubsection{Chiffrement}
+			
+			Soit pour chaque lettre de l'alphabet son indice lui correspondant(a=0,b=1..z=25).\\
+			Le chiffrement de Vigenère consiste à additionner les valeurs de chaque lettre du texte
+			 clair avec celles d'un mot-clé qui va se repeter.\\
+			 Au résultat on appliquera un modulo 26 afin d'être sûre de retomber sur une valeur numérique(entre 0 et 25),
+			  et donc correspondant a une lettre de l'alphabet.
 
-Vigenere
-Chaque lettre possède son équivalent numérique (a = 0, b = 1, ...).
-
-CHIFFREMENT
-Le chiffrement de Vigenere consiste a additionner les valeurs de chaque lettres du texte claire avec celle d'un mot clé
-qui va se repeter. Le résultat sera modulo 26 afin d'être sure de retomber sur une valeur numérique correspondant a une lettre.
+			\subsubsection{Dechiffrement}
 
 
-DECHIFFREMENT
-Le dechiffrement de Vigenère est basée sur une méthode d'attaque statistique.
-On commence par effectuer le test de Kasiski : on cherche des paires de segments identiques de longueur > 2 dans le texte chiffré et on note la distance entre les premiers caractères d1. Si l'on obtient plusieurs distances d1, d2, .. di alors
-on peut conjecturer que le PGCD des di est la taille m de la clef.
-Ensuite, on va chercher les caractères qui compose notre mot clef. Nous allons utiliser l'indice de coincidences. (ou MG ????)
-Pour chaque caractères du mot clé, on va calculer l'indice de coincidence des 26 caractères possibles.
-Cette indice doit être de 0,065 si c'est effectivement le bon caractèsre et de 0,038 si c'est le mauvais (1/26 = 0,038).
-On va donc obtenir un tableau de m lignes contenant chacune 26 valeurs et remarquer que une seule valeur par colonne se
-rapproche de 0,065.
-On va donc pouvoir conjecturer les valeurs des caractères du mot clé.
-Pour finir, on va soustraire le mot clef (on le repete autant de fois que necessaire) au texte chiffré afin d'obtenir le texte claire.
-		\subsection{substitution}
-			La méthode de cryptage par substitution  monoalphabétique consiste a remplacer dans un message en claire chaque lettre de l’alphabet de ce message par une lettre d’un alphabet donné. Deux lettres distincts de l’alphabet du message en claire doivent être chiffrés par deux lettres distincts de l’alphabet donné afin d’éviter toute ambiguïté lors du déchiffrement.
+Le dechiffrement de Vigenère est basé sur une méthode d'attaque statistique.\\
+On commence par effectuer le test de Kasiski : on cherche des paires de segments identiques de longueur > 2 dans le texte chiffré et 
+on note la distance entre les premiers caractères d1.\\
+ Si l'on obtient plusieurs distances d1, d2, .. di alors on peut conjecturer que le PGCD des di est la taille m de la clef.\\
+Ensuite, on va chercher les caractères qui composent notre mot-clef. Nous allons utiliser l'indice de coincidences. (ou MG ????)
+Pour chaque caractères du mot clé, on va calculer l'indice de coincidence des 26 caractères possibles.\\
+Cette indice doit être de 0,065 si c'est effectivement le bon caractère et de 0,038 si c'est le mauvais (1/26 = 0,038).
+On va donc obtenir un tableau de m lignes contenant chacunes 26 valeurs et remarquer que une seule valeur par colonne se
+rapproche de 0,065.\\
+On va donc pouvoir en deduire les valeurs des caractères du mot-clé.
+Pour finir, on va soustraire le mot-clef (on le repete autant de fois que necessaire) au texte chiffré afin d'obtenir le texte clair.
+		\subsection{Substitution}
+		
+					\subsubsection{Chiffrement}
+
+			La méthode de cryptage par substitution  monoalphabétique consiste a remplacer dans un message en clair chaque lettre 
+			de l’alphabet de ce message par une lettre d’un alphabet donné. Deux lettres distinctes de l’alphabet du message en clair 
+			doivent être chiffrés par deux lettres distinctes de l’alphabet donné afin d’éviter toute ambiguïté lors du déchiffrement.
+			
+			
+					\subsubsection{Dechiffrement}
 	
-	Le  décryptage de la substitution monoalphabétique est basé sur une  méthode d’attaque statistique utilisant l’analyse fréquentielle. Il faut donc que le texte crypter soit assez long pour une analyse statistique.
+	Le  décryptage de la substitution monoalphabétique est basé sur une  méthode d’attaque statistique utilisant l’analyse fréquentielle.
+	 Il faut donc que le texte crypté soit assez long pour une analyse statistique.
 
-	On compare ensuite les résultats de l’analyse fréquentielle aux nombre d’occurrences
-de chaque lettre de l’alphabet en clair. Il faut donc connaître la langue correspondant au texte à décrypter. 
+	On compare ensuite les résultats de l’analyse fréquentielle aux nombres d’occurrences
+de chaque lettre de l’alphabet en clair. Il faut donc connaître la langue correspondant au texte a décrypter. 
 
-	On conjecture alors les correspondances entre les lettres de l’alphabet en claire et de l’alphabet crypté. On complète ensuite cette correspondance grace a une analyse des digrammes et des trigrammes les plus utilisé dans la langue de l’alphabet en clair.
+	On conjecture alors les correspondances entre les lettres de l’alphabet en clair et de l’alphabet crypté.
+	 On complète ensuite cette correspondance grace a une analyse des digrammes et des trigrammes les plus utilisés dans la langue de
+	  l’alphabet en clair.
 
-On possède alors un message partiellement décrypter du message en clair.
+On possède alors un message partiellement décrypté du message en clair.
+
+
 	\section{Numerotation des exigences}
 				\includegraphics[scale=0.31]{Arbre.jpg} 
 		
@@ -238,16 +255,19 @@ On possède alors un message partiellement décrypter du message en clair.
 			Elle nous semblait donc la plus adaptée au developement de notre application.
 			 
 			\section{Sources}
-
-fr.wikipedia.org/wiki/cryptographie
-fr.wikipedia.org/wiki/cryptanalyse
-fr.wikipedia.org/cryptologie
-e-campus.uvsq.fr/cours/chribour/cours-chribour-20140220133009
-Cryptographie: Théorie et pratique, de Douglas Stinson
-Cryptologie et codage: comprendre les codes secrets, de Pierre Vigoureux
+\textit{Liens(Sites):}\\
+fr.wikipedia.org/wiki/cryptographie\\
+fr.wikipedia.org/wiki/cryptanalyse\\
+fr.wikipedia.org/cryptologie\\
+e-campus.uvsq.fr/cours/chribour/cours-chribour-20140220133009\\
 %www.bibmath.net/crypto/index.php?action=affiche_quoi=modern/clepub
-www.thawte.fr/assets/documents/guides/history-cryptography.pdf
-mantis.free.fr/articles/analyse.htm
-https://fr.slideshare.net/mobile/antoningaunaud/les-4-phases-du-management-de-projet-2889991
-www.volere.co.uk>template-fr
+www.thawte.fr/assets/documents/guides/history-cryptography.pdf\\
+mantis.free.fr/articles/analyse.htm\\
+https://fr.slideshare.net/mobile/antoningaunaud/les-4-phases-du-management-de-projet-2889991\\
+www.volere.co.uk>template-fr\\
+
+\textit{Livres :}\\
+Cryptographie: Théorie et pratique, de Douglas Stinson\\
+Cryptologie et codage: comprendre les codes secrets, de Pierre Vigoureux
+
 \end{document}
