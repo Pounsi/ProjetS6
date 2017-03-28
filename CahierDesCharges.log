@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  22 MAR 2017 11:50
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  27 MAR 2017 11:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -539,106 +539,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
-<Tab1.jpg, id=10, 297.36093pt x 146.04562pt>
-File: Tab1.jpg Graphic file (type jpg)
- <use Tab1.jpg>
-Package pdftex.def Info: Tab1.jpg used on input line 99.
-(pdftex.def)             Requested size: 178.41792pt x 87.62804pt.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 135.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 135.
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--145
-
- []
+LaTeX Warning: File `Tab1.jpg' not found on input line 99.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--145
+./CahierDesCharges.tex:99: Package pdftex.def Error: File `Tab1.jpg' not found.
 
- []
 
-[1 <./Tab1.jpg>] <Arbr.jpg, id=17, 597.1911pt x 845.0772pt>
-File: Arbr.jpg Graphic file (type jpg)
- <use Arbr.jpg>
-Package pdftex.def Info: Arbr.jpg used on input line 170.
-(pdftex.def)             Requested size: 149.29741pt x 211.26878pt.
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.99 ...nter}\includegraphics[scale=0.6]{Tab1.jpg}
+                                                  \end{center}
+? 
+./CahierDesCharges.tex:99: Emergency stop.
+ ...                                              
+                                                  
+l.99 ...nter}\includegraphics[scale=0.6]{Tab1.jpg}
+                                                  \end{center}
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-[2] <dia.png, id=29, 413.545pt x 387.4475pt>
-File: dia.png Graphic file (type png)
- <use dia.png>
-Package pdftex.def Info: dia.png used on input line 200.
-(pdftex.def)             Requested size: 144.7429pt x 135.60864pt.
- [3 <./Arbr.jpg>]
-<organigramme_final.pdf, id=34, 597.23125pt x 845.1575pt>
-File: organigramme_final.pdf Graphic file (type pdf)
-
-<use organigramme_final.pdf>
-Package pdftex.def Info: organigramme_final.pdf used on input line 234.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: organigramme_final.pdf Graphic file (type pdf)
- <use organigramme_final.pdf>
-Package pdftex.def Info: organigramme_final.pdf used on input line 234.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- [4 <./dia.png>]
-<organigramme_final.pdf, id=41, page=1, 597.23125pt x 845.1575pt>
-File: organigramme_final.pdf Graphic file (type pdf)
-
-<use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 234.
-(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
-File: organigramme_final.pdf Graphic file (type pdf)
- <use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 234.
-(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
-File: organigramme_final.pdf Graphic file (type pdf)
-
-<use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 234.
-(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
-File: organigramme_final.pdf Graphic file (type pdf)
- <use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 234.
-(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
-File: organigramme_final.pdf Graphic file (type pdf)
-
-<use organigramme_final.pdf, page 1>
-Package pdftex.def Info: organigramme_final.pdf, page1 used on input line 234.
-(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
- [5 <./organigramme_final.pdf>]
-<Tableau_cout.jpg, id=52, 298.11375pt x 250.68657pt>
-File: Tableau_cout.jpg Graphic file (type jpg)
- <use Tableau_cout.jpg>
-Package pdftex.def Info: Tableau_cout.jpg used on input line 255.
-(pdftex.def)             Requested size: 149.0565pt x 125.34297pt.
-
-[6 <./Tableau_cout.jpg>] [7] [8] (./CahierDesCharges.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 5501 strings out of 494999
- 77592 string characters out of 6180228
- 168286 words of memory out of 5000000
- 8626 multiletter control sequences out of 15000+600000
- 13998 words of font info for 33 fonts, out of 8000000 for 9000
+ 5458 strings out of 494999
+ 77047 string characters out of 6180228
+ 164286 words of memory out of 5000000
+ 8593 multiletter control sequences out of 15000+600000
+ 11760 words of font info for 30 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,19n,49p,260b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/user/.texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/user/.texmf-var/fonts/pk
-/ljfour/jknappen/ec/ecbx1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecbx1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx
-1440.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> 
-</home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/user/
-.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb>
-Output written on CahierDesCharges.pdf (9 pages, 716765 bytes).
-PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 38i,6n,49p,260b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+./CahierDesCharges.tex:99:  ==> Fatal error occurred, no output PDF file produc
+ed!
