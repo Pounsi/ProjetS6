@@ -1,0 +1,321 @@
+\documentclass[a4]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{pdfpages}
+\usepackage{geometry}
+\geometry{hmargin=2.5cm,vmargin=2.5cm}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=L,	                       % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C,                 	   % the language of the code
+  otherkeywords={*,...},           % if you want to add more keywords to the set
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption= instead of title
+}
+%gestion des caractères latins
+\lstset{literate=
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1
+}
+%definition d'un syle pour les documents texte
+\lstdefinestyle{txt}{
+	frame=none,
+	numbers=none,
+	stringstyle=\color{black},
+}
+
+\begin{document}
+	\title{\Huge{\textbf{Cahier Des Specifications}}}
+	\author{Alabi Steve - Benyamna Younes - Capdenat Nicolas- \\
+		Chouipe Thibaut - El Harti Zakaria - Lienhardt Florian \\ \\ \\
+		Chef de projet : Benyamna Younes \\ \\ \\ 
+		Sous la direction de Mme Kloul \\ \\ \\ \\
+		Outil automatique de décryptage \\ \\ \\}
+		
+
+	\begin{titlepage}
+		\maketitle
+		\vspace{20em}
+		\begin{center}\includegraphics{logo_uvsq.jpg}\end{center}
+	\end{titlepage}
+	\section{Introduction}
+Dans le cadre de notre troisième année de Licence nous devons realiser une application d'aide au
+decryptage par la methode de Substitution ainsi que celle de Vigenère.
+Nous vous avons donc proposé l'application Dcrypt qui permet de décrypter 
+mais également crypter un texte ou même de faire une analyse fréquentielle sur un texte.
+Pour cela, nous avons rédigé un cahier des charges afin de clarifier les objectifs et les 
+exigences de ce projet. Dans la suite du cahier des charges, nous vous proposons donc
+le cahier des spécifications.
+
+Pour développer notre projet et après étude des besoins les arguments en faveur du langage C sont les suivants:
+-Tout d'abord, le C permet d'utiliser des expressions et des opérateurs qui sont très proches du langage machine, 
+il est donc possible de développer des programmes efficients et rapides.
+-La portabilité est aussi un argument de choix: En effet, en respectant le standard ANSI-C, il est possible d'utiliser
+le même programme sur tout autre système (autre hardware, autre système d'exploitation), simplement en le recompilant.
+-De plus, pour assurer la maintenance du produit apres sa realisation et ce meme par des developpeurs qui ne sont
+pas ceux d'origine, il faut un langage des plus utilisés et maitrisés
+-Enfin, selon l'IEEE(*), le langage C est depuis 2016 le meilleur langage de 
+programmation( de par sa forte croissance et sa demande par les employeurs). C'est aussi le langage n°1 pour le développement
+d’applications d’entreprise, de bureau et d'applications scientifiques.
+
+Nous avons egalement choisi une bibliothèque graphique du langage C: GTK+. Cette dernière nous permet de gérer efficacement
+la navigation entre les differentes fenêtres
+ainsi que nos accés memoires pour la sauvegarde et le chargement de nos fichiers. 
+IEEE(*):  Institut des ingénieurs électriciens et électroniciens.
+C'est la plus grande organisation professionnelle technique du monde de l'evolution de la technologie
+	\section{Organigramme}
+			\underline{Interface graphique :}     \hspace{5cm}  \underline{Cryptage Substitution :}\\
+			- bouton cryptage            \hspace{5.5cm}       -créer une clé aleatoirement\\
+			- bouton decryptage         \hspace{5cm}        -crypter le message\\
+			- bouton substitution\\
+			- bouton Vigenère           \hspace{5.2cm}       \underline{Cryptage Vigenère :}\\
+			- affichage de texte(complet et partiel)  \hspace{2.2cm} -crypter le message\\
+			- affichage pour la clé de substitution\\
+			- bouton Francais(decryptage)   \hspace{3.5cm}     \underline{Decryptage Substitution :}\\
+			- bouton Anglais(decryptage)    \hspace{3.5cm}     -decrypter le message\\
+			- affichage pour l'analyse fréquentielle\\
+			- charger un fichier texte       \hspace{4.2cm}  \underline{Analyse fréquentielle :}\\
+			- sauvegarder un fichier texte     \hspace{3.8cm}  -analyse frequentielle sur texte donné\\
+			- créer un nouveau fichier texte(resultats)\\
+			- Demander clef de Vigenère\\
+			\underline{Decryptage Vigenère :}\\
+			-decrypter le message
+			\includepdf[scale=0.7]{organigramme_final.pdf}
+			
+			\section{Conventions de codage}
+			
+	\section{Signatures et Explications des methodes}
+		\subsection{Diagramme de classes}
+		ici on include 
+		\subsection{structures et nouveaux types}
+		Le gchar* est une chaîne de caractère, on utilise pas char* car dans la bibliothèque
+		GTK+ l'affichage d'un texte ce fait avec gchar*.\\
+		
+		GtkWidget explication\\
+		
+		On utilisera la variable global Fenetre pour garder la fenêtre principale de notre application.\\
+		GtkWidget *Fenetre; \\
+		
+	struct phoneme{\\
+		int frequence;\\
+		gchar* nom;\\
+	}PHONEME;\\
+	
+	
+	struct analyse{ \\
+		int nb //nbre de lettre \\
+		float occ[25];\\
+		PHONEME di[];\\
+		PHONEME tr[];\\
+		gchar* pgor;//plus grande occurence rencontrer\\
+	}ANALYSE;\\
+	
+		\subsection{Signatures}
+		
+	
+	\subsubsection{Analyse Frequentielle}
+	ANALYSE TabRessource(int langue);\\
+		la fonction prend en entrée un entier correspondant à la langue(francais ou anglais)
+		et va ainsi remplir la structure "ANALYSE" et ses attributs suivants:
+		la frequence d'apparition de chaque lettre dans la langue choisie ainsi que les digrammes
+		et les trigrammes.\\
+		
+		
+		
+	ANALYSE AnalyseFrequentielle(gchar* TexteClair)\\
+		la fonction prend en entrée le texte clair a analyser et va ainsi remplir la structure "ANALYSE" et 
+		ses attributs suivants:
+		le nombre de lettres, la frequence d'apparition de chaque lettre, les digrammes, les trigrammes
+		et la plus grande occurence rencontrée.\\
+		
+	\subsubsection{Cryptage substitution}
+	gchar* CryptageSubstitution(gchar* TexteClair);\\
+		Cette fonction permet de crypter un texte avec la methode de Substitution\\
+		Pour cela, elle prend en entrée une chaine de caracteres qui correspond au texte clair.\\
+		En sortie, le texte crypté sera sous forme de chaine de caracteres.\\
+		
+	void GenereCle(gchar T[]);\\
+		genere une clé(alphabet) aleatoirement
+	
+	\subsubsection{Decryptage substitution}
+	gchar* DecryptageSubstitution( gchar* texte, ANALYSE a)\\
+		Prend en argument un texte crypté.\\
+		Aprés avoir appellé la fonction d'analyse fréquentielle, cette fonction vas, 
+		dans une boucle, comparer les resultas de l'analyse frequentielle à l'alphabet
+		 correspondant à la langue choisit et remplacer une lettre du message crypter 
+		 par la lettre qu'elle semble crypter grace à une conjecture basé sur les 
+		 fréquences des lettres les plus utilsé et complété par l'analyse des digrammes 
+		 et trigrammes. Cette fonction appellera ensuite la fonction VerificationCoerenceDigrammeTrigramme.\\
+		Retourne en sortie le texte décrypté (gchar*).\\
+
+
+	void VerificationCoerenceDigrammeTrigramme(gchar* T[], int *TailleTexte, ANALYSE a)\\
+		Prend en argument le texte crypté en cours de décryptage.\\
+		Cette fonction vas parcourir le texte en cours de décryptage pour vériffier que les lettres trouvées 
+		ne forme pas de digramme ou trigramme inabituelle. Si c'est le cas elle proposera à l'utilisateur 
+		de corriger le décryptage du texte ou le corrigera d'elle même.\\
+		Retourne en sortie le texte crypté en cours de décryptage( gchar*).\\
+	
+	
+	\subsubsection{Deryptage Vignere}
+	gchar* DecryptageVigenere(gchar* TexteCrypte);\\
+		Cette fonction prend un texte crypté par le chiffrement de Vigenere \\
+		et renvoie un texte clair et lisible par l'utilisateur.\\
+	
+	int Kasiski(ANALYSE freq, gchar* TexteCrypte);\\
+		Cette fonction cherche les différentes distance de PGOR(Plus Grande Occurence Rencontrée) et effectue
+		le PGCD de ces distances. Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé chercher).\\
+	
+	void indiceMutuelle(int kasiski, ANALYSE freq, ANALYSE ressource);\\
+		Cette fonction calcule les indices de coïncidence mutuelles et les stockes sous forme d'un tableau tab[25][kasiski].\\
+		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celle qui sont proche de 0,065 (une par ligne).\\
+		Elle renvoie l'indice de chaque des valeurs valides dans un tableau a une dimension. \\
+	
+	gchar* decrypteur( int T[], int kasiski, gchar* TexteCrypte);\\
+		Cette fonction soustrait la valeur du mot clef (tableau renvoyer par indiceMutuelle) au texte Crypté.\\
+		Elle va repeter la suite de nombre composant le mot clef jusqu'a la fin du texte afin de toujours pouvoir
+		soustraire une valeur du mot clé a une valeur du texte crypté.\\
+		Elle renvoie le texte claire.\\
+		
+		\subsubsection{Cryptage Vignere}
+	gchar* CryptageVigenere(gchar* TexteClair, gchar* Cle);\\
+		Cette fonction permet de crypter un texte avec la methode de Vigenere\\
+		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caracteres.\\
+		La fonction renvoiera le texte crypté\\
+		
+		\subsubsection{Interface Graphique}
+	void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte); // retire accent espace\\
+		enlever accent et espace, et mettre dans un tableau\\
+	 
+	gchar* ConvertisseurChar(char T[],int TailleTexte); \\
+		Parcoure un tableau donné et le retourne en chaine de caractere\\
+		
+	void MenuPrincipal(GtkWidget *Fenetre);\\
+		Cette procedure permet d'afficher le menu principal.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuCryptage(GtkWidget *Fenetre);\\
+		Cette procedure permet d'afficher le menu de cryptage.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuDecryptage(GtkWidget *Fenetre);\\
+		Cette procedure permet d'afficher le menu de decryptage.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuCryptageSubstitution(GtkWidget *Fenetre);\\
+		Cette procedure permet d'afficher le menu de cryptage par la methode de substitution.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuCryptageVigenere(GtkWidget *Fenetre);\\
+		Cette procedure permet d'afficher le menu de cryptage par la methode de vigenere.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuDecryptageSubstitution(GtkWidget *Fenetre);\\
+		Cette procedure permet d'afficher le menu de decryptage par la methode de substitution.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuDecryptageVigenere(GtkWidget *Fenetre);\\
+		Cette procedure permet d'afficher le menu de decryptage par la methode de vigenere.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuAnalyseFrequentielle(GtkWidget *Fenetre);\\
+		Cette procedure permet d'afficher le menu d'analyse frequentielle.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuResultatSubstitution(GtkWidget *Fenetre, gchar* Textcrypt);\\
+		Cette procedure permet d'afficher le menu du resultat du decryptage par la methode de substitution.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuResultatVigenere(GtkWidget *Fenetre, gchar* Textcrypt, gchar* cle);\\
+		Cette procedure permet d'afficher le menu du resultat du decryptage par la methode de vigenere.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void MenuResultatAnalyse(GtkWidget *Fenetre);//rajouer le texte\\
+		Cette procedure permet d'afficher le menu du resultat de l'analyse frequentielle.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Cette procedure ne renvoie rien .\\
+	
+	void Enregistrer (GtkWidget *pwidget, GtkWidget *text );\\
+		Cette procedure permet de sauvegarder le texte obtenue.\\
+		Elle prend en argument une fenetre et le texte à sauvegarder.\\
+		Cette procedure ne renvoie rien.\\
+	
+	void RecupererChemin(GtkWidget *bouton, GtkWidget *fileselection);\\
+		Cette procedure permet de recuperer le chemin d'acces d'un fichier.\\
+		Elle prend en argument une fenetre et une deuxieme fenetre (pour les fenetres de selections de fichier)\\
+		Cette procedure appel\\
+
+	void ChoisirFichier();\\
+		Cette procedure nous permet de selectionner un fichier à charger (fichier qui contient le texte clair ou crypter)\\
+
+	void ViderContenaire(GtkContainer * container);\\
+		Cette procedure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenetre.\\
+		Cette procedure prend en argument la fenetre à vider.\\
+		
+	void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
+		Cette procedure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
+		Elle prend en argument la fenetre.\\
+	
+	void BoiteDialogueVigenere(GtkWidget *Fenetre);\\
+		Cette procedure affiche deux zone de texte qui permet de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
+		Elle prend en argument une fenetre.\\
+		
+	void BoiteDialogueAnalyse(GtkWidget *Fenetre);\\
+		Cette procedure affiche une zone de texte qui permet de renter le texte sur lequel éffectuer une analyse fréquentielle.\\
+		Elle prend en argument une fenetre.\\
+		
+	gchar* LireFichier(const gchar* chemin);\\
+		Cette fonction permet de recuperer le texte qui est dans un fichier, pour cela nous donnons en argument un chemin de fichier.\\
+	
+	\section{Conclusion}
+	
+	
+\end{document}
