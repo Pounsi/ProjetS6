@@ -126,8 +126,8 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 		\subsection{Diagramme de classes}
 		ici on include 
 		\subsection{structures et nouveaux types}
-		Le gchar* est une chaîne de caractère, on utilise pas char* car dans la bibliothèque
-		GTK+ l'affichage d'un texte ce fait avec gchar*.\\
+		Le gchar* est une chaîne de caractères, on utilise pas char* car dans la bibliothèque
+		GTK+ l'affichage d'un texte se fait avec gchar*.\\
 		
 		GtkWidget explication\\
 		
@@ -145,7 +145,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 		float occ[25];\\
 		PHONEME di[];\\
 		PHONEME tr[];\\
-		gchar* pgor;//plus grande occurence rencontrer\\
+		gchar* pgor;//plus grande occurence rencontrée\\
 	}ANALYSE;\\
 	
 		\subsection{Signatures}
@@ -178,39 +178,39 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 	\subsubsection{Decryptage substitution}
 	gchar* DecryptageSubstitution( gchar* texte, ANALYSE a)\\
 		Prend en argument un texte crypté.\\
-		Aprés avoir appellé la fonction d'analyse fréquentielle, cette fonction vas, 
+		Aprés avoir appelé la fonction d'analyse fréquentielle, cette fonction va, 
 		dans une boucle, comparer les resultas de l'analyse frequentielle à l'alphabet
-		 correspondant à la langue choisit et remplacer une lettre du message crypter 
-		 par la lettre qu'elle semble crypter grace à une conjecture basé sur les 
-		 fréquences des lettres les plus utilsé et complété par l'analyse des digrammes 
-		 et trigrammes. Cette fonction appellera ensuite la fonction VerificationCoerenceDigrammeTrigramme.\\
+		 correspondant à la langue choisie et remplacer une lettre du message crypté 
+		 par la lettre qu'elle semble crypter grace à une conjecture basée sur les 
+		 fréquences des lettres les plus utilsés et complétée par l'analyse des digrammes 
+		 et trigrammes. Cette fonction appelera ensuite la fonction VerificationCoherenceDigrammeTrigramme.\\
 		Retourne en sortie le texte décrypté (gchar*).\\
 
 
-	void VerificationCoerenceDigrammeTrigramme(gchar* T[], int *TailleTexte, ANALYSE a)\\
+	void VerificationCoherenceDigrammeTrigramme(gchar* T[], int *TailleTexte, ANALYSE a)\\
 		Prend en argument le texte crypté en cours de décryptage.\\
-		Cette fonction vas parcourir le texte en cours de décryptage pour vériffier que les lettres trouvées 
-		ne forme pas de digramme ou trigramme inabituelle. Si c'est le cas elle proposera à l'utilisateur 
-		de corriger le décryptage du texte ou le corrigera d'elle même.\\
+		Cette fonction va parcourir le texte en cours de décryptage pour vérifier que les lettres trouvées 
+		ne forment pas de digramme ou trigramme inabituels. Si c'est le cas elle proposera à l'utilisateur 
+		de corriger le décryptage du texte ou le corrigera d'elle-même.\\
 		Retourne en sortie le texte crypté en cours de décryptage( gchar*).\\
 	
 	
-	\subsubsection{Deryptage Vignere}
+	\subsubsection{Decryptage Vignere}
 	gchar* DecryptageVigenere(gchar* TexteCrypte);\\
 		Cette fonction prend un texte crypté par le chiffrement de Vigenere \\
 		et renvoie un texte clair et lisible par l'utilisateur.\\
 	
 	int Kasiski(ANALYSE freq, gchar* TexteCrypte);\\
-		Cette fonction cherche les différentes distance de PGOR(Plus Grande Occurence Rencontrée) et effectue
-		le PGCD de ces distances. Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé chercher).\\
+		Cette fonction cherche les différentes distances de PGOR(Plus Grande Occurence Rencontrée) et effectue
+		le PGCD de ces distances. Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé cherché).\\
 	
 	void indiceMutuelle(int kasiski, ANALYSE freq, ANALYSE ressource);\\
-		Cette fonction calcule les indices de coïncidence mutuelles et les stockes sous forme d'un tableau tab[25][kasiski].\\
-		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celle qui sont proche de 0,065 (une par ligne).\\
-		Elle renvoie l'indice de chaque des valeurs valides dans un tableau a une dimension. \\
+		Cette fonction calcule les indices de coïncidences mutuelles et les stocke sous forme d'un tableau tab[25][kasiski].\\
+		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celles qui sont proches de 0,065 (une par ligne).\\
+		Elle renvoie l'indice de chacunes des valeurs valides dans un tableau a une dimension. \\
 	
 	gchar* decrypteur( int T[], int kasiski, gchar* TexteCrypte);\\
-		Cette fonction soustrait la valeur du mot clef (tableau renvoyer par indiceMutuelle) au texte Crypté.\\
+		Cette fonction soustrait la valeur du mot clef (tableau renvoyé par indiceMutuelle) au texte crypté.\\
 		Elle va repeter la suite de nombre composant le mot clef jusqu'a la fin du texte afin de toujours pouvoir
 		soustraire une valeur du mot clé a une valeur du texte crypté.\\
 		Elle renvoie le texte claire.\\
@@ -226,7 +226,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 		enlever accent et espace, et mettre dans un tableau\\
 	 
 	gchar* ConvertisseurChar(char T[],int TailleTexte); \\
-		Parcoure un tableau donné et le retourne en chaine de caractere\\
+		Parcours d'un tableau donné et le retourne en chaine de caracteres\\
 		
 	void MenuPrincipal(GtkWidget *Fenetre);\\
 		Cette procedure permet d'afficher le menu principal.\\
@@ -289,7 +289,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 		Cette procedure ne renvoie rien.\\
 	
 	void RecupererChemin(GtkWidget *bouton, GtkWidget *fileselection);\\
-		Cette procedure permet de recuperer le chemin d'acces d'un fichier.\\
+		Cette procedure permet de recuperer le chemin d'accés d'un fichier.\\
 		Elle prend en argument une fenetre et une deuxieme fenetre (pour les fenetres de selections de fichier)\\
 		Cette procedure appel\\
 
@@ -305,17 +305,18 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 		Elle prend en argument la fenetre.\\
 	
 	void BoiteDialogueVigenere(GtkWidget *Fenetre);\\
-		Cette procedure affiche deux zone de texte qui permet de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
+		Cette procedure affiche deux zones de texte qui permettent de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
 		Elle prend en argument une fenetre.\\
 		
 	void BoiteDialogueAnalyse(GtkWidget *Fenetre);\\
-		Cette procedure affiche une zone de texte qui permet de renter le texte sur lequel éffectuer une analyse fréquentielle.\\
+		Cette procedure affiche une zone de texte qui permet de rentrer le texte sur lequel éffectuer une analyse fréquentielle.\\
 		Elle prend en argument une fenetre.\\
 		
 	gchar* LireFichier(const gchar* chemin);\\
 		Cette fonction permet de recuperer le texte qui est dans un fichier, pour cela nous donnons en argument un chemin de fichier.\\
 	
 	\section{Conclusion}
+	La redaction de ce cahier des specifications est une etape importante pour la realisation du projet et plus precisement permet d'indiquer comment realiser le besoin. Elle se situe apres l'etape de conception (cahier des charges) etavant l'etape de realisation (codage). Le langage et la bibliotheque etant choisis, les fonctions etant definies, la realisation du produit est a present fortement simplifiée. 
 	
 	
 \end{document}
