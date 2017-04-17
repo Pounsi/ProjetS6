@@ -173,6 +173,10 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Cette fonction permet de crypter un texte avec la methode de Substitution\\
 		Pour cela, elle prend en entrée une chaine de caractères qui correspond au texte clair.\\
 		En sortie, le texte crypté sera sous forme de chaine de caractères.\\
+		?Le texte a crypter se trouve dans un tableau que je vais parcourir. Et pour chaque caractere je vais
+		aller lire dans un autre tableau [2][26] ou la premiere ligne correspond a l'alphabet de base
+		et la deuxieme celui de substitution(le nouveau). Ainsi, je lis la lettre dans le 1e tableau (du texte a 
+		crypter), je bascule dans le 2e tableau et trouve ce caractere dans la 1e ligne, puis regarde sa lettre de substitution, et enfin remplace dans le 1e tableau la lettre de base par ce caractere de substitution.?
 		
 	void GenereCle(gchar T[]);\\
 		genere une clé(alphabet) aléatoirement
@@ -222,6 +226,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Cette fonction permet de crypter un texte avec la methode de Vigenere\\
 		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caracteres.\\
 		La fonction renvoiera le texte crypté\\
+		? On construit un tableau [3][taille_texte]. En premiere ligne on trouvera le texte a crypter, en 2e la clé (qu'on repetera de facon a couvrir toute la 1e ligne(message a chiffrer) et enfin en 3e ligne le resultat de l'addition des caracteres des deux premieres lignes le tout modulo 26(c'est a dire le texte maintenant crypté).?
 		
 		\subsubsection{Interface Graphique}
 		Dans ce module nous allons utiliser plusieurs menus pour afficher notre application et naviguer 
@@ -328,11 +333,11 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	\section{Conclusion}
 	
 	Pour conclure, la rédaction des spécifications a permis de répondre de manière plus concrète aux différents besoins
-	formuler dans le cahier des charges. Notamment au niveau des données en entrée ou en sortie des fonctions/procédures
+	formulés dans le cahier des charges. Notamment au niveau des données en entrée ou en sortie des fonctions/procédures
 	qui composent nos modules. Le diagramme résume quels sont les échanges entre ces fonctions/procédures ainsi que
 	leurs chronologies (voir avancement de l'organi.).
-	Maintenant que tout ces paramètres ont été définie et que l'équipe est daccord sur l'architecture de l'application, nous allons
-	passer a l'implémentation en respectant tout les règles fixer par le cahier des charges & de spécifications.
+	Maintenant que tout ces paramètres ont été définis et que l'équipe est d'accord sur l'architecture de l'application, nous allons
+	passer a l'implémentation en respectant tout les règles fixées par le cahier des charges et des spécifications.
 	
 	La rédaction de ce cahier des specifications est une étape importante pour la réalisation du projet
 	et plus precisément permet d'indiquer comment réaliser le besoin.
