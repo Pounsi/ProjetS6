@@ -129,6 +129,8 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Le gchar* est une chaîne de caractères, on utilise pas char* car dans la bibliothèque
 		GTK+ l'affichage d'un texte se fait avec gchar*.\\
 		
+		les widgets (GTKWidget) sont les boutons, les zones de texte, les menus, enfin.. à peu 
+		près tout ce qui constitue une interface
 		GtkWidget explication\\
 		
 		On utilisera la variable global Fenetre pour garder la fenêtre principale de notre application.\\
@@ -166,7 +168,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		le nombre de lettres, la fréquence d'apparition de chaque lettre, les digrammes, les trigrammes
 		et la plus grande occurence rencontrée.\\
 		
-	\subsubsection{Cryptage substitution}
+	\subsubsection{Cryptage Substitution}
 	gchar* CryptageSubstitution(gchar* TexteClair);\\
 		Cette fonction permet de crypter un texte avec la methode de Substitution\\
 		Pour cela, elle prend en entrée une chaine de caractères qui correspond au texte clair.\\
@@ -175,7 +177,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	void GenereCle(gchar T[]);\\
 		genere une clé(alphabet) aléatoirement
 	
-	\subsubsection{Decryptage substitution}
+	\subsubsection{Decryptage Substitution}
 	gchar* DecryptageSubstitution( gchar* texte, ANALYSE a)\\
 		Prend en argument un texte crypté.\\
 		Aprés avoir appelé la fonction d'analyse fréquentielle, cette fonction va, 
@@ -222,12 +224,10 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		La fonction renvoiera le texte crypté\\
 		
 		\subsubsection{Interface Graphique}
-	void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte); // retire accent espace\\
-		enlever accent et espace, et mettre dans un tableau\\
-	 
-	gchar* ConvertisseurChar(char T[],int TailleTexte); \\
-		Parcours d'un tableau donné et le retourne en chaine de caracteres\\
-		
+		Dans ce module nous allons utiliser plusieurs menus pour afficher notre application et naviguer 
+		entre les menus pour cela nous allons creer plusieurs procedures qui vont afficher les menus  
+		\subsubsubsection{Les Menus}
+
 	void MenuPrincipal(GtkWidget *Fenetre);\\
 		Cette procedure permet d'afficher le menu principal.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
@@ -283,6 +283,20 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 		Cette procedure ne renvoie rien .\\
 	
+		void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
+		Cette procedure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
+		Elle prend en argument la fenêtre.\\
+	
+	void BoiteDialogueVigenere(GtkWidget *Fenetre);\\
+		Cette procedure affiche deux zones de texte qui permettent de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
+		Elle prend en argument une fenêtre.\\
+		
+	void BoiteDialogueAnalyse(GtkWidget *Fenetre);\\
+		Cette procedure affiche une zone de texte qui permet de rentrer le texte sur lequel éffectuer une analyse fréquentielle.\\
+		Elle prend en argument une fenêtre.\\
+	nous aurons peut etre besoin d'autres menus au cours de notre application(pour un meilleur affichage ou ameliorations) 
+	//menu pour la langue
+	\subsubsubsection{Les Enregistrement/Chargements}
 	void Enregistrer (GtkWidget *pwidget, GtkWidget *text );\\
 		Cette procedure permet de sauvegarder le texte obtenue.\\
 		Elle prend en argument une fenetre et le texte à sauvegarder.\\
@@ -294,26 +308,22 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Cette procedure appel\\
 
 	void ChoisirFichier();\\
-		Cette procedure nous permet de selectionner un fichier à charger (fichier qui contient le texte clair ou crypter)\\
+		Cette procedure nous permet de selectionner un fichier à charger (fichier qui contient le texte clair ou 		crypter)\\
 
-	void ViderContenaire(GtkContainer * container);\\
-		Cette procedure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
-		Cette procedure prend en argument la fenêtre à vider.\\
-		
-	void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
-		Cette procedure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
-		Elle prend en argument la fenêtre.\\
-	
-	void BoiteDialogueVigenere(GtkWidget *Fenetre);\\
-		Cette procedure affiche deux zones de texte qui permettent de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
-		Elle prend en argument une fenêtre.\\
-		
-	void BoiteDialogueAnalyse(GtkWidget *Fenetre);\\
-		Cette procedure affiche une zone de texte qui permet de rentrer le texte sur lequel éffectuer une analyse fréquentielle.\\
-		Elle prend en argument une fenêtre.\\
 		
 	gchar* LireFichier(const gchar* chemin);\\
 		Cette fonction permet de recuperer le texte qui est dans un fichier, pour cela nous donnons en argument un chemin de fichier.\\
+		
+	\subsubsubsection{Autres}	
+	void ViderContenaire(GtkContainer * container);\\
+		Cette procedure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
+		Cette procedure prend en argument la fenêtre à vider.\\
+	void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte); // retire accent espace\\
+		enlever accent et espace, et mettre dans un tableau\\
+	 
+	gchar* ConvertisseurChar(char T[],int TailleTexte); \\
+		Parcours d'un tableau donné et le retourne en chaine de caracteres\\
+		
 	
 	\section{Conclusion}
 	
