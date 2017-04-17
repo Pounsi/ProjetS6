@@ -77,8 +77,8 @@
 		\begin{center}\includegraphics{logo_uvsq.jpg}\end{center}
 	\end{titlepage}
 	\section{Introduction}
-Dans le cadre de notre troisième année de Licence nous devons realiser une application d'aide au
-decryptage par la methode de Substitution ainsi que celle de Vigenère.
+Dans le cadre de notre troisième année de licence nous devons réaliser une application d'aide au
+décryptage par la méthode de Substitution ainsi que celle de Vigenère.
 Nous vous avons donc proposé l'application Dcrypt qui permet de décrypter 
 mais également crypter un texte ou même de faire une analyse fréquentielle sur un texte.
 Pour cela, nous avons rédigé un cahier des charges afin de clarifier les objectifs et les 
@@ -96,11 +96,11 @@ pas ceux d'origine, il faut un langage des plus utilisés et maitrisés
 programmation( de par sa forte croissance et sa demande par les employeurs). C'est aussi le langage n°1 pour le développement
 d’applications d’entreprise, de bureau et d'applications scientifiques.
 
-Nous avons egalement choisi une bibliothèque graphique du langage C: GTK+. Cette dernière nous permet de gérer efficacement
+Nous avons également choisi une bibliothèque graphique du langage C: GTK+. Cette dernière nous permet de gérer efficacement
 la navigation entre les differentes fenêtres
-ainsi que nos accés memoires pour la sauvegarde et le chargement de nos fichiers. 
+ainsi que nos accès memoires pour la sauvegarde et le chargement de nos fichiers. 
 IEEE(*):  Institut des ingénieurs électriciens et électroniciens.
-C'est la plus grande organisation professionnelle technique du monde de l'evolution de la technologie
+C'est la plus grande organisation professionnelle technique du monde de l'évolution de la technologie
 	\section{Organigramme}
 			\underline{Interface graphique :}     \hspace{5cm}  \underline{Cryptage Substitution :}\\
 			- bouton cryptage            \hspace{5.5cm}       -créer une clé aleatoirement\\
@@ -163,23 +163,23 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 	ANALYSE AnalyseFrequentielle(gchar* TexteClair)\\
 		la fonction prend en entrée le texte clair a analyser et va ainsi remplir la structure "ANALYSE" et 
 		ses attributs suivants:
-		le nombre de lettres, la frequence d'apparition de chaque lettre, les digrammes, les trigrammes
+		le nombre de lettres, la fréquence d'apparition de chaque lettre, les digrammes, les trigrammes
 		et la plus grande occurence rencontrée.\\
 		
 	\subsubsection{Cryptage substitution}
 	gchar* CryptageSubstitution(gchar* TexteClair);\\
 		Cette fonction permet de crypter un texte avec la methode de Substitution\\
-		Pour cela, elle prend en entrée une chaine de caracteres qui correspond au texte clair.\\
-		En sortie, le texte crypté sera sous forme de chaine de caracteres.\\
+		Pour cela, elle prend en entrée une chaine de caractères qui correspond au texte clair.\\
+		En sortie, le texte crypté sera sous forme de chaine de caractères.\\
 		
 	void GenereCle(gchar T[]);\\
-		genere une clé(alphabet) aleatoirement
+		genere une clé(alphabet) aléatoirement
 	
 	\subsubsection{Decryptage substitution}
 	gchar* DecryptageSubstitution( gchar* texte, ANALYSE a)\\
 		Prend en argument un texte crypté.\\
 		Aprés avoir appelé la fonction d'analyse fréquentielle, cette fonction va, 
-		dans une boucle, comparer les resultas de l'analyse frequentielle à l'alphabet
+		dans une boucle, comparer les résultats de l'analyse frequentielle à l'alphabet
 		 correspondant à la langue choisie et remplacer une lettre du message crypté 
 		 par la lettre qu'elle semble crypter grace à une conjecture basée sur les 
 		 fréquences des lettres les plus utilsés et complétée par l'analyse des digrammes 
@@ -244,22 +244,22 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 		Cette procedure ne renvoie rien .\\
 	
 	void MenuCryptageSubstitution(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de cryptage par la methode de substitution.\\
+		Cette procedure permet d'afficher le menu de cryptage par la méthode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 		Cette procedure ne renvoie rien .\\
 	
 	void MenuCryptageVigenere(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de cryptage par la methode de vigenere.\\
+		Cette procedure permet d'afficher le menu de cryptage par la méthode de vigenere.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 		Cette procedure ne renvoie rien .\\
 	
 	void MenuDecryptageSubstitution(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de decryptage par la methode de substitution.\\
+		Cette procedure permet d'afficher le menu de decryptage par la méthode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 		Cette procedure ne renvoie rien .\\
 	
 	void MenuDecryptageVigenere(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de decryptage par la methode de vigenere.\\
+		Cette procedure permet d'afficher le menu de decryptage par la méthode de vigenere.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 		Cette procedure ne renvoie rien .\\
 	
@@ -297,26 +297,37 @@ C'est la plus grande organisation professionnelle technique du monde de l'evolut
 		Cette procedure nous permet de selectionner un fichier à charger (fichier qui contient le texte clair ou crypter)\\
 
 	void ViderContenaire(GtkContainer * container);\\
-		Cette procedure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenetre.\\
-		Cette procedure prend en argument la fenetre à vider.\\
+		Cette procedure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
+		Cette procedure prend en argument la fenêtre à vider.\\
 		
 	void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
 		Cette procedure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
-		Elle prend en argument la fenetre.\\
+		Elle prend en argument la fenêtre.\\
 	
 	void BoiteDialogueVigenere(GtkWidget *Fenetre);\\
 		Cette procedure affiche deux zones de texte qui permettent de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
-		Elle prend en argument une fenetre.\\
+		Elle prend en argument une fenêtre.\\
 		
 	void BoiteDialogueAnalyse(GtkWidget *Fenetre);\\
 		Cette procedure affiche une zone de texte qui permet de rentrer le texte sur lequel éffectuer une analyse fréquentielle.\\
-		Elle prend en argument une fenetre.\\
+		Elle prend en argument une fenêtre.\\
 		
 	gchar* LireFichier(const gchar* chemin);\\
 		Cette fonction permet de recuperer le texte qui est dans un fichier, pour cela nous donnons en argument un chemin de fichier.\\
 	
 	\section{Conclusion}
-	La redaction de ce cahier des specifications est une etape importante pour la realisation du projet et plus precisement permet d'indiquer comment realiser le besoin. Elle se situe apres l'etape de conception (cahier des charges) etavant l'etape de realisation (codage). Le langage et la bibliotheque etant choisis, les fonctions etant definies, la realisation du produit est a present fortement simplifiée. 
+	
+	Pour conclure, la rédaction des spécifications a permis de répondre de manière plus concrète aux différents besoins formuler 	         dans le cahier des charges. Notamment au niveau des données en entrée ou en sortie des fonctions/procédures qui composent nos
+	modules. Le diagramme résume quels sont les échanges entre ces fonctions/procédures ainsi que leurs chronologies (voir
+	avancement de l'organi.).
+	Maintenant que tout ces paramètres ont été définie et que l'équipe est daccord sur l'architecture de l'application, nous allons
+	passer a l'implémentation en respectant tout les règles fixer par le cahier des charges & de spécifications.
+	
+	La rédaction de ce cahier des specifications est une étape importante pour la réalisation du projet
+	et plus precisément permet d'indiquer comment réaliser le besoin.
+	Elle se situe apres l'étape de conception
+	(cahier des charges) et avant l'étape de realisation (codage). Le langage et la bibliotheque etant choisis,
+	les fonctions etant definies, la realisation du produit est a present fortement simplifiée. 
 	
 	
 \end{document}
