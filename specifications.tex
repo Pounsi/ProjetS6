@@ -83,18 +83,22 @@ Nous vous avons donc proposé l'application Dcrypt qui permet de décrypter
 mais également crypter un texte ou même de faire une analyse fréquentielle sur un texte.
 Pour cela, nous avons rédigé un cahier des charges afin de clarifier les objectifs et les 
 exigences de ce projet. Dans la suite du cahier des charges, nous vous proposons donc
-le cahier des spécifications.
+le cahier des spécifications.\\
 
-Pour développer notre projet et après étude des besoins les arguments en faveur du langage C sont les suivants:
+Pour développer notre projet et après étude des besoins les arguments en faveur du langage C sont les suivants:\\
+
 -Tout d'abord, le C permet d'utiliser des expressions et des opérateurs qui sont très proches du langage machine, 
-il est donc possible de développer des programmes efficients et rapides.
+il est donc possible de développer des programmes efficients et rapides.\\
+
 -La portabilité est aussi un argument de choix: En effet, en respectant le standard ANSI-C, il est possible d'utiliser
-le même programme sur tout autre système (autre hardware, autre système d'exploitation), simplement en le recompilant.
+le même programme sur tout autre système (autre hardware, autre système d'exploitation), simplement en le recompilant.\\
+
 -De plus, pour assurer la maintenance du produit apres sa realisation et ce meme par des developpeurs qui ne sont
-pas ceux d'origine, il faut un langage des plus utilisés et maitrisés
+pas ceux d'origine, il faut un langage des plus utilisés et maitrisés\\
+
 -Enfin, selon l'IEEE(*), le langage C est depuis 2016 le meilleur langage de 
-programmation( de par sa forte croissance et sa demande par les employeurs). C'est aussi le langage n°1 pour le développement
-d’applications d’entreprise, de bureau et d'applications scientifiques.
+programmation( de par sa forte croissance et sa demande par les employeurs). C'est aussi le langage n=1 pour le développement
+d’applications d’entreprise, de bureau et d'applications scientifiques.\\
 
 Nous avons également choisi une bibliothèque graphique du langage C: GTK+. Cette dernière nous permet de gérer efficacement
 la navigation entre les differentes fenêtres
@@ -116,40 +120,51 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 			- sauvegarder un fichier texte     \hspace{3.8cm}  -analyse frequentielle sur texte donné\\
 			- créer un nouveau fichier texte(resultats)\\
 			- Demander clef de Vigenère\\
+			
 			\underline{Decryptage Vigenère :}\\
 			-decrypter le message
 			\includepdf[scale=0.7]{organigramme_final.pdf}
 			
-			\section{Conventions de codage}
 			
 	\section{Signatures et Explications des methodes}
-		\subsection{Diagramme de classes}
-		ici on include 
-		\subsection{structures et nouveaux types}
+		\subsection{Diagramme des fonctions des differents modules}
+		\includegraphics[scale=0.8]{diaa.jpg}
+		\subsection{Structures et nouveaux types}
 		Le gchar* est une chaîne de caractères, on utilise pas char* car dans la bibliothèque
 		GTK+ l'affichage d'un texte se fait avec gchar*.\\
 		
 		les widgets (GTKWidget) sont les boutons, les zones de texte, les menus, enfin.. à peu 
-		près tout ce qui constitue une interface
-		GtkWidget explication\\
+		près tout ce qui constitue une interface.\\
 		
-		On utilisera la variable global Fenetre pour garder la fenêtre principale de notre application.\\
+		la seule  variable globale utilisée dans notre programme est Fenetre. Elle nous permet de
+		conserver la fenêtre principale de notre application:\\
 		GtkWidget *Fenetre; \\
 		
-	struct phoneme{\\
+	struct phoneme\{\\
 		int frequence;\\
 		gchar* nom;\\
-	}PHONEME;\\
+	\}PHONEME;\\
+	Cette structure represente les digrammes ou trigrammes et leurs frequences.\\
 	
-	
-	struct analyse{ \\
+	struct analyse\{ \\
 		int nb //nbre de lettre \\
 		float occ[25];\\
 		PHONEME di[];\\
 		PHONEME tr[];\\
-		gchar* pgor;//plus grande occurence rencontrée\\
-	}ANALYSE;\\
+		gchar* pgor;\\
+	\}ANALYSE;\\
+	Cette structure correspond aux caracteristiques d'un texte. Elle sera remplie lors de
+	l'appel de la fonction "AnalyseFrequentielle". Ainsi, on connaitra
+	le nombre de caracteres dans celui-ci, les digrammes/trigrammes, la plus grande occurence
+	rencontrée et la frequence d'apparition de chaque lettre.\\
 	
+	struct ressourceslangue\{ \\
+		float occ[25];\\
+		PHONEME di[];\\
+		PHONEME tr[];\\
+	\}RESSOURCESLANGUE;\\
+	Cette structure correspond aux caracteristiques d'une langue. On connaitra
+	les digrammes/trigrammes et la frequence d'apparition de chaque lettre dans la langue choisie.
 		\subsection{Signatures}
 		
 	
@@ -173,10 +188,12 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Cette fonction permet de crypter un texte avec la methode de Substitution\\
 		Pour cela, elle prend en entrée une chaine de caractères qui correspond au texte clair.\\
 		En sortie, le texte crypté sera sous forme de chaine de caractères.\\
-		?Le texte a crypter se trouve dans un tableau que je vais parcourir. Et pour chaque caractere je vais
-		aller lire dans un autre tableau [2][26] ou la premiere ligne correspond a l'alphabet de base
-		et la deuxieme celui de substitution(le nouveau). Ainsi, je lis la lettre dans le 1e tableau (du texte a 
-		crypter), je bascule dans le 2e tableau et trouve ce caractere dans la 1e ligne, puis regarde sa lettre de substitution, et enfin remplace dans le 1e tableau la lettre de base par ce caractere de substitution.?
+		Le texte a crypter se trouve dans un tableau que je vais parcourir. Et pour chaque caractere 
+		nous allons aller lire dans un autre tableau [2][26] ou la premiere ligne correspond a l'alphabet
+		de base et la deuxieme celui de substitution(le nouveau). Ainsi, nous regardons la lettre dans 
+		le 1e tableau (du texte a crypter), on bascule dans le 2e tableau et trouve ce caractere dans la
+		1e ligne, puis on regarde sa lettre de substitution, et enfin on remplace dans le 1e tableau 
+		la lettre de base par ce caractere de substitution.
 		
 	void GenereCle(gchar T[]);\\
 		genere une clé(alphabet) aléatoirement
@@ -226,13 +243,17 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Cette fonction permet de crypter un texte avec la methode de Vigenere\\
 		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caracteres.\\
 		La fonction renvoiera le texte crypté\\
-		? On construit un tableau [3][taille_texte]. En premiere ligne on trouvera le texte a crypter, en 2e la clé (qu'on repetera de facon a couvrir toute la 1e ligne(message a chiffrer) et enfin en 3e ligne le resultat de l'addition des caracteres des deux premieres lignes le tout modulo 26(c'est a dire le texte maintenant crypté).?
+		On construit un tableau [3][taille texte]. En premiere ligne on trouvera le texte a crypter, 
+		en 2e la clé (qu'on repetera de facon a couvrir toute la 1e ligne(message a chiffrer)) et enfin 
+		en 3e ligne le resultat de l'addition des caracteres des deux premieres lignes le tout modulo 
+		26(c'est a dire le texte maintenant crypté).
 		
 		\subsubsection{Interface Graphique}
 		Dans ce module nous allons utiliser plusieurs menus pour afficher notre application et naviguer 
 		entre les menus pour cela nous allons creer plusieurs procedures qui vont afficher les menus  
-		\subsubsubsection{Les Menus}
-
+		
+		Les Menus\\
+		
 	void MenuPrincipal(GtkWidget *Fenetre);\\
 		Cette procedure permet d'afficher le menu principal.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
@@ -288,7 +309,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 		Cette procedure ne renvoie rien .\\
 	
-		void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
+	void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
 		Cette procedure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
 		Elle prend en argument la fenêtre.\\
 	
@@ -297,11 +318,18 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Elle prend en argument une fenêtre.\\
 		
 	void BoiteDialogueAnalyse(GtkWidget *Fenetre);\\
-		Cette procedure affiche une zone de texte qui permet de rentrer le texte sur lequel éffectuer une analyse fréquentielle.\\
+		Cette procedure affiche une zone de texte qui permet de rentrer le texte sur lequel effectuer une analyse fréquentielle.\\
 		Elle prend en argument une fenêtre.\\
-	nous aurons peut etre besoin d'autres menus au cours de notre application(pour un meilleur affichage ou ameliorations) 
+		
+	void BoiteDialogueLangue(GtkWidget *Fenetre,int langue);\\
+		Cette procedure nous permet de choisir la langue (0:francais , 1:anglais).\\
+		Elle prend en argument une fenêtre.\\
+		
+	nous aurons peut-être besoin d'autres menus au cours de notre application(pour un meilleur affichage ou ameliorations) 
 	//menu pour la langue
-	\subsubsubsection{Les Enregistrement/Chargements}
+	
+	Les Enregistrement/Chargements\\
+	
 	void Enregistrer (GtkWidget *pwidget, GtkWidget *text );\\
 		Cette procedure permet de sauvegarder le texte obtenue.\\
 		Elle prend en argument une fenetre et le texte à sauvegarder.\\
@@ -318,12 +346,13 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		
 	gchar* LireFichier(const gchar* chemin);\\
 		Cette fonction permet de recuperer le texte qui est dans un fichier, pour cela nous donnons en argument un chemin de fichier.\\
-		
-	\subsubsubsection{Autres}	
+	
+	Autres\\
+	
 	void ViderContenaire(GtkContainer * container);\\
 		Cette procedure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
 		Cette procedure prend en argument la fenêtre à vider.\\
-	void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte); // retire accent espace\\
+	void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte);\\
 		enlever accent et espace, et mettre dans un tableau\\
 	 
 	gchar* ConvertisseurChar(char T[],int TailleTexte); \\
@@ -332,18 +361,18 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	
 	\section{Conclusion}
 	
-	Pour conclure, la rédaction des spécifications a permis de répondre de manière plus concrète aux différents besoins
-	formulés dans le cahier des charges. Notamment au niveau des données en entrée ou en sortie des fonctions/procédures
-	qui composent nos modules. Le diagramme résume quels sont les échanges entre ces fonctions/procédures ainsi que
-	leurs chronologies (voir avancement de l'organi.).
-	Maintenant que tout ces paramètres ont été définis et que l'équipe est d'accord sur l'architecture de l'application, nous allons
-	passer a l'implémentation en respectant tout les règles fixées par le cahier des charges et des spécifications.
+	Pour conclure, la rédaction de ce cahier des spécifications est une étape importante pour la réalisation du projet
+	et plus précisément permet d'indiquer comment réaliser le besoin.\\
 	
-	La rédaction de ce cahier des specifications est une étape importante pour la réalisation du projet
-	et plus precisément permet d'indiquer comment réaliser le besoin.
-	Elle se situe apres l'étape de conception
-	(cahier des charges) et avant l'étape de realisation (codage). Le langage et la bibliotheque etant choisis,
-	les fonctions etant definies, la realisation du produit est a present fortement simplifiée. 
+	Elle se situe après l'étape de conception (cahier des charges) et avant l'étape de réalisation (codage).\\
+	
+	Ce cahier permet donc de répondre de manière spécifique aux différentes reponses apportées, notamment les données en entrée
+	ou en sortie des fonctions/procédures qui composent nos modules.\\
+	
+	Le diagramme résume les fonctions/procédures présentes dans chaque module ainsi que les liens d'inclusion.\\
+	
+	Maintenant que tout ces paramètres ont été définis et que l'équipe est d'accord sur l'architecture de l'application, nous allons
+	passer à l'implémentation en respectant tout les règles fixées par le cahier des charges et des spécifications.
 	
 	
 \end{document}
