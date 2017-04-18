@@ -144,7 +144,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		int frequence;\\
 		gchar* nom;\\
 	\}PHONEME;\\
-	Cette structure represente les digrammes ou trigrammes et leurs frequences.\\
+	Cette structure représente les digrammes ou trigrammes et leurs fréquences.\\
 	
 	struct analyse\{ \\
 		int nb //nbre de lettre \\
@@ -153,9 +153,9 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		PHONEME tr[];\\
 		gchar* pgor;\\
 	\}ANALYSE;\\
-	Cette structure correspond aux caracteristiques d'un texte. Elle sera remplie lors de
+	Cette structure correspond aux caractéristiques d'un texte. Elle sera remplie lors de
 	l'appel de la fonction "AnalyseFrequentielle". Ainsi, on connaitra
-	le nombre de caracteres dans celui-ci, les digrammes/trigrammes, la plus grande occurence
+	le nombre de caractères dans celui-ci, les digrammes/trigrammes, la plus grande occurence
 	rencontrée et la frequence d'apparition de chaque lettre.\\
 	
 	struct ressourceslangue\{ \\
@@ -163,16 +163,16 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		PHONEME di[];\\
 		PHONEME tr[];\\
 	\}RESSOURCESLANGUE;\\
-	Cette structure correspond aux caracteristiques d'une langue. On connaitra
-	les digrammes/trigrammes et la frequence d'apparition de chaque lettre dans la langue choisie.
+	Cette structure correspond aux caractéristiques d'une langue. On connaitra
+	les digrammes/trigrammes et la fréquence d'apparition de chaque lettre dans la langue choisie.
 		\subsection{Signatures}
 		
 	
 	\subsubsection{Analyse Frequentielle}
 	ANALYSE TabRessource(int langue);\\
-		la fonction prend en entrée un entier correspondant à la langue(francais ou anglais)
+		La fonction prend en entrée un entier correspondant à la langue(francais ou anglais)
 		et va ainsi remplir la structure "ANALYSE" et ses attributs suivants:
-		la frequence d'apparition de chaque lettre dans la langue choisie ainsi que les digrammes
+		la fréquence d'apparition de chaque lettre dans la langue choisie ainsi que les digrammes
 		et les trigrammes.\\
 		
 		
@@ -185,18 +185,18 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		
 	\subsubsection{Cryptage Substitution}
 	gchar* CryptageSubstitution(gchar* TexteClair);\\
-		Cette fonction permet de crypter un texte avec la methode de Substitution\\
+		Cette fonction permet de crypter un texte avec la méthode de Substitution\\
 		Pour cela, elle prend en entrée une chaine de caractères qui correspond au texte clair.\\
 		En sortie, le texte crypté sera sous forme de chaine de caractères.\\
-		Le texte a crypter se trouve dans un tableau que je vais parcourir. Et pour chaque caractere 
+		Le texte a crypter se trouve dans un tableau que nous allons parcourir. Et pour chaque caractere 
 		nous allons aller lire dans un autre tableau [2][26] ou la premiere ligne correspond a l'alphabet
-		de base et la deuxieme celui de substitution(le nouveau). Ainsi, nous regardons la lettre dans 
-		le 1e tableau (du texte a crypter), on bascule dans le 2e tableau et trouve ce caractere dans la
-		1e ligne, puis on regarde sa lettre de substitution, et enfin on remplace dans le 1e tableau 
-		la lettre de base par ce caractere de substitution.
+		de base et la deuxième celui de substitution(le nouveau). Ainsi, nous regardons la lettre dans 
+		le premier tableau (du texte a crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la
+		première ligne, puis on regarde sa lettre de substitution, et enfin on remplace dans le premier tableau 
+		la lettre de base par ce caractère de substitution.
 		
 	void GenereCle(gchar T[]);\\
-		genere une clé(alphabet) aléatoirement
+		génère une clé(alphabet) aléatoirement.
 	
 	\subsubsection{Decryptage Substitution}
 	gchar* DecryptageSubstitution( gchar* texte, ANALYSE a)\\
@@ -220,7 +220,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	
 	\subsubsection{Decryptage Vignere}
 	gchar* DecryptageVigenere(gchar* TexteCrypte);\\
-		Cette fonction prend un texte crypté par le chiffrement de Vigenere \\
+		Cette fonction prend un texte crypté par le chiffrement de Vigenère \\
 		et renvoie un texte clair et lisible par l'utilisateur.\\
 	
 	int Kasiski(ANALYSE freq, gchar* TexteCrypte);\\
@@ -241,88 +241,88 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		\subsubsection{Cryptage Vignere}
 	gchar* CryptageVigenere(gchar* TexteClair, gchar* Cle);\\
 		Cette fonction permet de crypter un texte avec la methode de Vigenere\\
-		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caracteres.\\
-		La fonction renvoiera le texte crypté\\
-		On construit un tableau [3][taille texte]. En premiere ligne on trouvera le texte a crypter, 
+		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caractères.\\
+		La fonction renverra le texte crypté\\
+		On construit un tableau [3][taille texte]. En première ligne on trouvera le texte a crypter, 
 		en 2e la clé (qu'on repetera de facon a couvrir toute la 1e ligne(message a chiffrer)) et enfin 
 		en 3e ligne le resultat de l'addition des caracteres des deux premieres lignes le tout modulo 
 		26(c'est a dire le texte maintenant crypté).
 		
 		\subsubsection{Interface Graphique}
 		Dans ce module nous allons utiliser plusieurs menus pour afficher notre application et naviguer 
-		entre les menus pour cela nous allons creer plusieurs procedures qui vont afficher les menus  
+		entre les menus pour cela nous allons créer plusieurs procédures qui vont afficher les menus  
 		
 		Les Menus\\
 		
 	void MenuPrincipal(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu principal.\\
+		Cette procédure permet d'afficher le menu principal.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuCryptage(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de cryptage.\\
+		Cette procédure permet d'afficher le menu de cryptage.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuDecryptage(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de decryptage.\\
+		Cette procédure permet d'afficher le menu de decryptage.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuCryptageSubstitution(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de cryptage par la méthode de substitution.\\
+		Cette procédure permet d'afficher le menu de cryptage par la méthode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuCryptageVigenere(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de cryptage par la méthode de vigenere.\\
+		Cette procédure permet d'afficher le menu de cryptage par la méthode de vigenere.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuDecryptageSubstitution(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de decryptage par la méthode de substitution.\\
+		Cette procédure permet d'afficher le menu de decryptage par la méthode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuDecryptageVigenere(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu de decryptage par la méthode de vigenere.\\
+		Cette procédure permet d'afficher le menu de decryptage par la méthode de vigenere.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuAnalyseFrequentielle(GtkWidget *Fenetre);\\
-		Cette procedure permet d'afficher le menu d'analyse frequentielle.\\
+		Cette procédure permet d'afficher le menu d'analyse frequentielle.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuResultatSubstitution(GtkWidget *Fenetre, gchar* Textcrypt);\\
-		Cette procedure permet d'afficher le menu du resultat du decryptage par la methode de substitution.\\
+		Cette procédure permet d'afficher le menu du resultat du decryptage par la methode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuResultatVigenere(GtkWidget *Fenetre, gchar* Textcrypt, gchar* cle);\\
-		Cette procedure permet d'afficher le menu du resultat du decryptage par la methode de vigenere.\\
+		Cette procédure permet d'afficher le menu du resultat du decryptage par la methode de vigenere.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void MenuResultatAnalyse(GtkWidget *Fenetre);//rajouer le texte\\
-		Cette procedure permet d'afficher le menu du resultat de l'analyse frequentielle.\\
+		Cette procédure permet d'afficher le menu du resultat de l'analyse frequentielle.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procedure ne renvoie rien .\\
+		Cette procédure ne renvoie rien .\\
 	
 	void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
-		Cette procedure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
+		Cette procédure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
 		Elle prend en argument la fenêtre.\\
 	
 	void BoiteDialogueVigenere(GtkWidget *Fenetre);\\
-		Cette procedure affiche deux zones de texte qui permettent de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
+		Cette procédure affiche deux zones de texte qui permettent de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
 		Elle prend en argument une fenêtre.\\
 		
 	void BoiteDialogueAnalyse(GtkWidget *Fenetre);\\
-		Cette procedure affiche une zone de texte qui permet de rentrer le texte sur lequel effectuer une analyse fréquentielle.\\
+		Cette procédure affiche une zone de texte qui permet de rentrer le texte sur lequel effectuer une analyse fréquentielle.\\
 		Elle prend en argument une fenêtre.\\
 		
 	void BoiteDialogueLangue(GtkWidget *Fenetre,int langue);\\
-		Cette procedure nous permet de choisir la langue (0:francais , 1:anglais).\\
+		Cette procédure nous permet de choisir la langue (0:francais , 1:anglais).\\
 		Elle prend en argument une fenêtre.\\
 		
 	nous aurons peut-être besoin d'autres menus au cours de notre application(pour un meilleur affichage ou ameliorations) 
@@ -331,17 +331,17 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	Les Enregistrement/Chargements\\
 	
 	void Enregistrer (GtkWidget *pwidget, GtkWidget *text );\\
-		Cette procedure permet de sauvegarder le texte obtenue.\\
+		Cette procédure permet de sauvegarder le texte obtenue.\\
 		Elle prend en argument une fenetre et le texte à sauvegarder.\\
-		Cette procedure ne renvoie rien.\\
+		Cette procédure ne renvoie rien.\\
 	
 	void RecupererChemin(GtkWidget *bouton, GtkWidget *fileselection);\\
-		Cette procedure permet de recuperer le chemin d'accés d'un fichier.\\
+		Cette procédure permet de recuperer le chemin d'accés d'un fichier.\\
 		Elle prend en argument une fenetre et une deuxieme fenetre (pour les fenetres de selections de fichier)\\
-		Cette procedure appel\\
+		Cette procédure appel\\
 
 	void ChoisirFichier();\\
-		Cette procedure nous permet de selectionner un fichier à charger (fichier qui contient le texte clair ou 		crypter)\\
+		Cette procédure nous permet de selectionner un fichier à charger (fichier qui contient le texte clair ou 		crypter)\\
 
 		
 	gchar* LireFichier(const gchar* chemin);\\
@@ -350,8 +350,8 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	Autres\\
 	
 	void ViderContenaire(GtkContainer * container);\\
-		Cette procedure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
-		Cette procedure prend en argument la fenêtre à vider.\\
+		Cette procédure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
+		Cette procédure prend en argument la fenêtre à vider.\\
 	void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte);\\
 		enlever accent et espace, et mettre dans un tableau\\
 	 
