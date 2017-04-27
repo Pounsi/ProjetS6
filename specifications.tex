@@ -55,7 +55,7 @@
   {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
   {€}{{\EUR}}1 {£}{{\pounds}}1
 }
-%definition d'un syle pour les documents texte
+%definition d'un syle pour les documents text
 \lstdefinestyle{txt}{
 	frame=none,
 	numbers=none,
@@ -80,7 +80,7 @@
 Dans le cadre de notre troisième année de licence nous devons réaliser une application d'aide au
 décryptage par la méthode de Substitution ainsi que celle de Vigenère.
 Nous vous avons donc proposé l'application Dcrypt qui permet de décrypter 
-mais également crypter un texte ou même de faire une analyse fréquentielle sur un texte.
+mais également crypter un text ou même de faire une analyse fréquentielle sur un text.
 Pour cela, nous avons rédigé un cahier des charges afin de clarifier les objectifs et les 
 exigences de ce projet. Dans la suite du cahier des charges, nous vous proposons donc
 le cahier des spécifications.\\
@@ -111,15 +111,17 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 			- bouton decryptage         \hspace{5cm}        -crypter le message\\
 			- bouton substitution\\
 			- bouton Vigenère           \hspace{5.2cm}       \underline{Cryptage Vigenère :}\\
-			- affichage de texte(complet et partiel)  \hspace{2.2cm} -crypter le message\\
+			- affichage de text(complet et partiel)  \hspace{2.2cm} -crypter le message\\
 			- affichage pour la clé de substitution\\
 			- bouton Francais(decryptage)   \hspace{3.5cm}     \underline{Decryptage Substitution :}\\
 			- bouton Anglais(decryptage)    \hspace{3.5cm}     -decrypter le message\\
 			- affichage pour l'analyse fréquentielle\\
-			- charger un fichier texte       \hspace{4.2cm}  \underline{Analyse fréquentielle :}\\
-			- sauvegarder un fichier texte     \hspace{3.8cm}  -analyse frequentielle sur texte donné\\
-			- créer un nouveau fichier texte(resultats)\\
+			- charger un fichier text       \hspace{4.2cm}  \underline{Analyse fréquentielle :}\\
+			- sauvegarder un fichier text     \hspace{3.8cm}  -analyse frequentielle sur text donné\\
+			- créer un nouveau fichier text(resultats)\\
 			- Demander clef de Vigenère\\
+			
+			Le diagramme résume les fonctions/procédures présentes dans chaque module ainsi que les liens d'inclusion.\\
 			
 			\underline{Decryptage Vigenère :}\\
 			-decrypter le message
@@ -131,9 +133,9 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		\includegraphics[scale=0.8]{diaa.jpg}
 		\subsection{Structures et nouveaux types}
 		Le gchar* est une chaîne de caractères, on utilise pas char* car dans la bibliothèque
-		GTK+ l'affichage d'un texte se fait avec gchar*.\\
+		GTK+ l'affichage d'un text se fait avec gchar*.\\
 		
-		les widgets (GTKWidget) sont les boutons, les zones de texte, les menus, enfin.. à peu 
+		les widgets (GTKWidget) sont les boutons, les zones de text, les menus, enfin.. à peu 
 		près tout ce qui constitue une interface.\\
 		
 		la seule  variable globale utilisée dans notre programme est Fenetre. Elle nous permet de
@@ -153,7 +155,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		PHONEME tr[];\\
 		gchar* pgor;\\
 	\}ANALYSE;\\
-	Cette structure correspond aux caractéristiques d'un texte. Elle sera remplie lors de
+	Cette structure correspond aux caractéristiques d'un text. Elle sera remplie lors de
 	l'appel de la fonction "AnalyseFrequentielle". Ainsi, on connaitra
 	le nombre de caractères dans celui-ci, les digrammes/trigrammes, la plus grande occurence
 	rencontrée et la frequence d'apparition de chaque lettre.\\
@@ -177,21 +179,21 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		
 		
 		
-	ANALYSE AnalyseFrequentielle(gchar* TexteClair)\\
-		la fonction prend en entrée le texte clair a analyser et va ainsi remplir la structure "ANALYSE" et 
+	ANALYSE AnalyseFrequentielle(gchar* TextClair)\\
+		la fonction prend en entrée le text clair a analyser et va ainsi remplir la structure "ANALYSE" et 
 		ses attributs suivants:
 		le nombre de lettres, la fréquence d'apparition de chaque lettre, les digrammes, les trigrammes
 		et la plus grande occurence rencontrée.\\
 		
 	\subsubsection{Cryptage Substitution}
-	gchar* CryptageSubstitution(gchar* TexteClair);\\
-		Cette fonction permet de crypter un texte avec la méthode de Substitution\\
-		Pour cela, elle prend en entrée une chaine de caractères qui correspond au texte clair.\\
-		En sortie, le texte crypté sera sous forme de chaine de caractères.\\
-		Le texte a crypter se trouve dans un tableau que nous allons parcourir. Et pour chaque caractere 
+	gchar* CryptageSubstitution(gchar* TextClair);\\
+		Cette fonction permet de crypter un text avec la méthode de Substitution\\
+		Pour cela, elle prend en entrée une chaine de caractères qui correspond au text clair.\\
+		En sortie, le text crypté sera sous forme de chaine de caractères.\\
+		Le text a crypter se trouve dans un tableau que nous allons parcourir. Et pour chaque caractere 
 		nous allons aller lire dans un autre tableau [2][26] ou la premiere ligne correspond a l'alphabet
 		de base et la deuxième celui de substitution(le nouveau). Ainsi, nous regardons la lettre dans 
-		le premier tableau (du texte a crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la
+		le premier tableau (du text a crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la
 		première ligne, puis on regarde sa lettre de substitution, et enfin on remplace dans le premier tableau 
 		la lettre de base par ce caractère de substitution.
 		
@@ -199,47 +201,52 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		génère une clé(alphabet) aléatoirement.
 	
 	\subsubsection{Decryptage Substitution}
-	gchar* DecryptageSubstitution( gchar* texte, ANALYSE a)\\
-		Prend en argument un texte crypté.\\
+	gchar* DecryptageSubstitution( gchar* text, ANALYSE a)\\
+		Prend en argument un text crypté.\\
 		Aprés avoir appelé la fonction d'analyse fréquentielle, cette fonction va, 
 		dans une boucle, comparer les résultats de l'analyse frequentielle à l'alphabet
 		 correspondant à la langue choisie et remplacer une lettre du message crypté 
 		 par la lettre qu'elle semble crypter grace à une conjecture basée sur les 
 		 fréquences des lettres les plus utilsés et complétée par l'analyse des digrammes 
 		 et trigrammes. Cette fonction appelera ensuite la fonction VerificationCoherenceDigrammeTrigramme.\\
-		Retourne en sortie le texte décrypté (gchar*).\\
+		Retourne en sortie le text décrypté (gchar*).\\
 
 
-	void VerificationCoherenceDigrammeTrigramme(gchar* T[], int *TailleTexte, ANALYSE a)\\
-		Prend en argument le texte crypté en cours de décryptage.\\
-		Cette fonction va parcourir le texte en cours de décryptage pour vérifier que les lettres trouvées 
+	void VerificationCoherenceDigrammeTrigramme(gchar* T[], int *Tailletext, ANALYSE a)\\
+		Prend en argument le text crypté en cours de décryptage.\\
+		Cette fonction va parcourir le text en cours de décryptage pour vérifier que les lettres trouvées 
 		ne forment pas de digramme ou trigramme inabituels. Si c'est le cas elle proposera à l'utilisateur 
-		de corriger le décryptage du texte ou le corrigera d'elle-même.\\
-		Retourne en sortie le texte crypté en cours de décryptage( gchar*).\\
+		de corriger le décryptage du text ou le corrigera d'elle-même.\\
+		Retourne en sortie le text crypté en cours de décryptage( gchar*).\\
 	
 	
 	\subsubsection{Decryptage Vignere}
-	gchar* DecryptageVigenere(gchar* TexteCrypte);\\
-		Cette fonction prend un texte crypté par le chiffrement de Vigenère \\
-		et renvoie un texte clair et lisible par l'utilisateur.\\
+	gchar* DecryptageVigenere(gchar* textCrypte);\\
+		Cette fonction prend un texte crypté par le chiffrement de Vigenère en argument
+		Déclaration d'un tableau cle[] qui contiendra les valeurs des caractères du mot clé.\\
+		Renvoie un texte clair et lisible par l'utilisateur.\\
 	
-	int Kasiski(ANALYSE freq, gchar* TexteCrypte);\\
-		Cette fonction cherche les différentes distances de PGOR(Plus Grande Occurence Rencontrée) et effectue
-		le PGCD de ces distances. Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé cherché).\\
+	int Kasiski(ANALYSE freq, gchar* texteCrypte);\\
+		Cette fonction prend une structure ANALYSE en argument afin de connaitre le PGOR (Plus Grande Occurence Rencontrée) et/ou les trigrammes, ainsi que le texte à décrypter.
+		Elle cherche les différentes distances de PGOR et effectue le PGCD de ces distances.
+		Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé cherché).\\
 	
-	void indiceMutuelle(int kasiski, ANALYSE freq, ANALYSE ressource);\\
-		Cette fonction calcule les indices de coïncidences mutuelles et les stocke sous forme d'un tableau tab[25][kasiski].\\
+	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource);\\
+		Cette fonction prend en argument le tableau clé qui contiendra les valeurs de notre mot clé, freq qui contient les fréquences de chacune des lettres du textes et ressource la
+		probabilité d'apparition d'une lettre dans la langue choisie.
+		Cette fonction calcule les indices de coïncidences mutuelles et les enregistrent dans un tableau tab[25][kasiski].\\
 		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celles qui sont proches de 0,065 (une par ligne).\\
-		Elle renvoie l'indice de chacunes des valeurs valides dans un tableau a une dimension. \\
+		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacunes des valeurs choisies dans un tableau à une dimension. \\
 	
-	gchar* decrypteur( int T[], int kasiski, gchar* TexteCrypte);\\
-		Cette fonction soustrait la valeur du mot clef (tableau renvoyé par indiceMutuelle) au texte crypté.\\
-		Elle va repeter la suite de nombre composant le mot clef jusqu'a la fin du texte afin de toujours pouvoir
+	gchar* decrypteur( int cle[], int kasiski, gchar* texteCrypte);\\
+		Cette fonction prend en argument le tableau cle ainsi que le texte a décrypter.
+		Elle va soustraire la valeur du mot clef (tableau renvoyé par indiceMutuelle) au texte crypté.\\
+		Elle va repeter la suite de nombre composant le mot clef (contenu dans le tableau passé en argument) jusqu'a la fin du texte afin de toujours pouvoir
 		soustraire une valeur du mot clé a une valeur du texte crypté.\\
-		Elle renvoie le texte claire.\\
+		Elle renvoie le texte en clair, c'est a dire décrypter.\\
 		
 		\subsubsection{Cryptage Vignere}
-	gchar* CryptageVigenere(gchar* TexteClair, gchar* Cle);\\
+	gchar* CryptageVigenere(gchar* texteClair, gchar* Cle);\\
 		Cette fonction permet de crypter un texte avec la methode de Vigenere\\
 		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caractères.\\
 		La fonction renverra le texte crypté\\
@@ -252,62 +259,64 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Dans ce module nous allons utiliser plusieurs menus pour afficher notre application et naviguer 
 		entre les menus pour cela nous allons créer plusieurs procédures qui vont afficher les menus  
 		
-		\textit{Les Menus}\\
+		\texteit{Les Menus}\\
+		
+		Toutes le procedure suivante ne renvoie rien et elle prennent en argument un conteneur(c'est l'endroit où sera affiché le contenu present dans ce menu)
 		
 	void MenuPrincipal(GtkWidget *Fenetre);\\
 		Cette procédure permet d'afficher le menu principal.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
 	
 	void MenuCryptage(GtkWidget *Fenetre);\\
 		Cette procédure permet d'afficher le menu de cryptage.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
+
 	
 	void MenuDecryptage(GtkWidget *Fenetre);\\
 		Cette procédure permet d'afficher le menu de decryptage.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
+
 	
 	void MenuCryptageSubstitution(GtkWidget *Fenetre);\\
 		Cette procédure permet d'afficher le menu de cryptage par la méthode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
+
 	
 	void MenuCryptageVigenere(GtkWidget *Fenetre);\\
 		Cette procédure permet d'afficher le menu de cryptage par la méthode de vigenere.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
 	
 	void MenuDecryptageSubstitution(GtkWidget *Fenetre);\\
 		Cette procédure permet d'afficher le menu de decryptage par la méthode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
 	
 	void MenuDecryptageVigenere(GtkWidget *Fenetre);\\
 		Cette procédure permet d'afficher le menu de decryptage par la méthode de vigenere.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
 	
 	void MenuAnalyseFrequentielle(GtkWidget *Fenetre);\\
 		Cette procédure permet d'afficher le menu d'analyse frequentielle.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
 	
-	void MenuResultatSubstitution(GtkWidget *Fenetre, gchar* Textcrypt);\\
+	void MenuResultatSubstitution(GtkWidget *Fenetre, gchar* textecrypt);\\
+		Cette procédure permet d'afficher le menu du resultat du cryptage par la methode de substitution.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+	
+	void MenuResultatVigenere(GtkWidget *Fenetre, gchar* textecrypt, gchar* cle);\\
+		Cette procédure permet d'afficher le menu du resultat du cryptage par la methode de vigenere.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		
+	void MenuResultatDecryptageSubstitution(GtkWidget *Fenetre, gchar* textecrypt);\\
 		Cette procédure permet d'afficher le menu du resultat du decryptage par la methode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
 	
-	void MenuResultatVigenere(GtkWidget *Fenetre, gchar* Textcrypt, gchar* cle);\\
+	void MenuResultatDecryptageVigenere(GtkWidget *Fenetre, gchar* textecrypt, gchar* cle);\\
 		Cette procédure permet d'afficher le menu du resultat du decryptage par la methode de vigenere.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
 	
-	void MenuResultatAnalyse(GtkWidget *Fenetre);//rajouer le texte\\
+	void MenuResultatAnalyse(GtkWidget *Fenetre);//rajouer le texte ou tableau\\
 		Cette procédure permet d'afficher le menu du resultat de l'analyse frequentielle.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
-		Cette procédure ne renvoie rien .\\
 	
 	void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
 		Cette procédure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
@@ -315,6 +324,14 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	
 	void BoiteDialogueVigenere(GtkWidget *Fenetre);\\
 		Cette procédure affiche deux zones de texte qui permettent de rentrer le texte à crypter et la cle qui permet d'effectuer le chiffrement.\\
+		Elle prend en argument une fenêtre.\\
+		
+	void BoiteDialogueDecryptageSubstitution(GtkWidget *Fenetre);\\
+		Cette procédure affiche une zone de texte qui nous permet de rentrer le texte à decrypter par substitution.\\
+		Elle prend en argument la fenêtre.\\
+	
+	void BoiteDialogueDecryptageVigenere(GtkWidget *Fenetre);\\
+		Cette procédure affiche deux zones de texte qui permettent de rentrer le texte à decrypter par la methode de vigenere.\\
 		Elle prend en argument une fenêtre.\\
 		
 	void BoiteDialogueAnalyse(GtkWidget *Fenetre);\\
@@ -326,11 +343,10 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Elle prend en argument une fenêtre.\\
 		
 	nous aurons peut-être besoin d'autres menus au cours de notre application(pour un meilleur affichage ou ameliorations) 
-	//menu pour la langue
 	
-	\textit{Les Enregistrement/Chargements}\\
+	\texteit{Les Enregistrement/Chargements}\\
 	
-	void Enregistrer (GtkWidget *pwidget, GtkWidget *text );\\
+	void Enregistrer (GtkWidget *pwidget, GtkWidget *texte );\\
 		Cette procédure permet de sauvegarder le texte obtenue.\\
 		Elle prend en argument une fenetre et le texte à sauvegarder.\\
 		Cette procédure ne renvoie rien.\\
@@ -338,7 +354,8 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	void RecupererChemin(GtkWidget *bouton, GtkWidget *fileselection);\\
 		Cette procédure permet de recuperer le chemin d'accés d'un fichier.\\
 		Elle prend en argument une fenetre et une deuxieme fenetre (pour les fenetres de selections de fichier)\\
-		Cette procédure appel\\
+		Cette procédure appel LireFichier,une fonction de Cryptage ou Decryptage et son menu de resultat qui va l'afficher.\\
+		
 
 	void ChoisirFichier();\\
 		Cette procédure nous permet de selectionner un fichier à charger (fichier qui contient le texte clair ou 		crypter)\\
@@ -347,15 +364,16 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	gchar* LireFichier(const gchar* chemin);\\
 		Cette fonction permet de recuperer le texte qui est dans un fichier, pour cela nous donnons en argument un chemin de fichier.\\
 	
-	\textit{Autres}\\
+	\texteit{Autres}\\
 	
 	void ViderContenaire(GtkContainer * container);\\
 		Cette procédure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
 		Cette procédure prend en argument la fenêtre à vider.\\
-	void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte);\\
+	
+	void ConvertisseurTableau(gchar T[],int *Tailletexte,gchar* texte);\\
 		enlever accent et espace, et mettre dans un tableau\\
 	 
-	gchar* ConvertisseurChar(char T[],int TailleTexte); \\
+	gchar* ConvertisseurChar(char T[],int Tailletexte); \\
 		Parcours d'un tableau donné et le retourne en chaine de caracteres\\
 		
 	
@@ -366,10 +384,10 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	
 	Elle se situe après l'étape de conception (cahier des charges) et avant l'étape de réalisation (codage).\\
 	
-	Ce cahier permet donc de répondre de manière spécifique aux différentes reponses apportées, notamment les données en entrée
+	Ce cahier permet donc de décrire de manière spécifique les différentes solutions apportées dans la cahier des charges, notamment les données en entrée
 	ou en sortie des fonctions/procédures qui composent nos modules.\\
 	
-	Le diagramme résume les fonctions/procédures présentes dans chaque module ainsi que les liens d'inclusion.\\
+	
 	
 	Maintenant que tout ces paramètres ont été définis et que l'équipe est d'accord sur l'architecture de l'application, nous allons
 	passer à l'implémentation en respectant tout les règles fixées par le cahier des charges et des spécifications.
