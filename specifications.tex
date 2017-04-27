@@ -138,6 +138,9 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		les widgets (GTKWidget) sont les boutons, les zones de text, les menus, enfin.. à peu 
 		près tout ce qui constitue une interface.\\
 		
+		L'argument "gchar* TextClair" que l'on va retrouver par la suite dans plusieurs fonctions
+		designe le texte clair(le texte a crypter).\\
+		
 		la seule  variable globale utilisée dans notre programme est Fenetre. Elle nous permet de
 		conserver la fenêtre principale de notre application:\\
 		GtkWidget *Fenetre; \\
@@ -161,7 +164,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	l'appel de la fonction "AnalyseFrequentielle". Ainsi, on connaitra
 	le nombre de caractères dans celui-ci, les digrammes/trigrammes, la plus grande occurence
 	rencontrée et la frequence d'apparition de chaque lettre.\\
-	le nb représente le nombre de lettres dans le texte etudié, occ est un tableau qui contiend \\
+	le nb représente le nombre de lettres dans le texte etudié, occ est un tableau qui contient \\
 	le nombre d'occurences de chaque lettre (occ[0] pour A etc..) ,di et tr contiennent les digrammes \\
 	et les trigrammes dans le texte ainsi que leurs nombre d'occurences.\\
 	pgor est la chaine de caracteres qui contiend la Plus Grande Occurance Repetée dans notre texte .\\
@@ -189,22 +192,21 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		
 		
 	ANALYSE AnalyseFrequentielle(gchar* TextClair)\\
-		la fonction prend en entrée le text clair a analyser et va ainsi remplir la structure "ANALYSE" et 
+		La fonction prend en entrée le text clair a analyser et va ainsi remplir la structure "ANALYSE" et 
 		ses attributs suivants:
 		le nombre de lettres, la fréquence d'apparition de chaque lettre, les digrammes, les trigrammes
-		et la plus grande occurence rencontrée.\\
+		et la plus grande occurence rencontrée. Ils seront logiquement remplis en fonction du texte.\\
 		
 	\subsubsection{Cryptage Substitution}
 	gchar* CryptageSubstitution(gchar* TextClair);\\
 		Cette fonction permet de crypter un text avec la méthode de Substitution\\
 		Pour cela, elle prend en entrée une chaine de caractères qui correspond au text clair.\\
-		En sortie, le text crypté sera sous forme de chaine de caractères.\\
-		Le text a crypter se trouve dans un tableau que nous allons parcourir. Et pour chaque caractere 
-		nous allons aller lire dans un autre tableau [2][26] ou la premiere ligne correspond a l'alphabet
-		de base et la deuxième celui de substitution(le nouveau). Ainsi, nous regardons la lettre dans 
-		le premier tableau (du text a crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la
-		première ligne, puis on regarde sa lettre de substitution, et enfin on remplace dans le premier tableau 
-		la lettre de base par ce caractère de substitution.
+		On utilise ensuite la fonction "ConvertisseurTableau".
+		Le text a crypter se trouve alors dans un tableau que nous allons parcourir. Et pour chaque caractere 
+		nous allons lire dans un autre tableau [2][26] ou la premiere ligne du tableau([0][]) correspond a l'alphabet
+		de base et la deuxième ligne ([1][]) celui de substitution(le nouveau).Que l'on aura generé à l'aide de la fonction "GenereCle". Ainsi, nous regardons la lettre dans 
+		le premier tableau ( celui du texte a crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la première ligne, puis on regarde sa lettre de substitution (2e ligne), et enfin on remplace dans le premier tableau 
+		la lettre de base par ce caractère de substitution. En sortie, le text crypté sera sous forme de chaine de caractères grace a la fonction "ConvertisseurChar".
 		
 	void GenereCle(gchar T[]);\\
 		génère une clé(alphabet) aléatoirement.
@@ -264,11 +266,10 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	gchar* CryptageVigenere(gchar* texteClair, gchar* Cle);\\
 		Cette fonction permet de crypter un texte avec la methode de Vigenere\\
 		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caractères.\\
-		La fonction renverra le texte crypté\\
-		On construit un tableau [3][taille texte]. En première ligne on trouvera le texte a crypter, 
-		en 2e la clé (qu'on repetera de facon a couvrir toute la 1e ligne(message a chiffrer)) et enfin 
-		en 3e ligne le resultat de l'addition des caracteres des deux premieres lignes le tout modulo 
-		26(c'est a dire le texte maintenant crypté).
+		On construit un tableau [3][taille texte]. En première ligne([0][]) on trouvera le texte a crypter(ou plutot la valeur en entier de chaque caractere du texte a crypter), 
+		en 2e ligne([1][]) la clé (qu'on repetera de facon a couvrir toute la 1e ligne et donc le message a chiffrer). La aussi chaque caractere de la clé sera directement inscrit en entier et enfin en 3e ligne([2][]) le resultat de l'addition des caracteres(entiers) des deux premieres lignes le tout modulo 26.
+		On lira toute cette derniere ligne (l'entier de chaque case) et on ira remplir un second tableau avec directement le caractere correspondant a cet entier.
+		La fonction "ConvertisseurChar" permettra de renvoyer le texte crypté sous forme de gchar*.
 		
 		\subsubsection{Interface Graphique}
 		Dans ce module nous allons utiliser plusieurs menus pour afficher notre application et naviguer 
