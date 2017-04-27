@@ -222,23 +222,29 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	
 	\subsubsection{Decryptage Vignere}
 	gchar* DecryptageVigenere(gchar* textCrypte);\\
-		Cette fonction prend un texte crypté par le chiffrement de Vigenère en argument
-		Déclaration d'un tableau cle[] qui contiendra les valeurs des caractères du mot clé.\\
-		Renvoie un texte clair et lisible par l'utilisateur.\\
+		Cette fonction prend un texte crypté par le chiffrement de Vignère en argument.
+		Appelle des fonctions AnalyseFrequentielle et TabRessource qui vont initialisé les Valeurs 
+		contenue dans la structure ANALYSE.
+		Elle appel la fonction Kasiski qui va conjecturé la taille de la clé.
+		Ensuite, on déclare un tableau cle[taille_kasiski] de taille correspondant à la fonction kasiski. 
+		On appel la fonction indiceMutuelle qui remplira les valeurs des caractères de la clé dans le tableau cle[].\\
+		On retourne finalement la fonction Decrypteur qui retournera le texte en clair, décrypter.\\
 	
 	int Kasiski(ANALYSE freq, gchar* texteCrypte);\\
-		Cette fonction prend une structure ANALYSE en argument afin de connaitre le PGOR (Plus Grande Occurence Rencontrée) et/ou les trigrammes, ainsi que le texte à décrypter.
+		Cette fonction prend une structure ANALYSE en argument afin de connaitre le 
+		PGOR (Plus Grande Occurence Rencontrée) et/ou les trigrammes,ainsi que le texteCrypte à décrypter.
 		Elle cherche les différentes distances de PGOR et effectue le PGCD de ces distances.
 		Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé cherché).\\
 	
 	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource);\\
-		Cette fonction prend en argument le tableau clé qui contiendra les valeurs de notre mot clé, freq qui contient les fréquences de chacune des lettres du textes et ressource la
+		Cette fonction prend en argument le tableau clé qui contiendra les valeurs de notre mot clé,
+		 freq qui contient les fréquences de chacune des lettres du textes et ressource la
 		probabilité d'apparition d'une lettre dans la langue choisie.
 		Cette fonction calcule les indices de coïncidences mutuelles et les enregistrent dans un tableau tab[25][kasiski].\\
 		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celles qui sont proches de 0,065 (une par ligne).\\
 		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacunes des valeurs choisies dans un tableau à une dimension. \\
 	
-	gchar* decrypteur( int cle[], int kasiski, gchar* texteCrypte);\\
+	gchar* Decrypteur( int cle[], int kasiski, gchar* texteCrypte);\\
 		Cette fonction prend en argument le tableau cle ainsi que le texte a décrypter.
 		Elle va soustraire la valeur du mot clef (tableau renvoyé par indiceMutuelle) au texte crypté.\\
 		Elle va repeter la suite de nombre composant le mot clef (contenu dans le tableau passé en argument) jusqu'a la fin du texte afin de toujours pouvoir
@@ -387,10 +393,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	Ce cahier permet donc de décrire de manière spécifique les différentes solutions apportées dans la cahier des charges, notamment les données en entrée
 	ou en sortie des fonctions/procédures qui composent nos modules.\\
 	
-	
-	
 	Maintenant que tout ces paramètres ont été définis et que l'équipe est d'accord sur l'architecture de l'application, nous allons
 	passer à l'implémentation en respectant tout les règles fixées par le cahier des charges et des spécifications.
-	
 	
 \end{document}
