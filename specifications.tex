@@ -147,6 +147,8 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		gchar* nom;\\
 	\}PHONEME;\\
 	Cette structure représente les digrammes ou trigrammes et leurs fréquences.\\
+	le nom représente le nom du phoneme , la frequence est le nombre d'occurences\\
+	de ce dernier.\\
 	
 	struct analyse\{ \\
 		int nb //nbre de lettre \\
@@ -159,6 +161,11 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	l'appel de la fonction "AnalyseFrequentielle". Ainsi, on connaitra
 	le nombre de caractères dans celui-ci, les digrammes/trigrammes, la plus grande occurence
 	rencontrée et la frequence d'apparition de chaque lettre.\\
+	le nb représente le nombre de lettres dans le texte etudié, occ est un tableau qui contiend \\
+	le nombre d'occurences de chaque lettre (occ[0] pour A etc..) ,di et tr contiennent les digrammes \\
+	et les trigrammes dans le texte ainsi que leurs nombre d'occurences.\\
+	pgor est la chaine de caracteres qui contiend la Plus Grande Occurance Repetée dans notre texte .\\
+	
 	
 	struct ressourceslangue\{ \\
 		float occ[25];\\
@@ -166,7 +173,9 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		PHONEME tr[];\\
 	\}RESSOURCESLANGUE;\\
 	Cette structure correspond aux caractéristiques d'une langue. On connaitra
-	les digrammes/trigrammes et la fréquence d'apparition de chaque lettre dans la langue choisie.
+	les digrammes/trigrammes et la fréquence d'apparition de chaque lettre dans la langue choisie.\\
+	occ est un tableau qui contiend le nombre d'occurences de chaque lettre (occ[0] pour A etc..) \\
+	,di et tr contiennent les digrammes et les trigrammes dans le texte ainsi que leurs nombre d'occurences.
 		\subsection{Signatures}
 		
 	
