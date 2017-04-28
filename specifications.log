@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  27 APR 2017 11:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  28 APR 2017 11:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -637,78 +637,235 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--140
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--144
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--150
+Underfull \hbox (badness 10000) in paragraph at lines 144--147
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--162
+Underfull \hbox (badness 10000) in paragraph at lines 148--155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 174--179
+Underfull \hbox (badness 10000) in paragraph at lines 156--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--187
+Underfull \hbox (badness 10000) in paragraph at lines 186--191
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 204--213
+Underfull \hbox (badness 10000) in paragraph at lines 194--199
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--221
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--228
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--233
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--240
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 241--247
+Underfull \hbox (badness 10000) in paragraph at lines 255--263
 
  []
 
 [5]
-./specifications.tex:262: Undefined control sequence.
-l.262 		\texteit
-                {Les Menus}\\
-? 
-./specifications.tex:262: Emergency stop.
-l.262 		\texteit
-                {Les Menus}\\
-End of file on the terminal!
+Underfull \hbox (badness 10000) in paragraph at lines 264--269
 
- 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--284
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--305
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--319
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--324
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 325--328
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--340
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 341--344
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--352
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--356
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 357--360
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 361--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--368
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--376
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 377--380
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 385--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--394
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 400--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--408
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 418--420
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 421--422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--425
+
+ []
+
+[9] (./specifications.aux) ) 
 Here is how much of TeX's memory you used:
- 5478 strings out of 494999
- 77163 string characters out of 6180228
- 168286 words of memory out of 5000000
- 8610 multiletter control sequences out of 15000+600000
- 13312 words of font info for 32 fonts, out of 8000000 for 9000
+ 5485 strings out of 494999
+ 77241 string characters out of 6180228
+ 169286 words of memory out of 5000000
+ 8614 multiletter control sequences out of 15000+600000
+ 13998 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,19n,49p,240b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
-./specifications.tex:262:  ==> Fatal error occurred, no output PDF file produce
-d!
+ 40i,19n,49p,337b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecti1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.60
+0pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/
+user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/user/.texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/user/.texmf-var/fonts/pk
+/ljfour/jknappen/ec/ecrm1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/ecbx2488.600pk>
+Output written on specifications.pdf (10 pages, 921470 bytes).
+PDF statistics:
+ 328 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

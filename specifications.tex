@@ -121,15 +121,18 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 			- créer un nouveau fichier text(resultats)\\
 			- Demander clef de Vigenère\\
 			
-			Le diagramme résume les fonctions/procédures présentes dans chaque module ainsi que les liens d'inclusion.\\
 			
 			\underline{Decryptage Vigenère :}\\
-			-decrypter le message
+			-decrypter le message\\
+			
+
 			\includepdf[scale=0.7]{organ.pdf}
 			
 			
 	\section{Signatures et Explications des methodes}
 		\subsection{Diagramme des fonctions des differents modules}
+								Le diagramme résume les fonctions/procédures présentes dans chaque module ainsi que les liens d'inclusion.\\
+
 		\includegraphics[scale=0.8]{diaa.jpg}
 		\subsection{Structures et nouveaux types}
 		Le gchar* est une chaîne de caractères, on utilise pas char* car dans la bibliothèque
@@ -139,22 +142,26 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		près tout ce qui constitue une interface.\\
 		
 		L'argument "gchar* TextClair" que l'on va retrouver par la suite dans plusieurs fonctions
-		designe le texte clair(le texte a crypter).\\
+		designe le texte clair(le texte lisible).\\
 		
-		la seule  variable globale utilisée dans notre programme est Fenetre. Elle nous permet de
+		Les variables globales utilisées dans notre programme sont Fenetre et Langue. Fenetre nous permet de
 		conserver la fenêtre principale de notre application:\\
 		GtkWidget *Fenetre; \\
+		Langue permet, quant a elle, de garder la langue utilisée.
+		int Langue;\\
 		
-	struct phoneme\{\\
+		
+		
+	typedef struct phoneme\{\\
 		int frequence;\\
 		gchar* nom;\\
 	\}PHONEME;\\
 	Cette structure représente les digrammes ou trigrammes et leurs fréquences.\\
-	le nom représente le nom du phoneme , la frequence est le nombre d'occurences\\
+	"nom" représente le nom du phoneme et la frequence est le nombre d'occurences\\
 	de ce dernier.\\
 	
-	struct analyse\{ \\
-		int nb //nbre de lettre \\
+	typedef struct analyse\{ \\
+		int nb; \\
 		float occ[25];\\
 		PHONEME di[];\\
 		PHONEME tr[];\\
@@ -166,8 +173,8 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	rencontrée et la frequence d'apparition de chaque lettre.\\
 	le nb représente le nombre de lettres dans le texte etudié, occ est un tableau qui contient \\
 	le nombre d'occurences de chaque lettre (occ[0] pour A etc..) ,di et tr contiennent les digrammes \\
-	et les trigrammes dans le texte ainsi que leurs nombre d'occurences.\\
-	pgor est la chaine de caracteres qui contiend la Plus Grande Occurance Repetée dans notre texte .\\
+	et les trigrammes dans le texte ainsi que leurs nombres d'occurences.\\
+	pgor est la chaine de caracteres qui contiend la Plus Grande Occurance Rencontrée dans notre texte .\\
 	
 	
 	struct ressourceslangue\{ \\
@@ -177,14 +184,14 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 	\}RESSOURCESLANGUE;\\
 	Cette structure correspond aux caractéristiques d'une langue. On connaitra
 	les digrammes/trigrammes et la fréquence d'apparition de chaque lettre dans la langue choisie.\\
-	occ est un tableau qui contiend le nombre d'occurences de chaque lettre (occ[0] pour A etc..) \\
+	occ est un tableau qui contient le nombre d'occurences de chaque lettre (occ[0] pour A etc..) \\
 	,di et tr contiennent les digrammes et les trigrammes dans le texte ainsi que leurs nombre d'occurences.
 		\subsection{Signatures}
 		
 	
 	\subsubsection{Analyse Frequentielle}
-	ANALYSE TabRessource(int langue);\\
-		La fonction prend en entrée un entier correspondant à la langue(francais ou anglais)
+	ANALYSE TabRessource();\\
+		La fonction recupère un entier correspondant à la langue(francais ou anglais, en variable globale)
 		et va ainsi remplir la structure "ANALYSE" et ses attributs suivants:
 		la fréquence d'apparition de chaque lettre dans la langue choisie ainsi que les digrammes
 		et les trigrammes.\\
@@ -192,7 +199,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		
 		
 	ANALYSE AnalyseFrequentielle(gchar* TextClair)\\
-		La fonction prend en entrée le text clair a analyser et va ainsi remplir la structure "ANALYSE" et 
+		La fonction prend en entrée le text clair à analyser et va ainsi remplir la structure "ANALYSE" et 
 		ses attributs suivants:
 		le nombre de lettres, la fréquence d'apparition de chaque lettre, les digrammes, les trigrammes
 		et la plus grande occurence rencontrée. Ils seront logiquement remplis en fonction du texte.\\
@@ -202,38 +209,38 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Cette fonction permet de crypter un text avec la méthode de Substitution\\
 		Pour cela, elle prend en entrée une chaine de caractères qui correspond au text clair.\\
 		On utilise ensuite la fonction "ConvertisseurTableau".
-		Le text a crypter se trouve alors dans un tableau que nous allons parcourir. Et pour chaque caractere 
-		nous allons lire dans un autre tableau [2][26] ou la premiere ligne du tableau([0][]) correspond a l'alphabet
+		Le text à crypter se trouve alors dans un tableau que nous allons parcourir. Et pour chaque caractere 
+		nous allons lire dans un autre tableau [2][26] où la premiere ligne du tableau([0][]) correspond à l'alphabet
 		de base et la deuxième ligne ([1][]) celui de substitution(le nouveau).Que l'on aura generé à l'aide de la fonction "GenereCle". Ainsi, nous regardons la lettre dans 
-		le premier tableau ( celui du texte a crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la première ligne, puis on regarde sa lettre de substitution (2e ligne), et enfin on remplace dans le premier tableau 
-		la lettre de base par ce caractère de substitution. En sortie, le text crypté sera sous forme de chaine de caractères grace a la fonction "ConvertisseurChar".
+		le premier tableau ( celui du texte à crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la première ligne, puis on regarde sa lettre de substitution (2e ligne) et enfin on remplace dans le premier tableau 
+		la lettre de base par ce caractère de substitution. En sortie, le text crypté sera sous forme de chaine de caractères grace à la fonction "ConvertisseurChar".
 		
 	void GenereCle(gchar T[]);\\
-		génère une clé(alphabet) aléatoirement.
+		Cette procédure permet de génerer une clé(alphabet) aléatoirement. On la modifie à l'aide de pointeurs.
 	
 	\subsubsection{Decryptage Substitution}
 void DecryptageSubstitution( gchar* texteCrypté)
 	Cette fonction prend en argument une chaine de caractère contenant le texte crypté.
-	Elle vas commencer par appeler la fonction convertisseurtableau qui vas stocker les  caractères 
-	du texte crypté dans un tableau. DecryptageSubstitution vas ensuite appeler les fonctions 
-	AnalyseFrequencielle et TabRessource. Aprés avoir appellé ces fonctions elle vas, dans une boucle,
-	 comparer les resultas de l'analyse frequentielle stocké dans une structure ANALYSE et obtenu par 
-	 AnalyseFrequencielle aux données stocké dans une autre ANALYSE crée grace à la fonction TabRessource 
-	 et contenant une analyse fréquentielle sur l'alphabet correspondant à la langue choisit(anglais ou 
-	 francais). Elle vas alors remplacer dans le tableau une lettre du message crypter par la lettre qu'elle
-	  semble crypter grace à une conjecture basé sur les fréquences des lettres les plus utilsé et 
-	  complété par l'analyse des digrammes et trigrammes, elle vas egalement crée une clef de 
+	Elle va commencer par appeler la fonction convertisseurtableau qui va stocker les  caractères 
+	du texte crypté dans un tableau. DecryptageSubstitution va ensuite appeler les fonctions 
+	AnalyseFrequentielle et TabRessource. Aprés avoir appelé ces fonctions elle va, dans une boucle,
+	 comparer les résultats de l'analyse frequentielle stockés dans une structure ANALYSE créée par 
+	 AnalyseFrequentielle aux données stockées dans une autre ANALYSE créée grace à la fonction TabRessource 
+	 et contenant une analyse fréquentielle sur l'alphabet correspondant à la langue choisie(anglais ou 
+	 francais). Elle va alors remplacer dans le tableau une lettre du message crypté par la lettre qu'elle
+	  semble crypter grace à une conjecture basée sur les fréquences des lettres les plus utilisées et 
+	  complétée par l'analyse des digrammes et trigrammes, elle va egalement crée une clef de 
 	  substitution sous la forme d'un tableau de caractère de la taille de l'alphabet (la premiére case 
-	  corespondra au caractère décryptant la lettre A, la seconde au caractère décryptant la lettre B ect...)
-	  . Cette fonction appellera ensuite la fonction VerificationCoerenceDigrammeTrigramme. La boucle 
-	  prendra fin lorsque la clef de substitution sera compléte, c'est à dire quand tous les caractère
-	   de l'alphabet seron décrypté.
-	Cette fonction ne renverra rien puisque son but vas étre de permettre l'affichage du décryptage et 
-	de la clef de décryptage pendant et à la fin de l'opperation. Cette affichage sera appellé dans la
-	 fonction VerificationCoerenceDigrammeTrigramme.
+	  correspondra au caractère décryptant la lettre A, la seconde au caractère décryptant la lettre B ect...)
+	  . Cette fonction appellera ensuite la fonction VerificationCoherenceDigrammeTrigramme. La boucle 
+	  prendra fin lorsque la clef de substitution sera complète, c'est à dire quand tous les caractères
+	   de l'alphabet seront décryptés.
+	Cette fonction ne renverra rien puisque son but va être de permettre l'affichage du décryptage et 
+	de la clef de décryptage pendant et à la fin de l'opération. Cette affichage sera appelé dans la
+	 fonction VerificationCoherenceDigrammeTrigramme.
 
 
-void VerificationCoerenceDigrammeTrigramme( gchar T[], int TailleTexte, gchar clef[], int TailleAlphabet, 
+void VerificationCoherenceDigrammeTrigramme( gchar T[], int TailleTexte, gchar clef[], int TailleAlphabet, 
 ANALYSE Ressource)
 	Prend en argument un tableau T de la taille du texte crypté et contenant le texte crypté en cours de
 	 décryptage, une structure ANALYSE crée grace à la fonction contenant une analyse fréquentielle sur 
@@ -252,14 +259,17 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 	
 	
 	\subsubsection{Decryptage Vignere}
-	gchar* DecryptageVigenere(gchar* textCrypte);\\
-		Cette fonction prend un texte crypté par le chiffrement de Vignère en argument.
+	gchar* DecryptageVigenere(gchar* textCrypte, gchar* safecle);\\
+		Cette fonction prend en argument un texte crypté par le chiffrement de Vignère ainsi 
+		que safecle (chaine de caractère) qui va permettre de sauvegarder la clé.
 		Appelle des fonctions AnalyseFrequentielle et TabRessource qui vont initialisé les Valeurs 
-		contenue dans la structure ANALYSE.
-		Elle appel la fonction Kasiski qui va conjecturé la taille de la clé.
-		Ensuite, on déclare un tableau cle[taille_kasiski] de taille correspondant à la fonction kasiski. 
-		On appel la fonction indiceMutuelle qui remplira les valeurs des caractères de la clé dans le tableau cle[].\\
-		On retourne finalement la fonction Decrypteur qui retournera le texte en clair, décrypter.\\
+		contenue dans la structure ANALYSE ainsi que convertisseurtableau qui va stocker le texte crypté 
+		dans un tableau.
+		Ensuite appel la fonction Kasiski qui va conjecturé la taille de la clé.
+		Ensuite, on déclare un tableau cle[taillekasiski] de taille correspondant à la fonction kasiski. 
+		On appel la fonction indiceMutuelle qui remplira les valeurs des caractères de la clé dans le tableau cle[]
+		ainsi que safecle qui contient les caractères mêmes.\\
+		On appelle la fonction Decrypteur, cette dernière nous servant à retourner le texte en clair.\\
 	
 	int Kasiski(ANALYSE freq, gchar* texteCrypte);\\
 		Cette fonction prend une structure ANALYSE en argument afin de connaitre le 
@@ -267,13 +277,14 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 		Elle cherche les différentes distances de PGOR et effectue le PGCD de ces distances.
 		Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé cherché).\\
 	
-	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource);\\
+	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource, gchar* safecle);\\
 		Cette fonction prend en argument le tableau clé qui contiendra les valeurs de notre mot clé,
 		 freq qui contient les fréquences de chacune des lettres du textes et ressource la
 		probabilité d'apparition d'une lettre dans la langue choisie.
 		Cette fonction calcule les indices de coïncidences mutuelles et les enregistrent dans un tableau tab[25][kasiski].\\
 		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celles qui sont proches de 0,065 (une par ligne).\\
-		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacunes des valeurs choisies dans un tableau à une dimension. \\
+		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacunes des valeurs choisies dans un tableau à 
+		une dimension et affecte a safecle la clé afin de pouvoir l'afficher dans le menu. \\
 	
 	gchar* Decrypteur( int cle[], int kasiski, gchar* texteCrypte);\\
 		Cette fonction prend en argument le tableau cle ainsi que le texte a décrypter.
@@ -295,7 +306,7 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 		Dans ce module nous allons utiliser plusieurs menus pour afficher notre application et naviguer 
 		entre les menus pour cela nous allons créer plusieurs procédures qui vont afficher les menus  
 		
-		\texteit{Les Menus}\\
+		\textit{Les Menus}\\
 		
 		Toutes le procedure suivante ne renvoie rien et elle prennent en argument un conteneur(c'est l'endroit où sera affiché le contenu present dans ce menu)
 		
@@ -380,7 +391,7 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 		
 	nous aurons peut-être besoin d'autres menus au cours de notre application(pour un meilleur affichage ou ameliorations) 
 	
-	\texteit{Les Enregistrement/Chargements}\\
+	\textit{Les Enregistrement/Chargements}\\
 	
 	void Enregistrer (GtkWidget *pwidget, GtkWidget *texte );\\
 		Cette procédure permet de sauvegarder le texte obtenue.\\
@@ -400,7 +411,7 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 	gchar* LireFichier(const gchar* chemin);\\
 		Cette fonction permet de recuperer le texte qui est dans un fichier, pour cela nous donnons en argument un chemin de fichier.\\
 	
-	\texteit{Autres}\\
+	\textit{Autres}\\
 	
 	void ViderContenaire(GtkContainer * container);\\
 		Cette procédure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
