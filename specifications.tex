@@ -212,23 +212,43 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		génère une clé(alphabet) aléatoirement.
 	
 	\subsubsection{Decryptage Substitution}
-	gchar* DecryptageSubstitution( gchar* text, ANALYSE a)\\
-		Prend en argument un text crypté.\\
-		Aprés avoir appelé la fonction d'analyse fréquentielle, cette fonction va, 
-		dans une boucle, comparer les résultats de l'analyse frequentielle à l'alphabet
-		 correspondant à la langue choisie et remplacer une lettre du message crypté 
-		 par la lettre qu'elle semble crypter grace à une conjecture basée sur les 
-		 fréquences des lettres les plus utilsés et complétée par l'analyse des digrammes 
-		 et trigrammes. Cette fonction appelera ensuite la fonction VerificationCoherenceDigrammeTrigramme.\\
-		Retourne en sortie le text décrypté (gchar*).\\
+void DecryptageSubstitution( gchar* texteCrypté)
+	Cette fonction prend en argument une chaine de caractère contenant le texte crypté.
+	Elle vas commencer par appeler la fonction convertisseurtableau qui vas stocker les  caractères 
+	du texte crypté dans un tableau. DecryptageSubstitution vas ensuite appeler les fonctions 
+	AnalyseFrequencielle et TabRessource. Aprés avoir appellé ces fonctions elle vas, dans une boucle,
+	 comparer les resultas de l'analyse frequentielle stocké dans une structure ANALYSE et obtenu par 
+	 AnalyseFrequencielle aux données stocké dans une autre ANALYSE crée grace à la fonction TabRessource 
+	 et contenant une analyse fréquentielle sur l'alphabet correspondant à la langue choisit(anglais ou 
+	 francais). Elle vas alors remplacer dans le tableau une lettre du message crypter par la lettre qu'elle
+	  semble crypter grace à une conjecture basé sur les fréquences des lettres les plus utilsé et 
+	  complété par l'analyse des digrammes et trigrammes, elle vas egalement crée une clef de 
+	  substitution sous la forme d'un tableau de caractère de la taille de l'alphabet (la premiére case 
+	  corespondra au caractère décryptant la lettre A, la seconde au caractère décryptant la lettre B ect...)
+	  . Cette fonction appellera ensuite la fonction VerificationCoerenceDigrammeTrigramme. La boucle 
+	  prendra fin lorsque la clef de substitution sera compléte, c'est à dire quand tous les caractère
+	   de l'alphabet seron décrypté.
+	Cette fonction ne renverra rien puisque son but vas étre de permettre l'affichage du décryptage et 
+	de la clef de décryptage pendant et à la fin de l'opperation. Cette affichage sera appellé dans la
+	 fonction VerificationCoerenceDigrammeTrigramme.
 
 
-	void VerificationCoherenceDigrammeTrigramme(gchar* T[], int *Tailletext, ANALYSE a)\\
-		Prend en argument le text crypté en cours de décryptage.\\
-		Cette fonction va parcourir le text en cours de décryptage pour vérifier que les lettres trouvées 
-		ne forment pas de digramme ou trigramme inabituels. Si c'est le cas elle proposera à l'utilisateur 
-		de corriger le décryptage du text ou le corrigera d'elle-même.\\
-		Retourne en sortie le text crypté en cours de décryptage( gchar*).\\
+void VerificationCoerenceDigrammeTrigramme( gchar T[], int TailleTexte, gchar clef[], int TailleAlphabet, 
+ANALYSE Ressource)
+	Prend en argument un tableau T de la taille du texte crypté et contenant le texte crypté en cours de
+	 décryptage, une structure ANALYSE crée grace à la fonction contenant une analyse fréquentielle sur 
+	 l'alphabet correspondant à la langue choisit(anglais ou francais) ainsi qu'un tableau clef de la
+	  taille de l'alphabet et correspondant à la clef de substitution.
+	Cette fonction vas parcourir le texte en cours de décryptage pour vériffier que les letres trouvé ne
+	 forme pas de digramme ou trigramme inabituelle. Si c'est le cas elle proposera à l'utilisateur de 
+	 corriger le décryptage du texte ou le corrigera d'elle même. Pour se faire elle appelera la fonction
+	  ConvertisseurChar afin de stocké le résultat du texte partiellement décrypté dans une chaine de 
+	  caractère permettant son affichage grace à la fonction 
+   MenuResultatDecryptagePartiel la fonction appeller pourra également récupérer la clef
+ de substitution final ainsi que le texte final afin de les enregistrer. Ainsi l'utilisation de cette
+  fonction suivra deux cas
+de figures: soit la fonction ne détécte aucune anomalie est les tableaux en entrée ne sont pas modifiés,
+ soit elle détécte des anomalies et les tableau sont alors modifiés avec l'aide de l'utilisateur.
 	
 	
 	\subsubsection{Decryptage Vignere}
@@ -387,10 +407,10 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Cette procédure prend en argument la fenêtre à vider.\\
 	
 	void ConvertisseurTableau(gchar T[],int *Tailletexte,gchar* texte);\\
-		enlever accent et espace, et mettre dans un tableau\\
+		Cette procedure permet de transformer une chaine de caractère en tableau de caractère\\
 	 
 	gchar* ConvertisseurChar(char T[],int Tailletexte); \\
-		Parcours d'un tableau donné et le retourne en chaine de caracteres\\
+		Parcours un tableau donné et le retourne en chaine de caracteres\\
 		
 	
 	\section{Conclusion}
