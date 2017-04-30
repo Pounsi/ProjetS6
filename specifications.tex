@@ -258,16 +258,16 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
  soit elle détécte des anomalies et les tableau sont alors modifiés avec l'aide de l'utilisateur.
 	
 	
-	\subsubsection{Decryptage Vignere}
+	\subsubsection{Decryptage Vigenère}
 	gchar* DecryptageVigenere(gchar* textCrypte, gchar* safecle);\\
-		Cette fonction prend en argument un texte crypté par le chiffrement de Vignère ainsi 
-		que safecle (chaine de caractère) qui va permettre de sauvegarder la clé.
-		Appelle des fonctions AnalyseFrequentielle et TabRessource qui vont initialisé les Valeurs 
+		Cette fonction prend en argument un texte crypté par le chiffrement de Vigenère ainsi 
+		que safecle (chaine de caractères) qui va permettre de sauvegarder la clé.
+		Appels des fonctions AnalyseFrequentielle et TabRessource qui vont initialisées les valeurs 
 		contenue dans la structure ANALYSE ainsi que convertisseurtableau qui va stocker le texte crypté 
 		dans un tableau.
-		Ensuite appel la fonction Kasiski qui va conjecturé la taille de la clé.
-		Ensuite, on déclare un tableau cle[taillekasiski] de taille correspondant à la fonction kasiski. 
-		On appel la fonction indiceMutuelle qui remplira les valeurs des caractères de la clé dans le tableau cle[]
+		Ensuite appelle la fonction Kasiski qui va conjecturée la taille de la clé.
+		Puis, on déclare un tableau cle[taillekasiski] de taille correspondant à la fonction kasiski. 
+		On appelle la fonction indiceMutuelle qui remplira les valeurs des caractères de la clé dans le tableau cle[]
 		ainsi que safecle qui contient les caractères mêmes.\\
 		On appelle la fonction Decrypteur, cette dernière nous servant à retourner le texte en clair.\\
 	
@@ -279,23 +279,24 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 	
 	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource, gchar* safecle);\\
 		Cette fonction prend en argument le tableau clé qui contiendra les valeurs de notre mot clé,
-		 freq qui contient les fréquences de chacune des lettres du textes et ressource la
+		freq qui contient les fréquences de chacune des lettres du textes et ressource la
 		probabilité d'apparition d'une lettre dans la langue choisie.
 		Cette fonction calcule les indices de coïncidences mutuelles et les enregistrent dans un tableau tab[25][kasiski].\\
-		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celles qui sont proches de 0,065 (une par ligne).\\
-		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacunes des valeurs choisies dans un tableau à 
-		une dimension et affecte a safecle la clé afin de pouvoir l'afficher dans le menu. \\
+		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celles qui sont proches de 0,065
+		(une par ligne).\\
+		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacunes des valeurs choisies dans un 
+		tableau à une dimension et affecte a safecle la clé afin de pouvoir l'afficher dans le menu. \\
 	
 	gchar* Decrypteur( int cle[], int kasiski, gchar* texteCrypte);\\
 		Cette fonction prend en argument le tableau cle ainsi que le texte a décrypter.
 		Elle va soustraire la valeur du mot clef (tableau renvoyé par indiceMutuelle) au texte crypté.\\
-		Elle va repeter la suite de nombre composant le mot clef (contenu dans le tableau passé en argument) jusqu'a la fin du texte afin de toujours pouvoir
-		soustraire une valeur du mot clé a une valeur du texte crypté.\\
-		Elle renvoie le texte en clair, c'est a dire décrypter.\\
+		Elle va répeter la suite de nombre composant le mot clef (contenue dans le tableau passé en argument) jusqu'a
+		la fin du texte afin de toujours pouvoir soustraire une valeur du mot clé a une valeur du texte crypté.\\
+		Elle renvoie le texte en clair, c'est a dire décrypté.\\
 		
-		\subsubsection{Cryptage Vignere}
+		\subsubsection{Cryptage Vigenère}
 	gchar* CryptageVigenere(gchar* texteClair, gchar* Cle);\\
-		Cette fonction permet de crypter un texte avec la methode de Vigenere\\
+		Cette fonction permet de crypter un texte avec la methode de Vigenère\\
 		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caractères.\\
 		On construit un tableau [3][taille texte]. En première ligne([0][]) on trouvera le texte a crypter(ou plutot la valeur en entier de chaque caractere du texte a crypter), 
 		en 2e ligne([1][]) la clé (qu'on repetera de facon a couvrir toute la 1e ligne et donc le message a chiffrer). La aussi chaque caractere de la clé sera directement inscrit en entier et enfin en 3e ligne([2][]) le resultat de l'addition des caracteres(entiers) des deux premieres lignes le tout modulo 26.
@@ -330,7 +331,7 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 
 	
 	void MenuCryptageVigenere(GtkWidget *Fenetre);\\
-		Cette procédure permet d'afficher le menu de cryptage par la méthode de vigenere.\\
+		Cette procédure permet d'afficher le menu de cryptage par la méthode de vigenère.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 	
 	void MenuDecryptageSubstitution(GtkWidget *Fenetre);\\
@@ -338,7 +339,7 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 	
 	void MenuDecryptageVigenere(GtkWidget *Fenetre);\\
-		Cette procédure permet d'afficher le menu de decryptage par la méthode de vigenere.\\
+		Cette procédure permet d'afficher le menu de decryptage par la méthode de vigenère.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 	
 	void MenuAnalyseFrequentielle(GtkWidget *Fenetre);\\
@@ -350,7 +351,7 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 	
 	void MenuResultatVigenere(GtkWidget *Fenetre, gchar* textecrypt, gchar* cle);\\
-		Cette procédure permet d'afficher le menu du resultat du cryptage par la methode de vigenere.\\
+		Cette procédure permet d'afficher le menu du resultat du cryptage par la methode de vigenère.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 		
 	void MenuResultatDecryptageSubstitution(GtkWidget *Fenetre, gchar* textecrypt);\\
@@ -358,7 +359,7 @@ de figures: soit la fonction ne détécte aucune anomalie est les tableaux en en
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 	
 	void MenuResultatDecryptageVigenere(GtkWidget *Fenetre, gchar* textecrypt, gchar* cle);\\
-		Cette procédure permet d'afficher le menu du resultat du decryptage par la methode de vigenere.\\
+		Cette procédure permet d'afficher le menu du resultat du decryptage par la methode de vigenère.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 	
 	void MenuResultatAnalyse(GtkWidget *Fenetre);//rajouer le texte ou tableau\\
