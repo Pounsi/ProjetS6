@@ -239,7 +239,14 @@ void DecryptageSubstitution( gchar* texteCrypté)
 	décryptage, une structure RESSOURCESLANGUE crée grace à la fonction contenant une analyse fréquentielle sur 
 	l'alphabet correspondant à la langue choisit(anglais ou francais) ainsi qu'un tableau clef de la
 	taille de l'alphabet et correspondant à la clef de substitution.
-	Cette fonction vas parcourir le texte en cours de décryptage pour vériffier que les letres trouvé ne forme pas de 		digramme ou trigramme inabituelle. Si c'est le cas elle proposera à l'utilisateur de corriger le décryptage du texte ou 	le corrigera d'elle même. Pour se faire elle appelera la fonction ConvertisseurChar afin de stocké le résultat du texte 	partiellement décrypté dans une chaine de caractère permettant son affichage grace à la fonction 				MenuResultatDecryptagePartiel la fonction appeller pourra également récupérer la clef de substitution final ainsi que le 	 texte final afin de les enregistrer. Ainsi l'utilisation de cette fonction suivra deux ca de figures: soit la fonction 	ne détécte aucune anomalie est les tableaux en entrée ne sont pas modifiés, soit elle détécte des anomalies et les 		tableau sont alors modifiés avec l'aide de l'utilisateur.
+	Cette fonction vas parcourir le texte en cours de décryptage pour vériffier que les letres trouvé ne forme pas de 
+	digramme ou trigramme inabituelle. Si c'est le cas elle proposera à l'utilisateur de corriger le décryptage du texte ou 
+	le corrigera d'elle même. Pour se faire elle appelera la fonction ConvertisseurChar afin de stocké le résultat du texte 
+	partiellement décrypté dans une chaine de caractère permettant son affichage grace à la fonction 		
+	MenuResultatDecryptagePartiel la fonction appeller pourra également récupérer la clef de substitution final ainsi que le
+	texte final afin de les enregistrer. Ainsi l'utilisation de cette fonction suivra deux ca de figures: soit la fonction 
+	ne détécte aucune anomalie est les tableaux en entrée ne sont pas modifiés, soit elle détécte des anomalies et les 	
+	tableau sont alors modifiés avec l'aide de l'utilisateur.
 	
 	
 	\subsubsection{Decryptage Vigenère}
