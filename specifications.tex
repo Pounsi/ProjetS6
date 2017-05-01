@@ -222,40 +222,24 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 void DecryptageSubstitution( gchar* texteCrypté)
 	Cette fonction prend en argument une chaine de caractère contenant le texte crypté.
 	Elle va commencer par appeler la fonction convertisseurtableau qui va stocker les  caractères 
-	du texte crypté dans un tableau. DecryptageSubstitution va ensuite appeler les fonctions 
-	AnalyseFrequentielle et TabRessource. Aprés avoir appelé ces fonctions elle va, dans une boucle,
-	 comparer les résultats de l'analyse frequentielle stockés dans une structure ANALYSE créée par 
-	 AnalyseFrequentielle aux données stockées dans une autre ANALYSE créée grace à la fonction TabRessource 
-	 et contenant une analyse fréquentielle sur l'alphabet correspondant à la langue choisie(anglais ou 
-	 francais). Elle va alors remplacer dans le tableau une lettre du message crypté par la lettre qu'elle
-	  semble crypter grace à une conjecture basée sur les fréquences des lettres les plus utilisées et 
-	  complétée par l'analyse des digrammes et trigrammes, elle va egalement crée une clef de 
-	  substitution sous la forme d'un tableau de caractère de la taille de l'alphabet (la premiére case 
-	  correspondra au caractère décryptant la lettre A, la seconde au caractère décryptant la lettre B ect...)
-	  . Cette fonction appellera ensuite la fonction VerificationCoherenceDigrammeTrigramme. La boucle 
-	  prendra fin lorsque la clef de substitution sera complète, c'est à dire quand tous les caractères
-	   de l'alphabet seront décryptés.
-	Cette fonction ne renverra rien puisque son but va être de permettre l'affichage du décryptage et 
-	de la clef de décryptage pendant et à la fin de l'opération. Cette affichage sera appelé dans la
-	 fonction VerificationCoherenceDigrammeTrigramme.
+	du texte crypté dans un tableau. 
+	DecryptageSubstitution va ensuite appeler les fonctions AnalyseFrequentielle et TabRessource. 
+	Aprés avoir appelé ces 	fonctions elle va, dans une boucle comparer les résultats de l'analyse frequentielle stockés 		dans une structure ANALYSE créée par AnalyseFrequentielle aux données stockées dans une structure RESSOURCESLANGUE créée 	 grace à la fonction TabRessource et contenant une analyse fréquentielle sur l'alphabet correspondant à la langue 		choisie(anglais ou francais).
+	Elle va alors remplacer dans le tableau une lettre du message crypté par la lettre qu'elle semble crypter grace à une 		conjecture basée sur les fréquences des lettres les plus utilisées et complétée par l'analyse des digrammes et 			trigrammes, elle va egalement crée une clef de substitution sous la forme d'un tableau de caractère de la taille de 		l'alphabet (la premiére case correspondra au caractère décryptant la lettre A, la seconde au caractère décryptant la 		lettre B ect...).
+	Cette fonction appellera ensuite la fonction VerificationCoherenceDigrammeTrigramme.
+	La boucle prendra fin lorsque la clef de substitution sera complète, c'est à dire quand tous les caractères
+	de l'alphabet seront décryptés.
+	Cette fonction ne renverra rien puisque son but va être de permettre l'affichage du décryptage et de la clef de 		décryptage pendant et à la fin de l'opération.
+	Cette affichage sera appelé dans lafonction VerificationCoherenceDigrammeTrigramme.
 
 
-void VerificationCoherenceDigrammeTrigramme( gchar T[], int TailleTexte, gchar clef[], int TailleAlphabet, 
-ANALYSE Ressource)
+	void VerificationCoherenceDigrammeTrigramme( gchar T[], int TailleTexte, gchar clef[], int TailleAlphabet, 
+	RESSOURCESLANGUE Ressource)
 	Prend en argument un tableau T de la taille du texte crypté et contenant le texte crypté en cours de
-	 décryptage, une structure ANALYSE crée grace à la fonction contenant une analyse fréquentielle sur 
-	 l'alphabet correspondant à la langue choisit(anglais ou francais) ainsi qu'un tableau clef de la
-	  taille de l'alphabet et correspondant à la clef de substitution.
-	Cette fonction vas parcourir le texte en cours de décryptage pour vériffier que les letres trouvé ne
-	 forme pas de digramme ou trigramme inabituelle. Si c'est le cas elle proposera à l'utilisateur de 
-	 corriger le décryptage du texte ou le corrigera d'elle même. Pour se faire elle appelera la fonction
-	  ConvertisseurChar afin de stocké le résultat du texte partiellement décrypté dans une chaine de 
-	  caractère permettant son affichage grace à la fonction 
-   MenuResultatDecryptagePartiel la fonction appeller pourra également récupérer la clef
- de substitution final ainsi que le texte final afin de les enregistrer. Ainsi l'utilisation de cette
-  fonction suivra deux cas
-de figures: soit la fonction ne détécte aucune anomalie est les tableaux en entrée ne sont pas modifiés,
- soit elle détécte des anomalies et les tableau sont alors modifiés avec l'aide de l'utilisateur.
+	décryptage, une structure RESSOURCESLANGUE crée grace à la fonction contenant une analyse fréquentielle sur 
+	l'alphabet correspondant à la langue choisit(anglais ou francais) ainsi qu'un tableau clef de la
+	taille de l'alphabet et correspondant à la clef de substitution.
+	Cette fonction vas parcourir le texte en cours de décryptage pour vériffier que les letres trouvé ne forme pas de 		digramme ou trigramme inabituelle. Si c'est le cas elle proposera à l'utilisateur de corriger le décryptage du texte ou 	le corrigera d'elle même. Pour se faire elle appelera la fonction ConvertisseurChar afin de stocké le résultat du texte 	partiellement décrypté dans une chaine de caractère permettant son affichage grace à la fonction 				MenuResultatDecryptagePartiel la fonction appeller pourra également récupérer la clef de substitution final ainsi que le 	 texte final afin de les enregistrer. Ainsi l'utilisation de cette fonction suivra deux ca de figures: soit la fonction 	ne détécte aucune anomalie est les tableaux en entrée ne sont pas modifiés, soit elle détécte des anomalies et les 		tableau sont alors modifiés avec l'aide de l'utilisateur.
 	
 	
 	\subsubsection{Decryptage Vigenère}
