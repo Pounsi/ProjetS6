@@ -126,7 +126,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 			-decrypter le message\\
 			
 
-			\includepdf[scale=0.7]{organ.pdf}
+			\includepdf[scale=0.65]{organ.pdf}
 			
 			
 	\section{Signatures et Explications des methodes}
@@ -141,7 +141,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		les widgets (GTKWidget) sont les boutons, les zones de text, les menus, enfin.. à peu 
 		près tout ce qui constitue une interface.\\
 		
-		L'argument "gchar* TextClair" que l'on va retrouver par la suite dans plusieurs fonctions
+		L'argument "gchar* TexteClair" que l'on va retrouver par la suite dans plusieurs fonctions
 		designe le texte clair(le texte lisible).\\
 		
 		Les variables globales utilisées dans notre programme sont Fenetre et Langue. Fenetre nous permet de
@@ -197,7 +197,7 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		et les trigrammes.\\
 		Elle renvoie la structure RESSOURCESLANGUES remplie.
 		
-	ANALYSE AnalyseFrequentielle(gchar* TextCrypté)\\
+	ANALYSE AnalyseFrequentielle(gchar* TexteCrypté)\\
 		La fonction prend en entrée le text crypté à analyser et va ainsi remplir la structure "ANALYSE" et 
 		ses attributs suivants:
 		le nombre de lettres, la fréquence d'apparition de chaque lettre, les digrammes, les trigrammes
@@ -205,58 +205,50 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Elle renvoie la structure ANALYSE remplie.
 		
 	\subsubsection{Cryptage Substitution}
-	gchar* CryptageSubstitution(gchar* TextClair);\\
-		Cette fonction permet de crypter un text avec la méthode de Substitution\\
+	gchar* CryptageSubstitution(gchar* TexteClair);\\
+		Cette fonction permet de crypter un texte avec la méthode de Substitution\\
 		Pour cela, elle prend en entrée une chaine de caractères qui correspond au text clair.\\
 		On utilise ensuite la fonction "ConvertisseurTableau".
 		Le text à crypter se trouve alors dans un tableau que nous allons parcourir. Et pour chaque caractere 
 		nous allons lire dans un autre tableau [2][26] où la premiere ligne du tableau([0][]) correspond à l'alphabet
 		de base et la deuxième ligne ([1][]) celui de substitution(le nouveau).Que l'on aura generé à l'aide de la fonction "GenereCle". Ainsi, nous regardons la lettre dans 
 		le premier tableau ( celui du texte à crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la première ligne, puis on regarde sa lettre de substitution (2e ligne) et enfin on remplace dans le premier tableau 
-		la lettre de base par ce caractère de substitution. En sortie, le text crypté sera sous forme de chaine de caractères grace à la fonction "ConvertisseurChar".
+		la lettre de base par ce caractère de substitution. En sortie, le texte crypté sera sous forme de chaine de caractères grace à la fonction "ConvertisseurChar".
 		
 	void GenereCle(gchar T[]);\\
 		Cette procédure permet de génerer une clé(alphabet) aléatoirement. On la modifie à l'aide de pointeurs.
 	
 	\subsubsection{Decryptage Substitution}
-void DecryptageSubstitution( gchar* texteCrypté)
-	Cette fonction prend en argument une chaine de caractère contenant le texte crypté.
-	Elle va commencer par appeler la fonction convertisseurtableau qui va stocker les  caractères 
+gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
+	Cette fonction prend en argument une chaine de caractères contenant le texte crypté et une chaine
+	de caractères vide.
+	Elle va commencer par appeler la fonction ConvertisseurTableau qui va stocker les caractères 
 	du texte crypté dans un tableau. 
 	DecryptageSubstitution va ensuite appeler les fonctions AnalyseFrequentielle et TabRessource. 
-	Aprés avoir appelé ces 	fonctions elle va, dans une boucle comparer les résultats de l'analyse frequentielle stockés 		dans une structure ANALYSE créée par AnalyseFrequentielle aux données stockées dans une structure RESSOURCESLANGUE créée 	 grace à la fonction TabRessource et contenant une analyse fréquentielle sur l'alphabet correspondant à la langue 		choisie(anglais ou francais).
-	Elle va alors remplacer dans le tableau une lettre du message crypté par la lettre qu'elle semble crypter grace à une 		conjecture basée sur les fréquences des lettres les plus utilisées et complétée par l'analyse des digrammes et 			trigrammes, elle va egalement crée une clef de substitution sous la forme d'un tableau de caractère de la taille de 		l'alphabet (la premiére case correspondra au caractère décryptant la lettre A, la seconde au caractère décryptant la 		lettre B ect...).
-	Cette fonction appellera ensuite la fonction VerificationCoherenceDigrammeTrigramme.
-	La boucle prendra fin lorsque la clef de substitution sera complète, c'est à dire quand tous les caractères
+	Aprés avoir appelé ces fonctions elle va, dans une boucle comparer les résultats de l'analyse frequentielle stockés 
+	dans une structure ANALYSE créée par AnalyseFrequentielle aux données stockées dans une structure RESSOURCESLANGUE créée
+	grace à la fonction TabRessource et contenant une analyse fréquentielle sur l'alphabet correspondant à la langue
+	choisie(anglais ou francais).
+	Elle va alors remplacer dans le tableau une lettre du message crypté par la lettre qu'elle semble crypter grace à une 
+	conjecture basée sur les fréquences des lettres les plus utilisées et complétée par l'analyse des digrammes et
+	trigrammes, elle va egalement créer une clef de substitution sous la forme d'un tableau de caractères de la taille de 
+	l'alphabet (la première case correspondra au caractère décryptant la lettre A, la seconde au caractère décryptant la 
+	lettre B ect...).
+	Cette fonction récupérera la clef de substitution afin de l'enregistrer dans 'clef'.
+	Ainsi l'utilisation de cette fonction suivra deux cas de figures: soit le resultat de la fonction 
+	correspond aux attentes de l'utilisateur sinon on rappelle la fonction qui tentera un decryptage different. 
+	La boucle prendra fin lorsque la clef de substitution sera partiellement complète, c'est à dire quand 10 caractères
 	de l'alphabet seront décryptés.
-	Cette fonction ne renverra rien puisque son but va être de permettre l'affichage du décryptage et de la clef de 		décryptage pendant et à la fin de l'opération.
-	Cette affichage sera appelé dans lafonction VerificationCoherenceDigrammeTrigramme.
-
-
-	void VerificationCoherenceDigrammeTrigramme( gchar T[], int TailleTexte, gchar clef[], int TailleAlphabet, 
-	RESSOURCESLANGUE Ressource)
-	Prend en argument un tableau T de la taille du texte crypté et contenant le texte crypté en cours de
-	décryptage, une structure RESSOURCESLANGUE crée grace à la fonction contenant une analyse fréquentielle sur 
-	l'alphabet correspondant à la langue choisit(anglais ou francais) ainsi qu'un tableau clef de la
-	taille de l'alphabet et correspondant à la clef de substitution.
-	Cette fonction vas parcourir le texte en cours de décryptage pour vériffier que les letres trouvé ne forme pas de 
-	digramme ou trigramme inabituelle. Si c'est le cas elle proposera à l'utilisateur de corriger le décryptage du texte ou 
-	le corrigera d'elle même. Pour se faire elle appelera la fonction ConvertisseurChar afin de stocké le résultat du texte 
-	partiellement décrypté dans une chaine de caractère permettant son affichage grace à la fonction 		
-	MenuResultatDecryptagePartiel la fonction appeller pourra également récupérer la clef de substitution final ainsi que le
-	texte final afin de les enregistrer. Ainsi l'utilisation de cette fonction suivra deux ca de figures: soit la fonction 
-	ne détécte aucune anomalie est les tableaux en entrée ne sont pas modifiés, soit elle détécte des anomalies et les 	
-	tableau sont alors modifiés avec l'aide de l'utilisateur.
-	
+	Cette fonction renverra un texte clair utilisé pour l'affichage.
 	
 	\subsubsection{Decryptage Vigenère}
-	gchar* DecryptageVigenere(gchar* textCrypte, gchar* safecle);\\
+	gchar* DecryptageVigenere(gchar* texteCrypte, gchar** safecle);\\
 		Cette fonction prend en argument un texte crypté par le chiffrement de Vigenère ainsi 
 		que safecle (chaine de caractères) qui va permettre de sauvegarder la clé.
-		Appels des fonctions AnalyseFrequentielle et TabRessource qui vont initialisées les valeurs 
+		Appels des fonctions AnalyseFrequentielle et TabRessource qui vont initialiser les valeurs 
 		contenue dans la structure ANALYSE ainsi que convertisseurtableau qui va stocker le texte crypté 
 		dans un tableau.
-		Ensuite appelle la fonction Kasiski qui va conjecturée la taille de la clé.
+		Ensuite appelle la fonction Kasiski qui va conjecturer la taille de la clé.
 		Puis, on déclare un tableau cle[taillekasiski] de taille correspondant à la fonction kasiski. 
 		On appelle la fonction indiceMutuelle qui remplira les valeurs des caractères de la clé dans le tableau cle[]
 		ainsi que safecle qui contient les caractères mêmes.\\
@@ -268,14 +260,14 @@ void DecryptageSubstitution( gchar* texteCrypté)
 		Elle cherche les différentes distances de PGOR et effectue le PGCD de ces distances.
 		Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé cherché).\\
 	
-	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource, gchar* safecle);\\
+	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource, gchar** safecle);\\
 		Cette fonction prend en argument le tableau clé qui contiendra les valeurs de notre mot clé,
 		freq qui contient les fréquences de chacune des lettres du textes et ressource la
 		probabilité d'apparition d'une lettre dans la langue choisie.
 		Cette fonction calcule les indices de coïncidences mutuelles et les enregistrent dans un tableau tab[25][kasiski].\\
 		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celles qui sont proches de 0,065
 		(une par ligne).\\
-		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacunes des valeurs choisies dans un 
+		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacune des valeurs choisies dans un 
 		tableau à une dimension et affecte a safecle la clé afin de pouvoir l'afficher dans le menu. \\
 	
 	gchar* Decrypteur( int cle[], int kasiski, gchar* texteCrypte);\\
@@ -345,6 +337,15 @@ void DecryptageSubstitution( gchar* texteCrypté)
 		Cette procédure permet d'afficher le menu du resultat du cryptage par la methode de vigenère.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 		
+	void MenuResultatDecryptagePartiel(GtkWidget *Fenetre)
+		Cette procédure permet d'afficher le menu du resultat du decryptage  partiel par la \\
+		methode de substitution.\\
+		Ce menu affiche un resultat partiel du decryptage avec des boutons qui permettent d'affiner\\
+		notre resultat. \\
+		Une fois notre resultat obtenu nous passons au MenuResultatDecryptageSubstitution qui lui \\
+		permet d'afficher le resultat final et la clée de substitution.\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		
 	void MenuResultatDecryptageSubstitution(GtkWidget *Fenetre, gchar* textecrypt);\\
 		Cette procédure permet d'afficher le menu du resultat du decryptage par la methode de substitution.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
@@ -378,10 +379,15 @@ void DecryptageSubstitution( gchar* texteCrypté)
 		Elle prend en argument une fenêtre.\\
 		
 	void BoiteDialogueLangue(GtkWidget *Fenetre,int langue);\\
-		Cette procédure nous permet de choisir la langue (0:francais , 1:anglais).\\
+		Cette procédure nous permet de choisir la langue (0:francais , 1:anglais),\\
+		en modifiant la variable globale Langue à l'aide de la fonction ModifieLangue.\\
 		Elle prend en argument une fenêtre.\\
 		
-	nous aurons peut-être besoin d'autres menus au cours de notre application(pour un meilleur affichage ou ameliorations) 
+	void modifieLangue(GtkWidget *Fenetre, int lang)\\
+		Cette fonction va mettre à jour la variable globale Langue.\\
+		
+	nous aurons peut-être besoin d'autres menus au cours de notre 
+	application(pour un meilleur affichage ou ameliorations) 
 	
 	\textit{Les Enregistrement/Chargements}\\
 	

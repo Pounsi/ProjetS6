@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  28 APR 2017 11:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.9.11)  2 MAY 2017 13:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -574,64 +574,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--123
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 125--127
 
  []
 
 <organ.pdf, id=10, 597.23125pt x 845.1575pt>
 File: organ.pdf Graphic file (type pdf)
  <use organ.pdf>
-Package pdftex.def Info: organ.pdf used on input line 128.
+Package pdftex.def Info: organ.pdf used on input line 129.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: organ.pdf Graphic file (type pdf)
  <use organ.pdf>
-Package pdftex.def Info: organ.pdf used on input line 128.
+Package pdftex.def Info: organ.pdf used on input line 129.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
 [1] <organ.pdf, id=17, page=1, 597.23125pt x 845.1575pt>
 File: organ.pdf Graphic file (type pdf)
 
 <use organ.pdf, page 1>
-Package pdftex.def Info: organ.pdf, page1 used on input line 128.
+Package pdftex.def Info: organ.pdf, page1 used on input line 129.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: organ.pdf Graphic file (type pdf)
  <use organ.pdf, page 1>
-Package pdftex.def Info: organ.pdf, page1 used on input line 128.
-(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
+Package pdftex.def Info: organ.pdf, page1 used on input line 129.
+(pdftex.def)             Requested size: 388.19571pt x 549.34587pt.
 File: organ.pdf Graphic file (type pdf)
  <use organ.pdf, page 1>
-Package pdftex.def Info: organ.pdf, page1 used on input line 128.
-(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
+Package pdftex.def Info: organ.pdf, page1 used on input line 129.
+(pdftex.def)             Requested size: 388.19571pt x 549.34587pt.
 File: organ.pdf Graphic file (type pdf)
 
 <use organ.pdf, page 1>
-Package pdftex.def Info: organ.pdf, page1 used on input line 128.
-(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
+Package pdftex.def Info: organ.pdf, page1 used on input line 129.
+(pdftex.def)             Requested size: 388.19571pt x 549.34587pt.
 File: organ.pdf Graphic file (type pdf)
  <use organ.pdf, page 1>
-Package pdftex.def Info: organ.pdf, page1 used on input line 128.
-(pdftex.def)             Requested size: 418.05902pt x 591.60622pt.
+Package pdftex.def Info: organ.pdf, page1 used on input line 129.
+(pdftex.def)             Requested size: 388.19571pt x 549.34587pt.
  [2 <./organ.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
 <diaa.jpg, id=28, 597.432pt x 845.0772pt>
 File: diaa.jpg Graphic file (type jpg)
  <use diaa.jpg>
-Package pdftex.def Info: diaa.jpg used on input line 133.
+Package pdftex.def Info: diaa.jpg used on input line 136.
 (pdftex.def)             Requested size: 477.94624pt x 676.06268pt.
 
-Overfull \hbox (20.91501pt too wide) in paragraph at lines 133--134
+Overfull \hbox (20.91501pt too wide) in paragraph at lines 136--137
 [][] 
  []
 
-
-Overfull \vbox (67.04634pt too high) has occurred while \output is active []
-
-
-[3 <./diaa.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
-
- []
+[3]
+Overfull \vbox (23.35646pt too high) has occurred while \output is active []
 
 
+[4 <./diaa.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 138--140
 
  []
@@ -642,66 +641,66 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--143
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--155
+Underfull \hbox (badness 10000) in paragraph at lines 147--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--171
+Underfull \hbox (badness 10000) in paragraph at lines 155--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--191
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 194--199
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 255--263
+Underfull \hbox (badness 10000) in paragraph at lines 163--178
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 264--269
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 270--277
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 278--284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--305
+Underfull \hbox (badness 10000) in paragraph at lines 245--256
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 306--309
+Underfull \hbox (badness 10000) in paragraph at lines 257--262
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 263--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--279
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 293--294
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 297--300
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--304
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
+
+ []
+
+[7]
 Underfull \hbox (badness 10000) in paragraph at lines 311--314
 
  []
@@ -712,37 +711,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 316--319
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 321--324
+Underfull \hbox (badness 10000) in paragraph at lines 320--323
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--328
+Underfull \hbox (badness 10000) in paragraph at lines 324--327
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--332
+Underfull \hbox (badness 10000) in paragraph at lines 328--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--336
+Underfull \hbox (badness 10000) in paragraph at lines 332--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--340
+Underfull \hbox (badness 10000) in paragraph at lines 336--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--344
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--348
+Underfull \hbox (badness 10000) in paragraph at lines 340--348
 
  []
 
@@ -761,12 +755,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--360
 
  []
 
-[7]
+
 Underfull \hbox (badness 10000) in paragraph at lines 361--364
 
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 365--368
 
  []
@@ -787,37 +781,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 377--380
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 381--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--389
+Underfull \hbox (badness 10000) in paragraph at lines 386--388
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--394
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--398
+Underfull \hbox (badness 10000) in paragraph at lines 394--398
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 400--402
+Underfull \hbox (badness 10000) in paragraph at lines 399--403
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 405--408
+Underfull \hbox (badness 10000) in paragraph at lines 405--407
 
  []
 
@@ -826,46 +815,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 409--411
 
  []
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 412--414
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 414--417
+
+ []
+
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 418--420
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
+Underfull \hbox (badness 10000) in paragraph at lines 421--423
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
+Underfull \hbox (badness 10000) in paragraph at lines 427--429
 
  []
 
-[9] (./specifications.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--434
+
+ []
+
+[10] (./specifications.aux) ) 
 Here is how much of TeX's memory you used:
  5485 strings out of 494999
  77241 string characters out of 6180228
- 169286 words of memory out of 5000000
+ 168286 words of memory out of 5000000
  8614 multiletter control sequences out of 15000+600000
  13998 words of font info for 33 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  40i,19n,49p,337b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec
-/ecti1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.60
-0pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/
-user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/user/.texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/user/.texmf-var/fonts/pk
-/ljfour/jknappen/ec/ecrm1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jkna
-ppen/ec/ecbx2488.600pk>
-Output written on specifications.pdf (10 pages, 921470 bytes).
+ </home/user/.texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecti1000.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.6
+00pk> </home/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home
+/user/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/user/.texmf
+-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/user/.texmf-var/fonts/p
+k/ljfour/jknappen/ec/ecrm1200.600pk> </home/user/.texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx2488.600pk>
+Output written on specifications.pdf (11 pages, 921562 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 331 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
