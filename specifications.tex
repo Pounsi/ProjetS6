@@ -80,7 +80,7 @@
 Dans le cadre de notre troisième année de licence nous devons réaliser une application d'aide au
 décryptage par la méthode de Substitution ainsi que celle de Vigenère.
 Nous vous avons donc proposé l'application Dcrypt qui permet de décrypter 
-mais également crypter un text ou même de faire une analyse fréquentielle sur un text.
+mais également crypter un texte ou même de faire une analyse fréquentielle.
 Pour cela, nous avons rédigé un cahier des charges afin de clarifier les objectifs et les 
 exigences de ce projet. Dans la suite du cahier des charges, nous vous proposons donc
 le cahier des spécifications.\\
@@ -102,7 +102,7 @@ d’applications d’entreprise, de bureau et d'applications scientifiques.\\
 
 Nous avons également choisi une bibliothèque graphique du langage C: GTK+. Cette dernière nous permet de gérer efficacement
 la navigation entre les differentes fenêtres
-ainsi que nos accès memoires pour la sauvegarde et le chargement de nos fichiers. 
+ainsi que nos accès memoires pour la sauvegarde et le chargement de nos fichiers. \\
 IEEE(*):  Institut des ingénieurs électriciens et électroniciens.
 C'est la plus grande organisation professionnelle technique du monde de l'évolution de la technologie
 	\section{Organigramme}
@@ -135,10 +135,10 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 
 		\includegraphics[scale=0.8]{diaa.jpg}
 		\subsection{Structures et nouveaux types}
-		Le gchar* est une chaîne de caractères, on utilise pas char* car dans la bibliothèque
+		Le gchar* est une chaîne de caractères,\\ on n'utilise pas char* car dans la bibliothèque
 		GTK+ l'affichage d'un text se fait avec gchar*.\\
 		
-		les widgets (GTKWidget) sont les boutons, les zones de text, les menus, enfin.. à peu 
+		les widgets (GTKWidget) sont les boutons, les zones de texte, les menus, enfin.. à peu 
 		près tout ce qui constitue une interface.\\
 		
 		L'argument "gchar* TexteClair" que l'on va retrouver par la suite dans plusieurs fonctions
@@ -167,14 +167,14 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		PHONEME tr[20];\\
 		gchar* pgor;\\
 	\}ANALYSE;\\
-	Cette structure correspond aux caractéristiques d'un text. Elle sera remplie lors de
+	Cette structure correspond aux caractéristiques d'un texte. Elle sera remplie lors de
 	l'appel de la fonction "AnalyseFrequentielle". Ainsi, on connaitra
 	le nombre de caractères dans celui-ci, les digrammes/trigrammes, la plus grande occurence
 	rencontrée et la frequence d'apparition de chaque lettre.\\
 	le nb représente le nombre de lettres dans le texte etudié, occ est un tableau qui contient \\
 	le nombre d'occurences de chaque lettre (occ[0] pour A etc..) ,di et tr contiennent les digrammes \\
 	et les trigrammes dans le texte ainsi que leurs nombres d'occurences.\\
-	pgor est la chaine de caracteres qui contiend la Plus Grande Occurance Rencontrée dans notre texte .\\
+	pgor est la chaine de caracteres qui contient la Plus Grande Occurrence Rencontrée dans notre texte .\\
 	
 	
 	typedef struct ressourceslangue\{ \\
@@ -202,10 +202,10 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		ses attributs suivants:
 		le nombre de lettres, la fréquence d'apparition de chaque lettre, les digrammes, les trigrammes
 		et la plus grande occurence rencontrée. Ils seront logiquement remplis en fonction du texte.\\
-		Elle renvoie la structure ANALYSE remplie.
+		Elle renvoie la structure ANALYSE remplie.\\
 		
 	\subsubsection{Cryptage Substitution}
-	gchar* CryptageSubstitution(gchar* TexteClair);\\
+	void CryptageSubstitution(gchar* TexteClair, gchar* resultat);\\
 		Cette fonction permet de crypter un texte avec la méthode de Substitution\\
 		Pour cela, elle prend en entrée une chaine de caractères qui correspond au text clair.\\
 		On utilise ensuite la fonction "ConvertisseurTableau".
@@ -222,45 +222,51 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
 	Cette fonction prend en argument une chaine de caractères contenant le texte crypté et une chaine
 	de caractères vide.
-	Elle va commencer par appeler la fonction ConvertisseurTableau qui va stocker les caractères 
-	du texte crypté dans un tableau. 
+	Elle va commencer par appeler la fonction ConvertisseurTexteSimple qui va enlever les majuscules et accents du texte. 
 	DecryptageSubstitution va ensuite appeler les fonctions AnalyseFrequentielle et TabRessource. 
 	Aprés avoir appelé ces fonctions elle va, dans une boucle comparer les résultats de l'analyse frequentielle stockés 
 	dans une structure ANALYSE créée par AnalyseFrequentielle aux données stockées dans une structure RESSOURCESLANGUE créée
 	grace à la fonction TabRessource et contenant une analyse fréquentielle sur l'alphabet correspondant à la langue
 	choisie(anglais ou francais).
-	Elle va alors remplacer dans le tableau une lettre du message crypté par la lettre qu'elle semble crypter grace à une 
+	Elle va alors remplacer dans le texte une lettre du message crypté par la lettre qu'elle semble crypter grace à une 
 	conjecture basée sur les fréquences des lettres les plus utilisées et complétée par l'analyse des digrammes et
-	trigrammes, elle va egalement créer une clef de substitution sous la forme d'un tableau de caractères de la taille de 
-	l'alphabet (la première case correspondra au caractère décryptant la lettre A, la seconde au caractère décryptant la 
+	trigrammes, elle va egalement créer une clef de substitution enregistrée dans la chaine de caractères 'clef', de la taille du tableau
+	l'alphabet (la première lettre correspondra au caractère décryptant la lettre A, la seconde au caractère décryptant la 
 	lettre B ect...).
-	Cette fonction récupérera la clef de substitution afin de l'enregistrer dans 'clef'.
 	Ainsi l'utilisation de cette fonction suivra deux cas de figures: soit le resultat de la fonction 
 	correspond aux attentes de l'utilisateur sinon on rappelle la fonction qui tentera un decryptage different. 
 	La boucle prendra fin lorsque la clef de substitution sera partiellement complète, c'est à dire quand 10 caractères
 	de l'alphabet seront décryptés.
 	Cette fonction renverra un texte clair utilisé pour l'affichage.
 	
+	\subsubsection{Cryptage Vigenère}
+	void CryptageVigenere(gchar* texteClair, gchar* Cle, gchar* resultat);\\
+		Cette fonction permet de crypter un texte avec la methode de Vigenère\\
+		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caractères.\\
+		On construit un tableau [3][taille texte]. En première ligne([0][]) on trouvera le texte a crypter(ou plutot la valeur en entier de chaque caractere du texte a crypter), 
+		en 2e ligne([1][]) la clé (qu'on repetera de facon a couvrir toute la 1e ligne et donc le message a chiffrer). La aussi chaque caractere de la clé sera directement inscrit en entier et enfin en 3e ligne([2][]) le resultat de l'addition des caracteres(entiers) des deux premieres lignes le tout modulo 26.
+		On lira toute cette derniere ligne (l'entier de chaque case) et on ira remplir un second tableau avec directement le caractere correspondant a cet entier.
+		La fonction "ConvertisseurChar" permettra de renvoyer le texte crypté sous forme de gchar*.
+		
 	\subsubsection{Decryptage Vigenère}
-	gchar* DecryptageVigenere(gchar* texteCrypte, gchar** safecle);\\
+	gchar* DecryptageVigenere(gchar* texteCrypte, gchar** savecle);\\
 		Cette fonction prend en argument un texte crypté par le chiffrement de Vigenère ainsi 
 		que safecle (chaine de caractères) qui va permettre de sauvegarder la clé.
 		Appels des fonctions AnalyseFrequentielle et TabRessource qui vont initialiser les valeurs 
-		contenue dans la structure ANALYSE ainsi que convertisseurtableau qui va stocker le texte crypté 
-		dans un tableau.
+		contenue dans la structure ANALYSE ainsi que ConvertisseurTexteSimple.
 		Ensuite appelle la fonction Kasiski qui va conjecturer la taille de la clé.
 		Puis, on déclare un tableau cle[taillekasiski] de taille correspondant à la fonction kasiski. 
 		On appelle la fonction indiceMutuelle qui remplira les valeurs des caractères de la clé dans le tableau cle[]
-		ainsi que safecle qui contient les caractères mêmes.\\
+		ainsi que savecle qui contient les caractères mêmes(du mot-clé).\\
 		On appelle la fonction Decrypteur, cette dernière nous servant à retourner le texte en clair.\\
 	
 	int Kasiski(ANALYSE freq, gchar* texteCrypte);\\
 		Cette fonction prend une structure ANALYSE en argument afin de connaitre le 
-		PGOR (Plus Grande Occurence Rencontrée) et/ou les trigrammes,ainsi que le texteCrypte à décrypter.
+		PGOR (Plus Grande Occurrence Rencontrée) et/ou les trigrammes, ainsi que le texteCrypte à décrypter.
 		Elle cherche les différentes distances de PGOR et effectue le PGCD de ces distances.
 		Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé cherché).\\
 	
-	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource, gchar** safecle);\\
+	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource, gchar** savecle);\\
 		Cette fonction prend en argument le tableau clé qui contiendra les valeurs de notre mot clé,
 		freq qui contient les fréquences de chacune des lettres du textes et ressource la
 		probabilité d'apparition d'une lettre dans la langue choisie.
@@ -268,7 +274,7 @@ gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
 		Elle parcourt et compare les 26 valeurs de chaque ligne afin de reperer celles qui sont proches de 0,065
 		(une par ligne).\\
 		Elle modifie le tableau cle[] passé en argument qui contiendra l'indice de chacune des valeurs choisies dans un 
-		tableau à une dimension et affecte a safecle la clé afin de pouvoir l'afficher dans le menu. \\
+		tableau à une dimension et affecte a savecle la clé afin de pouvoir l'afficher dans le menu. \\
 	
 	gchar* Decrypteur( int cle[], int kasiski, gchar* texteCrypte);\\
 		Cette fonction prend en argument le tableau cle ainsi que le texte a décrypter.
@@ -276,15 +282,6 @@ gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
 		Elle va répeter la suite de nombre composant le mot clef (contenue dans le tableau passé en argument) jusqu'a
 		la fin du texte afin de toujours pouvoir soustraire une valeur du mot clé a une valeur du texte crypté.\\
 		Elle renvoie le texte en clair, c'est a dire décrypté.\\
-		
-		\subsubsection{Cryptage Vigenère}
-	gchar* CryptageVigenere(gchar* texteClair, gchar* Cle);\\
-		Cette fonction permet de crypter un texte avec la methode de Vigenère\\
-		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caractères.\\
-		On construit un tableau [3][taille texte]. En première ligne([0][]) on trouvera le texte a crypter(ou plutot la valeur en entier de chaque caractere du texte a crypter), 
-		en 2e ligne([1][]) la clé (qu'on repetera de facon a couvrir toute la 1e ligne et donc le message a chiffrer). La aussi chaque caractere de la clé sera directement inscrit en entier et enfin en 3e ligne([2][]) le resultat de l'addition des caracteres(entiers) des deux premieres lignes le tout modulo 26.
-		On lira toute cette derniere ligne (l'entier de chaque case) et on ira remplir un second tableau avec directement le caractere correspondant a cet entier.
-		La fonction "ConvertisseurChar" permettra de renvoyer le texte crypté sous forme de gchar*.
 		
 		\subsubsection{Interface Graphique}
 		Dans ce module nous allons utiliser plusieurs menus pour afficher notre application et naviguer 
@@ -354,9 +351,10 @@ gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
 		Cette procédure permet d'afficher le menu du resultat du decryptage par la methode de vigenère.\\
 		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
 	
-	void MenuResultatAnalyse(GtkWidget *Fenetre);//rajouer le texte ou tableau\\
+	void MenuResultatAnalyse(GtkWidget *Fenetre,ANALYSE a);//rajouer le texte ou tableau\\
 		Cette procédure permet d'afficher le menu du resultat de l'analyse frequentielle.\\
-		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels).\\
+		Elle prend en argument la fenetre qui sera le contenaire(des boutons et labels), et egalement
+		l'Analyse a afficher.\\
 	
 	void BoiteDialogueSubstitution(GtkWidget *Fenetre);\\
 		Cette procédure affiche une zone de texte qui nous permet de rentrer le texte à crypter par substitution.\\
@@ -415,11 +413,10 @@ gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
 		Cette procédure nous permet de vider le contenu de la fenetre, cele nous permet de travailler avec une seule fenêtre.\\
 		Cette procédure prend en argument la fenêtre à vider.\\
 	
-	void ConvertisseurTableau(gchar T[],int *Tailletexte,gchar* texte);\\
+	void ConvertisseurTexteSimple(gchar T[],int *Tailletexte,gchar* texte);\\
 		Cette procedure permet de transformer une chaine de caractère en tableau de caractère\\
 	 
-	gchar* ConvertisseurChar(char T[],int Tailletexte); \\
-		Parcours un tableau donné et le retourne en chaine de caracteres\\
+	
 		
 	
 	\section{Conclusion}
