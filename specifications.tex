@@ -205,21 +205,23 @@ C'est la plus grande organisation professionnelle technique du monde de l'évolu
 		Elle renvoie la structure ANALYSE remplie.\\
 		
 	\subsubsection{Cryptage Substitution}
-	void CryptageSubstitution(gchar* TexteClair, gchar* resultat);\\
+	void CryptageSubstitution(gchar* resultat, gchar* TexteClair);\\
 		Cette fonction permet de crypter un texte avec la méthode de Substitution\\
-		Pour cela, elle prend en entrée une chaine de caractères qui correspond au text clair.\\
+		Pour cela, elle prend en entrée une chaine de caractères qui correspond au texte clair.\\
 		On utilise ensuite la fonction "ConvertisseurTableau".
-		Le text à crypter se trouve alors dans un tableau que nous allons parcourir. Et pour chaque caractere 
-		nous allons lire dans un autre tableau [2][26] où la premiere ligne du tableau([0][]) correspond à l'alphabet
-		de base et la deuxième ligne ([1][]) celui de substitution(le nouveau).Que l'on aura generé à l'aide de la fonction "GenereCle". Ainsi, nous regardons la lettre dans 
-		le premier tableau ( celui du texte à crypter), on bascule dans le deuxieme tableau et trouve ce caractere dans la première ligne, puis on regarde sa lettre de substitution (2e ligne) et enfin on remplace dans le premier tableau 
-		la lettre de base par ce caractère de substitution. En sortie, le texte crypté sera sous forme de chaine de caractères grace à la fonction "ConvertisseurChar".
+		Le texte à crypter se trouve alors dans un tableau T1 que nous allons parcourir.
+		On appelle la fonction "GenereCle" afin de generer l'alphabet de substitution(sous forme d'un tableau T2).
+		On parcourt T1 et si le caractere est bien un lettre, on le crypte à l'aide du tableau T2.
+		
+		Le resultat du cryptage du caractere correspond au tableau T2 à l'indice T1[i](qui correspond a une lettre entre a et z).
+		Sinon le caractere sera retourné tel qu'il est. Le resultat sera renvoyé dans le tableau 'resultat'.
 		
 	void GenereCle(gchar T[]);\\
-		Cette procédure permet de génerer une clé(alphabet) aléatoirement. On la modifie à l'aide de pointeurs.
+		Cette procédure permet de génerer une clé(alphabet) aléatoirement dans le tableau T.
+		
 	
 	\subsubsection{Decryptage Substitution}
-gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
+void DecryptageSubstitution(gchar* resultat, gchar* texteCrypté ,gchar clef[])
 	Cette fonction prend en argument une chaine de caractères contenant le texte crypté et une chaine
 	de caractères vide.
 	Elle va commencer par appeler la fonction ConvertisseurTexteSimple qui va enlever les majuscules et accents du texte. 
@@ -240,18 +242,17 @@ gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
 	Cette fonction renverra un texte clair utilisé pour l'affichage.
 	
 	\subsubsection{Cryptage Vigenère}
-	void CryptageVigenere(gchar* texteClair, gchar* Cle, gchar* resultat);\\
+	void CryptageVigenere(gchar* resultat, gchar* texteClair, gchar* Cle);\\
 		Cette fonction permet de crypter un texte avec la methode de Vigenère\\
 		Elle prend en argument le texte clair et la clé qui sont tout les deux des chaines de caractères.\\
-		On construit un tableau [3][taille texte]. En première ligne([0][]) on trouvera le texte a crypter(ou plutot la valeur en entier de chaque caractere du texte a crypter), 
-		en 2e ligne([1][]) la clé (qu'on repetera de facon a couvrir toute la 1e ligne et donc le message a chiffrer). La aussi chaque caractere de la clé sera directement inscrit en entier et enfin en 3e ligne([2][]) le resultat de l'addition des caracteres(entiers) des deux premieres lignes le tout modulo 26.
-		On lira toute cette derniere ligne (l'entier de chaque case) et on ira remplir un second tableau avec directement le caractere correspondant a cet entier.
-		La fonction "ConvertisseurChar" permettra de renvoyer le texte crypté sous forme de gchar*.
+		Elle prend egalement la variable 'resultat' en argument, qui contiendra le resultat du cryptage.
+		On commencera par appeler la fonction "ConvertisseurTexteSimple"(detaillée plus bas).
+		Pour chaque caractere de la chaine a crypter, on lui ajoute la valeur du caractere du mot-clé qui lui correspond. Si le resultat de cette addition est superieure a 26, on effectuera l'operation modulo 26. 
 		
 	\subsubsection{Decryptage Vigenère}
-	gchar* DecryptageVigenere(gchar* texteCrypte, gchar** savecle);\\
+	void DecryptageVigenere(gchar* resultat, gchar* texteCrypte, gchar savecle[]);\\
 		Cette fonction prend en argument un texte crypté par le chiffrement de Vigenère ainsi 
-		que safecle (chaine de caractères) qui va permettre de sauvegarder la clé.
+		que savecle (chaine de caractères) qui va permettre de sauvegarder la clé.
 		Appels des fonctions AnalyseFrequentielle et TabRessource qui vont initialiser les valeurs 
 		contenue dans la structure ANALYSE ainsi que ConvertisseurTexteSimple.
 		Ensuite appelle la fonction Kasiski qui va conjecturer la taille de la clé.
@@ -266,7 +267,7 @@ gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
 		Elle cherche les différentes distances de PGOR et effectue le PGCD de ces distances.
 		Elle renvoie ce résultat sous forme d'un entier (qui représente la taille du mot clé cherché).\\
 	
-	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource, gchar** savecle);\\
+	void indiceMutuelle(int cle[],int kasiski, ANALYSE freq, ANALYSE ressource, gchar savecle[]);\\
 		Cette fonction prend en argument le tableau clé qui contiendra les valeurs de notre mot clé,
 		freq qui contient les fréquences de chacune des lettres du textes et ressource la
 		probabilité d'apparition d'une lettre dans la langue choisie.
@@ -414,7 +415,7 @@ gchar* DecryptageSubstitution( gchar* texteCrypté ,gchar** clef)
 		Cette procédure prend en argument la fenêtre à vider.\\
 	
 	void ConvertisseurTexteSimple(gchar T[],int *Tailletexte,gchar* texte);\\
-		Cette procedure permet de transformer une chaine de caractère en tableau de caractère\\
+		Cette procedure permet de remplacer les majuscules en minuscules, enlever les accents et certains caracteres speciaux du texte clair(de base).\\
 	 
 	
 		
