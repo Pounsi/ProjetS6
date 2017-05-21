@@ -78,10 +78,12 @@
 		%\begin{center}\includegraphics{logo_uvsq.jpg}\end{center}
 	\end{titlepage}
 	\section{Introduction}
-Après avoir réaliser les charges et les spécifications, l'application Dcrypt est maintenant disponible et utilisable par le client.
+Après avoir réalisé les charges et les spécifications, l'application Dcrypt est maintenant disponible et utilisable par le client.
 Ce dernier voulant pouvoir décrypter des fichiers/textes par procédé de Vigenère ou Substitution. Il peut egalement les crypter.
 Un manuel d'utilisation détaillé lui est fournit pour cela.
 	\section{Objectif de l'application}
+	Le but du
+projet est de developper un logiciel pour automatiser le decryptage d'un texte. Notre travail consiste a fournir un outil d'aide et d’analyse de ces textes. L’ensemble des fonctionnnalités demandées par le client ont été réalisées.
 	\section{Organigramme/explications}
 			\underline{Interface graphique :}     \hspace{5cm}  \underline{Cryptage Substitution :}\\
 			- bouton cryptage            \hspace{5.5cm}       -créer une clé aleatoirement\\
@@ -107,14 +109,30 @@ Un manuel d'utilisation détaillé lui est fournit pour cela.
 			
 			il faut expilquer l'organigramme ICI
 	\section{Language choisi et explication}
+	Le developpement a ete realise en C. Ce choix a ete motive par  :
+–
+– 
+-
+
+
+
+La libraire gtk+ permet/ressources..
+
 	\section{Partie technique}
-		est ce quelle fonctionne ?
-		quels sont les problemes/bugs rencontrees ? 
+		est ce quelle fonctionne ? oui
+		quels sont les problemes/bugs rencontrees ? segfault..ect
 		sont ils resolu ? si oui comment 
+		\subsection{tests et gestion des exceptions:}
+		L’exactitude des resultats de l'analyse etant tres importante pour les clients, nous avons predefinis des tests
+unitaires pour chaque module intervenant lors du decryptage. Ainsi, a chaque etape de la conception du logiciel
+nous avons pu verifier que le calcul n’etait pas altere.
 		
 	\section{Organisation interne et affectation des taches}
 		tableau des taches 
 		moi finis assez tot donc commence rapport et younes bien avancé aide un peu tt le monde
+		\subsection{Planning de developpement}
+		Cette phase a constitu´e l’´etape critique du projet, avec d’une part la d´ecision de coder l’interface graphique
+et d’autre part l’int´egration de tous les modules. Lors de cette phase, les modules ont connu leurs derni`eres ´evolutions.
 	\section{comparaison lignes de code}
 		estimation + nombre de vrai lignes (tableau)
 		si fonction trop longue pk? et laquelle?
@@ -122,5 +140,10 @@ Un manuel d'utilisation détaillé lui est fournit pour cela.
 	
 	\section{Conclusion}
 	ameliorations + des choix a changer 
+	critique du projet
+	-permettre a l'utilisateur de rentrer un type de texte (poeme, roman..)
+	-plus de langues
+	-plus de cryptage/decryptage
+	
 	
 \end{document}
