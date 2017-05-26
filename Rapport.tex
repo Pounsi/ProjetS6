@@ -78,12 +78,10 @@
 		%\begin{center}\includegraphics{logo_uvsq.jpg}\end{center}
 	\end{titlepage}
 	\section{Introduction}
-Après avoir réalisé les charges et les spécifications, l'application Dcrypt est maintenant disponible et utilisable par le client. \\
-Ce dernier voulant pouvoir décrypter des fichiers/textes par procédé de Vigenère ou Substitution. Il peut egalement les crypter. \\
+Après avoir réalisé les charges et les spécifications, l'application Dcrypt est maintenant disponible et utilisable par le client. Ce rapport décrit les fonctionnalités de l'application, son architecture logiciel ainsi qu'une partie technique \\
 Un manuel d'utilisation détaillé lui est fournit pour cela.
 	\section{Objectif de l'application}
-	Le but du
-projet est de developper un logiciel pour automatiser le decryptage d'un texte. Notre travail consiste a fournir un outil d'aide et d’analyse de ces textes. L’ensemble des fonctionnnalités demandées par le client ont été réalisées.
+	Le but du projet est de developper un logiciel convivial de cryptanalyse pour tenter de décrypter un texte. Notre travail consiste a fournir un outil automatique d'aide au décryptage des fichiers/textes crypté par le chiffrement de Vigenère ou par  Substitution. L'utilisateur peut egalement crypter (avec V. ou S) ou plus simplement effectuer une analyse fréquentielle sur un texte.
 	\section{Organigramme/explications}
 			\underline{Interface graphique :}     \hspace{5cm}  \underline{Cryptage Substitution :}\\
 			- bouton cryptage            \hspace{5.5cm}       -créer une clé aleatoirement\\
@@ -119,6 +117,13 @@ projet est de developper un logiciel pour automatiser le decryptage d'un texte. 
 La libraire gtk+ permet/ressources..
 
 	\section{Partie technique}
+		Vigenere: \\
+		Itération manuel pour trouver la taille de la clé car le test de Kasiski se trompe souvent. \\
+		Avec itération automatique : marche 1 fois sur 2 pour petite clé et peut lafficher en double (ex: clecle). \\
+		Oui cela fonctionne pour la plupart des cas.\\
+		Problème rencontrées avec Kasiski et l'hypothèse fait sur la taille de la clé.
+		solution => itération manuel pour la taille. \\
+		
 		-est ce quelle fonctionne ? oui \\
 		-quels sont les problemes/bugs rencontrees ? segfault..ect  \\
 		-sont ils resolu ? si oui comment  \\
@@ -129,13 +134,16 @@ consomme trop de mémoire ou de temps processeur.
 		\subsection{tests et gestion des exceptions:}
 		L’exactitude des resultats de l'analyse etant tres importante pour les clients, nous avons predefinis des tests
 unitaires pour chaque module intervenant lors du decryptage. Ainsi, a chaque etape de la conception du logiciel
-nous avons pu verifier que le calcul n’etait pas altere.
+nous avons pu verifier que le calcul n’etait pas altere. 
+		les tests permettent de voir comment le logiciel réagit lors de futurs améliorations.
+		Utilisation de Cunit => Création d'un registre et d'une suite de tests unitaires.
+		Création automatique d'un Summary(récapitulatif) des tests.
+		rq : besoin de l'option -lcunit a rajouter a la compilation des tests.  
 		
 	\section{Organisation interne et affectation des taches}
 	L'organisation de l'équipe est une chose importante pour le bon fonctionnement du
 projet et le deroulement du codage, et est faite selon nos capacités et nos disponibilités.  \\
 		-tableau des taches  \\
-		-moi finis assez tot donc commence rapport et younes bien avancé aide un peu tt le monde \\
 		L'organisation etant bonne et la cohesion du groupe certaine, la repartition et la mise en place d'un planning s'est faite naturellement et a été respectée.  \\
 		La communication étant la clé d'un projet d'un projet en groupe, nous avons préféré nous reunir tres regulierement et travailler en face tous ensemble et ce quel que soit l'etape du projet.
 		\subsection{Planning de developpement}
@@ -155,9 +163,11 @@ En evaluant les connaissances de chacun et en faisant un point regulierement sur
 	
 	\section{Conclusion}
 	ameliorations + des choix a changer  \\
+	=> Rajout d'un bouton "Recherche Intelligente" qui tente de trouver du premier coup la taille de clé.
 	-critique du projet \\
 	Ameliorations possibles futures: \\
-	-permettre a l'utilisateur de rentrer un type de texte (poeme, roman..) \\
+	-permettre a l'utilisateur de rentrer des informations qui facilite la cryptanalyse un type de texte (poeme, roman..),\\
+	une taille de clé, ..
 	-plus de langues \\
 	-plus de cryptage/decryptage \\
 	
