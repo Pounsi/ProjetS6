@@ -161,10 +161,18 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 	-probleme de segfault du a la gestion de la memoire: remplace "gchar* exemple" par "gchar exemple[10]" (zak) \\
 	-
 	\subsection{Decryptage vigenère}
- 		Itération manuel pour trouver la taille de la clé car le test de Kasiski se trompe souvent. 
- 		Problème rencontrées avec Kasiski et l'hypothèse fait sur la taille de la clé. \\
- 		Avec itération automatique : marche 1 fois sur 2 pour petite clé et peut lafficher en double (ex: clecle). \\
-		solution => itération manuel pour la taille. \\ \\
+ 		Le decryptage fonctionne en deux partie :
+		
+		avec recherche automatique : test de Kasiski (marche 1 fois sur 3, taux de reussite plus important pour \\
+		des petites clés et peut eventuellement lafficher en double (ex: clecle). 
+		*C'est effectuer lors du premier clic gauche de l'utilisateur. \\
+		
+		avec itération manuel pour trouver la taille de la clé car le test de Kasiski peut se tromper.
+		*Disponible après le premier clic gauche.
+		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte. \\
+ 		
+		Problème rencontrées avec Kasiski et l'hypothèse fait sur la taille de la clé. \\
+ 		 \\ \\
 	
 	\subsection{Decryptage substitution}
 	-\\
