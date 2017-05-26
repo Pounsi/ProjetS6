@@ -142,22 +142,37 @@ La bibliothèque graphique que nous avons décidée d'utiliser avec ce langage e
 	\section{Partie technique}
 	
 	Tout d'abord, l'application fonctionne (compilation et execution) et
-	l'ensemble des fonctionnnalités demandées par le client ont été réalisées.\\ \\
+	l'ensemble des fonctionnnalités demandées par le client ont été réalisées.\\ 
+	Les commandes pour compiler et executer sont les suivantes:\\
+	-compilation:\\
+	-execution:\\ \\
+	
 	
 	Nous souhaitions avoir une application complète qui puisse tourner sur des ordinateurs 
 de tout systeme d'exploitation et ce, sans pour autant qu’il ne
 consomme trop de mémoire ou de temps processeur. \\ \\
 	
-	L'equipe de developpement a evidemment rencontré bon nombre de problèmes ou bugs. Voici une liste non exhaustive: \\
+	L'equipe de developpement a evidemment rencontré bon nombre de problèmes ou bugs. Voici pour chaque
+	module une liste non exhaustive:
+	\subsection{Interface graphique}
 	-probleme du switch, remplacé par if (younes nicolas)\\
+	-
+	\subsection{Analyse frequentielle}
 	-probleme de segfault du a la gestion de la memoire: remplace "gchar* exemple" par "gchar exemple[10]" (zak) \\
+	-
+	\subsection{Decryptage vigenère}
+ 		Itération manuel pour trouver la taille de la clé car le test de Kasiski se trompe souvent. 
+ 		Problème rencontrées avec Kasiski et l'hypothèse fait sur la taille de la clé. \\
+ 		Avec itération automatique : marche 1 fois sur 2 pour petite clé et peut lafficher en double (ex: clecle). \\
+		solution => itération manuel pour la taille. \\ \\
+	
+	\subsection{Decryptage substitution}
 	-\\
-	-\\ \\
+	
 		
-		
-		-Des approximations et des erreurs de jugement sur le cahier des specifications ont conduit a certains changements ou problemes:
-		-\\
-		-\\
+		\subsection{Specifications}
+		-Des approximations et des erreurs de jugement sur le cahier des specifications ont conduit a certains changements ou problemes:\\
+		-changement de la structure (rajout de champs)\\
 		-\\
 		-\\ \\
 		
@@ -172,17 +187,28 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 		L’exactitude des resultats de l'analyse etant tres importante pour les clients, nous avons predefinis des tests
 unitaires pour chaque module(ou plutot les fonctions le composant). Ainsi, a chaque etape de la conception du logiciel
 nous avons pu verifier que le calcul n’etait pas altere. \\ \\
-Les resultats des tests unitaires sont les suivants:\\ \\ 
-METTRE SCREEN TESTS "RUN" ICI
+Les tests permettent de voir comment le logiciel réagit lors de futurs améliorations ou d'une eventuelle maintenance. \\ 
+ 
+Nous avons décidé d'utiliser Cunit qui est un systeme pour l'ecriture, l'administration et l'execution de tests unitaires
+en langage C. Il fournit a son programmeur une fonctionnalité de test de base avec une variété d'interfaces utilisateur flexible.\\
+Un "test"  CUnit est une fonction C ayant comme signature:\\
+void\_test\_func()\\
+Le corps de la fonction sera lui composé d'assertions Cunit.\\
+Il y'aura création d'un registre et d'une suite de tests unitaires.\\
+Nous noterons aussi la création automatique d'un Summary(récapitulatif) des tests.\\
+remarque : besoin de l'option -lcunit a rajouter a la compilation des tests et d'inclure la bibliotheque avec un
+\#include <CUnit/CUnit.h>.\\ \\ \\ 
 
-		
+  
+Les resultats des tests unitaires sont les suivants:\\ \\ 
+METTRE SCREEN TESTS "RUN" ICI \\ \\
+
+		METTRE COMMANDE POUR COMPILER ET CELLE POUR EXECUTER TESTS
 	\section{Organisation interne et affectation des taches}
 	L'organisation de l'équipe est une chose importante pour le bon fonctionnement du
-projet et le deroulement du codage, et est faite selon nos capacités et nos disponibilités.  \\ \\
-		-tableau des taches: qui a fais quoi?? \\
-		 \includepdf[scale=0.9]{tab_taches.pdf}
-		 
-		 EXPLICATIONS SUR TABLEAU DES TACHES  \\	\\
+projet et le deroulement du codage, et est faite selon nos capacités et nos disponibilités.  \\ 
+		 \begin{center}\includegraphics[scale=0.5]{tableau_tache_final.jpg}\end{center}
+		 EXPLICATIONS SUR TABLEAU DES TACHES \\ 
 		
 		L'organisation etant bonne et la cohesion du groupe certaine, la repartition et la mise en place d'un planning 
 		s'est faite naturellement et a été respectée.  \\
@@ -196,13 +222,11 @@ testé chaque fonction ou plutot module pour savoir si elles fonctionnaient sép
 Nous les avons ensuite
 réunies en les assemblant étapes par étapes pour construire l’application finale.  \\
 --> en priorité : l'interface graphique consistait la base de l'application et devait donc être commencée et avancée tres rapidement \\
- \\ 
 En evaluant les connaissances de chacun et en faisant un point regulierement sur nos taches respectives, cela a permis 
 d'avancer efficacement dans la réalisation le projet.
 	\section{comparaison lignes de code}
-	\includepdf[scale=0.9]{tab_comp_lignes.pdf}		
+		\begin{center}\includegraphics[scale=0.5]{preview.jpg}\end{center}
 		Certains modules ont depassés le nombre de lignes estimées selon les raisons suivantes: \\
-		
 		-decryptage Vigenere : nombre de ligne trop juste au vu de certaines fonctions qui permettent de vérifier
 		 nos résultats, par exemple la taille du mot clé. \\
 		-cryptage substitution : il faut une fonction(tirage) qui va permettre qu'une lettre est toujours chiffrée
@@ -210,7 +234,7 @@ d'avancer efficacement dans la réalisation le projet.
 		-analyse frequentielle: fonction AnalyseFreq en plus qui est une tres legere variante de l'analyse des occurences de 
 		chaque lettre faite deja dans AnalyseFrequentielle. Aussi, dans cette derniere, l'analyse des trigrammes fonctionne exactement
 		comme celle des digrammes et donc on a repeté ces "autres" 40 lignes \\
-		-interface graphique??
+		-interface graphique: pk??
 		
 	
 	\section{Conclusion}
@@ -218,8 +242,8 @@ d'avancer efficacement dans la réalisation le projet.
 	->au niveau des specifications et des fonctions \\ \\
 	
 	-critique du projet \\
-	->Manque de reflexion ou d'approfondissement de certaines notions a des moments
-	->?????? \\ \\ \\
+	->Manque de reflexion ou d'approfondissement de certaines notions a des moments \\
+	->?????? \\ \\
 	
 	
 		
@@ -236,12 +260,12 @@ Quelques améliorations pourraient être ajoutées :
 -permettre a l'utilisateur de rentrer un type de texte (poeme, roman..) pour aider au decryptage \\
 -plus de langues disponibles \\
 -plus de cryptages/decryptages differents \\
--\\
+=> Rajout d'un bouton "Recherche Intelligente" qui tente de trouver du premier coup la taille de clé.
 -\\ \\ \\
 
 	
 	
-Ce projet d'une durée d'un semestre(et plus precisement de X semaines) est une vrai expérience.
+Ce projet d'une durée d'un semestre(et plus precisement de 16 semaines) est une vrai expérience.
 Cela a été enrichissant d'un point de vue personnel ou collectif:
 il nous a apporté beaucoup, tant au
 niveau technique qu’en terme de gestion de projet.  \\  \\
