@@ -119,9 +119,93 @@ Pour cela, nous montrerons le fonctionnement de l'application à l'aide de tests
 			\underline{Decryptage Vigenère :}\\
 			-decrypter le message\\
 			
-\includepdf[scale=0.9]{organ.pdf}
 			
-			EXPLICATION DE L'ORGANIGRAMME ICI \\ \\ \\ \\ \\ \\ \\ \\ \\
+\includepdf[scale=0.9]{organ.pdf}
+
+
+PRESENTATION DES MODULES DE L'ORGANIGRAMME.
+
+	Notre organigramme se decompose en six modules:  un module d'interface graphique, un d'analyse 
+	frequentielle,un de cryptage par substitution,un de decryptage par substitution,un de cryptage 
+	par la methode de vigenere et un de decryptage par methode de vigenere. \\
+
+	Le module d'interface graphique est le centre de notre programme dans le sens où il est le seul qui voit ses 
+	fonctions appelées dans le main et qu'il interagit avec tous les autres modules en appellant leur fonctions principales.
+	Son rôle principale est de metre à disposition de l'utilisateur une interface graphique 
+	(composé de menus, de boites dialogue et de fenêtres). Ce module va egalement permettre à l'utilisateur de
+	 paramétrer les options du logiciel, il pourra choisir la langue du texte (francais ou anglais) qu'il
+	  pourra ensuite faire crypter, decrypter ou soummetre à une analyse fréquentielle. Pour se faire il aura
+	   la possibilité de charger un fichier texte ou de taper un texte ainsi que d'enregistrer le texte crypté 
+	   ou décrypté, la clef de cryptage en fonction de la methode utilisée ainsi qu'une analyse frequentielle. \\
+	
+	Le module d'analyse frequentielle va, comme son nom l'indique, effectuer une analyse frequentielle sur un texte donné.
+	 Il va donc remplir une structure nommé structure ANALYSE en observant le nombre d'occurrences de chaque caractère du 
+	 texte ainsi que les nombres d'occurrences des digrammes et trigrammes du texte.
+	Ce module sera utilisé de trois manières differentes: il pourra être appelé pour l'analyse d'un texte donné,
+	 pour permettre un décryptage par substitution ou pour permettre un décryptage par la methode de vigenere. \\
+
+	Le module de cryptage par substitution va permettre de crypter un texte clair grace à la methode de la substitution
+	 tout en creant une clef de sustitution aléatoire que l'utilisateur pourra sauvegarder via l'interface graphique. \\
+	
+	Le module de decryptage par substitution va permettre de decrypter un texte crypter par la methode de la substitution.
+	 Ce module permettra d'obtenir un texte partiellement décrypté ainsi que la clef partielle de substitution. \\
+
+	Le module de cryptage par la methode de vigenere va permettre de crypter un texte clair grace à la methode de vigenere
+	 et d'une clef de cryptage rentrée par l'utilisateur. \\
+
+	Le module de decryptage par la methode de vigenere va permettre de decrypter un texte crypté par la methode de vigenere. 
+	Ce module permetra d'obtenir un texte décrypté ainsi que la clef utilisée lors du cryptage. \\ \\
+
+	
+PRESENTATION DES INTERACTIONS ENTRE LES DIFFERENTs MODULES DE L'ORGANIGRAMME ET DE LA MEMOIRE. \\
+
+	L'interface graphique va intéragir avec la mémoire , elle va lui envoyer le nom de fichier entré par l'utilisateur 
+	afin de recevoir le fichier texte en clair ou crypté correspondant. L'interface pourra également lui envoyer à la 
+	memoire le nom de fichier ainsi que le texte crypté ou décrypté afin de l'enregistrer (fleche 5 et 6 sur le schema). \\
+
+	L'interface graphique va intéragir avec le module de l'analyse frequentilelle, elle va lui envoyer une chaine de 
+	caractère correspondant au texte à analyser entré par l'utilisateur. Le module d'analyse va lui renvoyer l'analyse 
+	frequentielle sous la forme d'une structure analyse contenant le nombre d'occurrences de chaque lettre, des differents
+	 digrammes et trigrammes que l'interface graphique pourra afficher (fleche 9 et 10 sur le schema). \\
+
+	L'interface graphique va intéragir avec le module de cryptage par substitution, elle va lui envoyer une 
+	chaine de caractères correspondant au texte en clair à crypter, et deux chaines de caractères vides. Le module
+	 de cryptage par substitution va remplir les deux chaines de caractères vides, une avec le texte crypté obtenu
+	  à partir du texte clair et l'autre avec la clef de substitution correspondante générée de façon aléatoire.
+	   L'interface graphique pourra alors afficher ces deux chaines de caractères (fleche 3 et 4 sur le schema). \\
+
+	L'interface graphique va intéragir avec le module de decryptage par substitution, elle va lui envoyer une 
+	chaine de caractères corespondant au texte crypté à decrypter, et deux chaines de caractères vides. Le module 
+	de decryptage par substitution va remplir les deux chaines de caractères vides, une avec le texte decrypté obtenu
+	 à partir du texte crypté et l'autre avec la clef de substitution correspondante. L'interface graphique pourra 
+	 alors afficher ces deux chaines de caractères (fleche 11 et 12 sur le schema). \\
+
+	L'interface graphique va intéragir avec le module de cryptage par la methode de vigenere, elle va lui envoyer une
+	 chaine de caractères corespondant au texte en clair à crypter,une chaine de caractères contenant la clef choisie par 
+	 l'utilisateur et une chaine de caractères vides. Le module de cryptage par la methode de vigenere va remplir la chaine
+	  de caractères vides avec le texte crypté obtenu à partir du texte clair et de la clef correspondante choisie par
+	   l'utilisateur. L'interface graphique pourra alors afficher cette chaine de caractères (fleche 1 et 2 sur le schema). \\
+
+	L'interface graphique va intéragir avec le module de decryptage par la methode de vigenere, elle va lui envoyer une 
+	chaine de caractères correspondant au texte crypté à decrypter, et deux chaines de caractères vides. Le module de 
+	decryptage par la methode de vigenere va remplir les deux chaines de caractères vides, une avec le texte decrypté 
+	obtenu à partir du texte crypté et l'autre avec la clef de vigenere correspondante. L'interface graphique pourra 
+	alors afficher ces deux chaines de caractères (fleche 7 et 8 sur le schema). \\
+
+	Le module de l'analyse frequentilelle va intéragir avec le module de décryptage par substitution,
+	 le module de décryptage par substitution va lui envoyer une chaine de caractères corespondant au texte 
+	 crypté à analyser. Le module d'analyse va alors lui renvoyer l'analyse frequentielle de ce texte sous 
+	 la forme d'une structure analyse contenant le nombre d'occurrences de chaque letrre, des differents digrammes 
+	 et trigrammes que le module de décryptage utilisera pour décrypter le texte (fleche 15 et 16 sur le schema). \\
+
+	Le module de l'analyse frequentilelle va intéragir avec le module de décryptage par la methode de vigenere, 
+	le module de décryptage va envoyer à celui d'analyse une chaine de caractères correspondant au texte crypté à
+	 analyser ainsi qu'un entier kasiski qui permettra de conjecturer la taille de la clef. Le module d'analyse va 
+	 alors lui renvoyer l'analyse frequentielle de ce texte sous la forme d'une structure analyse contenant le nombre
+	  d'occurrences de chaque lettre, des differents digrammes et trigrammes que le module de décryptage utilisera pour 
+	  décrypter le texte (fleche 13 et 14 sur le schema). \\
+
+
 	\section{Language choisi et explications}
 	
 	Le developpement de l'application s'est fait en langage C et les raisons étant les suivantes: \\
@@ -155,32 +239,38 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 	L'equipe de developpement a evidemment rencontré bon nombre de problèmes ou bugs. Voici pour chaque
 	module une liste non exhaustive:
 	\subsection{Interface graphique}
-	-probleme du switch, remplacé par if (younes nicolas)\\
+	-probleme du switch, remplacé par if..\\
 	-
 	\subsection{Analyse frequentielle}
-	-probleme de segfault du a la gestion de la memoire: remplace "gchar* exemple" par "gchar exemple[10]" (zak) \\
+	-probleme de segfault du a la gestion de la memoire: remplace "gchar* exemple" par "gchar exemple[10]"\\
 	-
 	\subsection{Decryptage vigenère}
- 		Le decryptage fonctionne en deux partie :
-		
-		avec recherche automatique : test de Kasiski (marche 1 fois sur 3, taux de reussite plus important pour \\
-		des petites clés et peut eventuellement lafficher en double (ex: clecle). 
-		*C'est effectuer lors du premier clic gauche de l'utilisateur. \\
-		
-		avec itération manuel pour trouver la taille de la clé car le test de Kasiski peut se tromper.
-		*Disponible après le premier clic gauche.
-		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte. \\
+ 		Le decryptage fonctionne en deux parties :
  		
-		Problème rencontrées avec Kasiski et l'hypothèse fait sur la taille de la clé. \\
- 		 \\ \\
+ 		avec recherche automatique : test de Kasiski (marche 1 fois sur 3, taux de reussite plus important pour \\
+ 		des petites clés et peut eventuellement l'afficher en double (ex: clecle). 
+ 		*S'est effectué lors du premier clic gauche de l'utilisateur. \\
+ 		
+ 		Avec itération manuel pour trouver la taille de la clé car le test de Kasiski peut se tromper.
+ 		*Disponible après le premier clic gauche.
+ 		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte. \\
+  		
+ 		Problèmes rencontrés avec Kasiski et l'hypothèse faite sur la taille de la clé. \\
+  		 \\ \\
 	
 	\subsection{Decryptage substitution}
-	-\\
+	-Nous avons sous-estimé le nombre de lignes attribués au module de cryptage de substitution,
+	 ce problème couplé au nombreux changements à apporter aux structures, tableaux et differentes
+	  variable à chaque fois que nous decryptions une lettre du texte crypté a vite rendu la fonction
+	   prévue dans le cahier de spécification illisible et difficile à coriger et paramètrer. Ainsi 
+	   pour permetrre une meilleur lecture du code nous avons divisé cette fonction en plusieur sous fonctions. \\ \\
+
 	
 		
 		\subsection{Specifications}
-		-Des approximations et des erreurs de jugement sur le cahier des specifications ont conduit a certains changements ou problemes:\\
-		-changement de la structure (rajout de champs)\\
+		Des approximations et des erreurs de jugement sur le cahier des specifications ont conduit a certains changements ou problemes:\\
+		-changement de la structure ( rajout de champs et de fonctions ainsi que la division de certaines fonctions en plusieurs
+		 petites fonctions).\\
 		-\\
 		-\\ \\
 		
