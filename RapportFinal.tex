@@ -97,10 +97,10 @@ les estimations faites dans le cahier des charges.
 	
 	
 	Le but du projet est donc de développer un logiciel pour automatiser le décryptage d'un texte.
-  Le produit est réalisé afin de satisfaire le client, et pour se faire il doit répondre à toutes ses attentes.\\
-  Ainsi, le client peut crypter ou décrypter un texte ou un fichier et ce par la méthode de Substitution ou de 
-  Vigenère.
-  Mais il lui est aussi possible d'effectuer indépendamment une analyse fréquentielle sur un texte donné.
+  Le produit est réalisé afin d'être accessible a tout types de client et a été créer dans un esprit de simplicité.\\
+  Ainsi, le client peut crypter ou decrypter un texte ou fichier et ce par methode de Substitution ou Vigenère.
+  Mais aussi, il lui est possible d'effectuer independamment une analyse frequentielle sur un texte donné afin d'obtenir
++	informations tel la fréquence d'apparition de chaque lettres ou sa taille.
 	
 	
 
@@ -197,7 +197,7 @@ Présentation des interactions entre les différents modules de l'organigramme e
 	décryptage par la méthode de vigenère va remplir les deux chaînes de caractères vides, une avec le texte décrypté 
 	obtenu à partir du texte crypté et l'autre avec la clef de vigenère correspondante. L'interface graphique pourra 
 	alors afficher ces deux chaînes de caractères (flèche 7 et 8 sur le schéma). \\
-
+	
 	Le module de l'analyse fréquentilelle va intéragir avec le module de décryptage par substitution,
 	le module de décryptage par substitution va lui envoyer une chaîne de caractères corespondant au texte 
 	crypté à analyser. Le module d'analyse va alors lui renvoyer l'analyse fréquentielle de ce texte sous 
@@ -259,18 +259,10 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 	-probléme de segfault du à la gestion de la mémoire: remplace "gchar* exemple" par "gchar exemple[10]"\\
 	-PROBLEME AVEC STRCPY REMPLACE PAR BOUCLE
 	\subsection{Décryptage Vigenère}
- 		Le décryptage fonctionne en deux parties :
- 		
- 		avec recherche automatique : test de Kasiski (marche 1 fois sur 3, taux de reussite plus important pour \\
- 		des petites clés et peut éventuellement l'afficher en double (ex: clecle). 
- 		*S'est effectué lors du premier clic gauche de l'utilisateur. \\
- 		
- 		Avec itération manuelle pour trouver la taille de la clé car le test de Kasiski peut se tromper.
- 		*Disponible après le premier clic gauche.
- 		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte. \\
-  		
- 		Problèmes rencontrés avec Kasiski et l'hypothèse faite sur la taille de la clé. \\
-  		 \\ \\
+	Problème ? la conjecture de la taille de la clé est parfois fausse (fonctionne mal lorsque le rapport
++		texte/clé est trop petit ou conjecture le double de la cle initiale (ex: clecle)).
++		Solution: Itération manuel pour trouver la taille de la clé.\\
++		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte \\ \\
 	
 	\subsection{Décryptage substitution}
 	 -Nous avons sous-estimé le nombre de lignes attribuées au module de cryptage de substitution.
@@ -296,18 +288,13 @@ consomme trop de mémoire ou de temps processeur. \\ \\
     à un module.
 		
 		\subsection{Tests (unitaires)}
-		L’exactitude des résultats de l'analyse étant tres importante pour les clients, nous avons prédéfinis des tests
-unitaires pour chaque module (ou plutôt les fonctions le composant). Ainsi, à chaque étape de la conception du logiciel
-nous avons pu vérifier que le calcul n’était pas altèré. \\ \\
 Les tests permettent de voir comment le logiciel réagit lors de futures améliorations ou d'une éventuelle maintenance. \\ 
  
 Nous avons décidé d'utiliser Cunit qui est un système pour l'écriture, l'administration et l'exécution de tests unitaires
 en langage C. Il fournit à son programmeur une fonctionnalité de test de base avec une variété d'interfaces utilisateur flexibles.\\
-Un "test"  CUnit est une fonction C ayant comme signature:\\
-void\_test\_func()\\
-Le corps de la fonction sera lui composé d'assertions Cunit.\\
-Il y aura création d'un registre et d'une suite de tests unitaires.\\
-Nous noterons aussi la création automatique d'un Summary(récapitulatif) des tests.\\
+Création d'un registre et d'une suite de tests unitaires qui conduisent a la création automatique d'un Summary(récapitulatif)
++des tests. Ce "summary" indique combien de test on été lancer et combien on echouer. Chaque test possède un nom qui lui\\
++est propre afin de pouvoir indiquer avec précision ou se situe l'erreur.
 remarque : besoin de l'option -lcunit à rajouter à la compilation des tests et d'inclure la bibliotheque avec un
 \#include <CUnit/CUnit.h>.\\ \\ \\ 
 
@@ -339,8 +326,6 @@ d'avancer efficacement dans la réalisation du projet.
 	\section{comparaison lignes de code}
 		\begin{center}\includegraphics[scale=0.5]{preview.jpg}\end{center}
 		Certains modules ont depassé le nombre de lignes estimées selon les raisons suivantes: \\
-		-décryptage Vigenère : nombre de lignes trop juste au vu de certaines fonctions qui permettent de vérifier
-		 nos résultats, par exemple la taille du mot clé. \\
 		-cryptage substitution : il faut une fonction(tirage) qui va permettre qu'une lettre est toujours chiffrée
 		 par une seule et même lettre. \\
 		-analyse fréquentielle: fonction AnalyseFreq en plus qui est une tres légère variante de l'analyse des occurences de 
@@ -360,6 +345,7 @@ d'avancer efficacement dans la réalisation du projet.
 	
 		
 	-si à refaire, pareil?? \\
+	->coder concretement un peu plus en amont pour se faire une idée différente des besoins de l'application?
 	->Le groupe serait le même et la base du projet aussi. \\ \\ \\
 	
 	
@@ -372,7 +358,7 @@ Quelques exemples d'améliorations pourraient être ajoutées :
 -permettre à l'utilisateur de rentrer un type de texte (poéme, roman..) pour aider au décryptage \\
 -plus de langues disponibles \\
 -plus de cryptages/décryptages différents \\
-=> Rajout d'un bouton "Recherche Intelligente" qui tente de trouver du premier coup la taille de clé.
+
 -\\ \\ \\
 
 	
