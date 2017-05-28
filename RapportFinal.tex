@@ -97,10 +97,10 @@ les estimations faites dans le cahier des charges.
 	
 	
 	Le but du projet est donc de développer un logiciel pour automatiser le décryptage d'un texte.
-  Le produit est réalisé afin d'être accessible a tout types de client et a été créer dans un esprit de simplicité.\\
+  Le produit est réalisé afin d'être accessible à tous types de clients et a été crée dans un esprit de simplicité.\\
   Ainsi, le client peut crypter ou decrypter un texte ou fichier et ce par methode de Substitution ou Vigenère.
   Mais aussi, il lui est possible d'effectuer independamment une analyse frequentielle sur un texte donné afin d'obtenir
-+	informations tel la fréquence d'apparition de chaque lettres ou sa taille.
+des informations telles que la fréquence d'apparition de chaque lettre ou sa taille.
 	
 	
 
@@ -260,9 +260,9 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 	-PROBLEME AVEC STRCPY REMPLACE PAR BOUCLE
 	\subsection{Décryptage Vigenère}
 	Problème ? la conjecture de la taille de la clé est parfois fausse (fonctionne mal lorsque le rapport
-+		texte/clé est trop petit ou conjecture le double de la cle initiale (ex: clecle)).
-+		Solution: Itération manuel pour trouver la taille de la clé.\\
-+		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte \\ \\
+		texte/clé est trop petit ou conjecture le double de la cle initiale (ex: clecle)).
+		Solution: Itération manuel pour trouver la taille de la clé.\\
+		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte \\ \\
 	
 	\subsection{Décryptage substitution}
 	 -Nous avons sous-estimé le nombre de lignes attribuées au module de cryptage de substitution.
@@ -288,21 +288,23 @@ consomme trop de mémoire ou de temps processeur. \\ \\
     à un module.
 		
 		\subsection{Tests (unitaires)}
+??Tests faits a la fin pour tester chaque module ou plutot les fonctions le composant?? 		
+
 Les tests permettent de voir comment le logiciel réagit lors de futures améliorations ou d'une éventuelle maintenance. \\ 
  
 Nous avons décidé d'utiliser Cunit qui est un système pour l'écriture, l'administration et l'exécution de tests unitaires
 en langage C. Il fournit à son programmeur une fonctionnalité de test de base avec une variété d'interfaces utilisateur flexibles.\\
 Création d'un registre et d'une suite de tests unitaires qui conduisent a la création automatique d'un Summary(récapitulatif)
-+des tests. Ce "summary" indique combien de test on été lancer et combien on echouer. Chaque test possède un nom qui lui\\
-+est propre afin de pouvoir indiquer avec précision ou se situe l'erreur.
-remarque : besoin de l'option -lcunit à rajouter à la compilation des tests et d'inclure la bibliotheque avec un
+des tests. Ce "summary" indique combien de tests on été lancés et combien ont echoués. Chaque test possède un nom qui lui\\
+est propre afin de pouvoir indiquer avec précision ou se situe l'erreur.
+Remarque : besoin de l'option -lcunit à rajouter à la compilation des tests et d'inclure la bibliotheque avec un
 \#include <CUnit/CUnit.h>.\\ \\ \\ 
 
   
 Les résultats des tests unitaires sont les suivants:\\ \\ 
 		 \begin{center}\includegraphics[scale=0.5]{Capture.png}\end{center}
 	pour compiler les tests : make Ctest
-	pour compiler les tests : make test
+	pour executer les tests : make test
 	\section{Organisation interne et affectation des tâches}
 	L'organisation de l'équipe est une chose importante pour le bon fonctionnement du
   projet et le déroulement du codage, et est faite selon nos capacités et nos disponibilités.  \\ 
