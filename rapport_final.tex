@@ -123,7 +123,7 @@ Pour cela, nous montrerons le fonctionnement de l'application à l'aide de tests
 \includepdf[scale=0.9]{organ.pdf}
 
 
-PRESENTATION DES MODULES DE L'ORGANIGRAMME.
+PRESENTATION DES MODULES DE L'ORGANIGRAMME. \\
 
 	Notre organigramme se decompose en six modules:  un module d'interface graphique, un d'analyse 
 	frequentielle,un de cryptage par substitution,un de decryptage par substitution,un de cryptage 
@@ -240,14 +240,14 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 	module une liste non exhaustive:
 	\subsection{Interface graphique}
 	Nous avons eu plusieurs problèmes liées à GTK+ :\\
-	-Avec GTK+ on ne peux passer que un seul argument dans un bouton, 
-	pour remedier à ce problème on à décider de passer en argument une structure ou alors d'enregistrer les informations dans un fichier pour 
+	-Avec GTK+ on ne peut passer que un seul argument dans un bouton, 
+	pour remedier à ce problème on a décidé de passer en argument une structure ou alors d'enregistrer les informations dans un fichier pour 
 	pouvoir les utiliser plus tard.\\
-	-On a rencontré aussi une erreur avec un switch et la solution qu'on a trouver à été de faire 
+	-On a rencontré aussi une erreur avec un switch et la solution qu'on a trouvée à été de faire 
 	la meme chose avec un if et le problème était résolu.\\
 	
 	-On a aussi un problème non résolu, lorsque l'on sauvegarde, le resultat ou la cle, une 2ème fois rapidement le programme crash 
-	avec une erreur mémoire et on ce n'est pas encore résolue\\
+	avec une erreur mémoire et on ce n'est pas encore résolu.\\
 	\\
 	
 	\subsection{Analyse frequentielle}
@@ -268,11 +268,11 @@ consomme trop de mémoire ou de temps processeur. \\ \\
   		 \\ \\
 	
 	\subsection{Decryptage substitution}
-	-Nous avons sous-estimé le nombre de lignes attribués au module de cryptage de substitution,
+	-Nous avons sous-estimé le nombre de lignes attribuées au module de cryptage de substitution,
 	 ce problème couplé au nombreux changements à apporter aux structures, tableaux et differentes
-	  variable à chaque fois que nous decryptions une lettre du texte crypté a vite rendu la fonction
-	   prévue dans le cahier de spécification illisible et difficile à coriger et paramètrer. Ainsi 
-	   pour permetrre une meilleur lecture du code nous avons divisé cette fonction en plusieur sous fonctions. \\ \\
+	  variables à chaque fois que nous decryptions une lettre du texte crypté a vite rendu la fonction
+	   prévue dans le cahier de spécifications illisible et difficile à corriger et paramètrer. Ainsi 
+	   pour permetrre une meilleure lecture du code nous avons divisés cette fonction en plusieurs sous-fonctions. \\ \\
 
 	
 		
@@ -314,7 +314,7 @@ METTRE SCREEN TESTS "RUN" ICI \\ \\
 	\section{Organisation interne et affectation des taches}
 	L'organisation de l'équipe est une chose importante pour le bon fonctionnement du
 projet et le deroulement du codage, et est faite selon nos capacités et nos disponibilités.  \\ 
-		 %\begin{center}\includegraphics[scale=0.5]{tableau_tache_final.jpg}\end{center}
+		 \begin{center}\includegraphics[scale=0.5]{tableau_tache_final.jpg}\end{center}
 		 EXPLICATIONS SUR TABLEAU DES TACHES \\ 
 		
 		L'organisation etant bonne et la cohesion du groupe certaine, la repartition et la mise en place d'un planning 
@@ -332,7 +332,7 @@ réunies en les assemblant étapes par étapes pour construire l’application f
 En evaluant les connaissances de chacun et en faisant un point regulierement sur nos taches respectives, cela a permis 
 d'avancer efficacement dans la réalisation le projet.
 	\section{comparaison lignes de code}
-		%\begin{center}\includegraphics[scale=0.5]{preview.jpg}\end{center}
+		\begin{center}\includegraphics[scale=0.5]{preview.jpg}\end{center}
 		Certains modules ont depassés le nombre de lignes estimées selon les raisons suivantes: \\
 		-decryptage Vigenere : nombre de ligne trop juste au vu de certaines fonctions qui permettent de vérifier
 		 nos résultats, par exemple la taille du mot clé. \\
