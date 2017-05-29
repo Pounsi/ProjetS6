@@ -261,13 +261,11 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 	
 	\subsection{Cryptage Vigenère}
 	-problème de modulo 26 pour avoir "c" entre 0 et 25. Solution: soustraire 26 a "c".
-	\subsection{Cryptage Substitution}
-	-
 	\subsection{Décryptage Vigenère}
-	Problème : la conjecture de la taille de la clé est parfois fausse (fonctionne mal lorsque le rapport
+	-problème : la conjecture de la taille de la clé est parfois fausse (fonctionne mal lorsque le rapport
 		texte/clé est trop petit ou conjecture le double de la cle initiale (ex: clecle)).
 		Solution mise en place : Itération manuel pour trouver la taille de la clé.\\
-		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte \\ \\
+		=> Permet d'augmenter considérablement le taux de réussite de cryptanalyse d'un texte \\ \\
 	Problème : utilisation d'une variable static pour itérer la taille de la clé : elle n'est pas remise
 	a zéro a chaque décryptage.
 	Solution : déclarer le static en variable globale.
@@ -286,7 +284,7 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 		Des approximations et des erreurs de jugement sur le cahier des spécifications ont conduit à certains changements ou problèmes:\\
 		-changement de structure(ajouts/modifications de champs). \\
 		-ajout de la structure double c qui permet de stocker deux caractères
-		-ajout de fonctions complémentaire ainsi que division de certaines fonctions trop grosses en plusieurs plus petites.\\
+		-ajout de fonctions complémentaires ainsi que division de certaines fonctions trop grosses en plusieurs plus petites.\\
 		
     -\\ \\
 		
@@ -295,7 +293,7 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 		
 		\subsection{Tests (unitaires)}
 Les tests permettent de voir comment le logiciel réagit lors de futures améliorations ou d'une éventuelle maintenance. \\ 
- 
+Ceux-ci ont été implémentés et effectués à la fin. Ils testent chaque module ou plutot les fonctions le composant. \\
 Nous avons décidé d'utiliser Cunit qui est un système pour l'écriture, l'administration et l'exécution de tests unitaires
 en langage C. Il fournit à son programmeur une fonctionnalité de test de base avec une variété d'interfaces utilisateur flexibles.\\
 Création d'un registre et d'une suite de tests unitaires qui conduisent a la création automatique d'un Summary(récapitulatif)
@@ -311,9 +309,11 @@ Les résultats des tests unitaires sont les suivants:\\ \\
 	pour executer les tests : make test
 	\section{Organisation interne et affectation des tâches}
 	L'organisation de l'équipe est une chose importante pour le bon fonctionnement du
-  projet et le déroulement du codag, et est faite selon nos capacités et nos disponibilités.  \\ 
+  projet et le déroulement du codage, et est faite selon nos capacités et nos disponibilités.  \\ 
 		 \begin{center}\includegraphics[scale=0.5]{tableau_tache_final.jpg}\end{center}
-		 EXPLICATIONS SUR TABLEAU DES TACHES \\ 
+
+		Mise a part quelques points ou parties de fonctions où la reflexion s'est faite a plusieurs, le tableau 
+		de repartition des taches a été globalement respecté.
 		
 		L'organisation étant bonne et la cohésion du groupe certaine, la répartition et la mise en place d'un planning 
 		s'est faite naturellement et a été respectée.  \\
@@ -337,25 +337,24 @@ d'avancer efficacement dans la réalisation du projet.
 		-analyse fréquentielle: fonction AnalyseFreq en plus qui est une tres légère variante de l'analyse des occurences de 
 		chaque lettre faite déjà dans AnalyseFrequentielle. Aussi, dans cette dernière, l'analyse des trigrammes fonctionne exactement
 		comme celle des digrammes et donc on a répété ces "autres" 40 lignes \\
-		-interface graphique: deux menus de decryptage partiel ont ete rajoutés.\\
+		-interface graphique: deux menus de decryptage partiels ont ete rajoutés.\\
+		-decryptage substitution: plusieurs boucles pour la recherche des digrammes et trigrammes, au lieu
+		d'une seule boucle.
 		
 	
 	\section{Conclusion}
-	-des choix à changer \\
-	->au niveau des spécifications et des fonctions \\ \\
-	->Rajout d'un fichier dictionnaire avec les mots les plus courants de la langue francaise pour fluidifier
-	le décryptage substitution.
-	->Approfondissement au niveau de la méthode de vérification de la conjecture du test de Kasiski. 
+
 	
-	-critique du projet \\
-	->Manque de réfléxion  certaines notions à des moments \\
-	-  \\ \\
+S'il y aurait des choses a changer, et au niveau des specifications et des fonctions, ce serait le rajout d'un fichier dictionnaire avec les mots les plus courants de la langue francaise pour fluidifier
+	le décryptage substitution.
+	Ou encore l'approfondissement au niveau de la méthode de vérification de la conjecture du test de Kasiski. \\ \\
+
+	Une des critiques principales serait le manque de réflexion sur certaines notions a des moments. \\
 	
 	
 		
-	-si à refaire, pareil?? \\
-	->coder concretement un peu plus en amont pour se faire une idée différente des besoins de l'application?
-	->Le groupe serait le même et la base du projet aussi. \\ \\ \\
+Si on devrait refaire le même projet un changement serait de coder concretement un peu plus en amont pour se faire une idée différente des besoins de l'application.\\
+Cependant, le groupe serait le même et la base du projet aussi. \\ \\ \\
 	
 	
 	Finalement, nous avons une version "1.0" de l’application. La majorité des fonctionnalités
