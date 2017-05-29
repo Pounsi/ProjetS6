@@ -1,31 +1,54 @@
 Fonctions du module de l'interace graphique:
 
-  void Enregistrer (GtkWidget *p_widget, GtkWidget *text );
-  void RecupererChemin(GtkWidget *bouton, GtkWidget *selection);
-  void ChoisirFichier();
-  void ViderContenaire(GtkContainer * container);
+  void Enregistrer (GtkWidget *p_widget, GtkWidget *text ); \\
+  void RecupererChemin(GtkWidget *bouton, GtkWidget *selection); \\
+  void ChoisirFichier();\\
+  void ViderContenaire(GtkContainer * container); 
+  
   void MenuResultatSubstitution(GtkWidget *Fenetre, DOUBLEC *Donnees);
+  
   void MenuResultatVigenere(GtkWidget *Fenetre, gchar* TexteCrypt, gchar* cle);
+  
   void MenuResultatAnalyse(GtkWidget *Fenetre, ANALYSE analyse);
+  
   void MenuResultatDecryptageSubstitution(GtkWidget *Fenetre, DOUBLEC* Donnees);
+  
   void MenuResultatDecryptageVigenere(GtkWidget *Fenetre, DOUBLEC *Donnees);
+  
   void BoiteDialogueSubstitution(GtkWidget *Fenetre);
+  
   void BoiteDialogueVigenereCle(GtkWidget *Fenetre);
+  
   void BoiteDialogueVigenereTexte(GtkWidget *Fenetre, DOUBLEC *Donnees);
+  
   void BoiteDialogueAnalyse(GtkWidget *Fenetre);
+  
   void BoiteDialogueDecryptageSubstitution(GtkWidget *Fenetre);
+  
   void BoiteDialogueDecryptageVigenere(GtkWidget *Fenetre);
+  
   void MenuDecryptageVigenere(GtkWidget *Fenetre);
+  
   void MenuDecryptageSubstitution(GtkWidget *Fenetre);
+  
   void MenuCryptageVigenere(GtkWidget *Fenetre,DOUBLEC *Donnees);
+  
   void MenuCryptageSubstitution(GtkWidget *Fenetre);
+  
   void MenuAnalyseFrequentielle(GtkWidget *Fenetre);
+  
   void MenuDecryptage(GtkWidget *Fenetre);
+  
   void MenuCryptage(GtkWidget *Fenetre);
+  
   void MenuPrincipal(GtkWidget *Fenetre);
+  
   void MenuResultatDecryptagePartiel(GtkWidget *Fenetre,DOUBLEC* Donnees);
+  
   void BoiteDialogueChangerLaCleSubstitution(GtkWidget *Fenetre,DOUBLEC *Donnees);
+  
   void MenuResultatDecryptagePartielVig(GtkWidget *Fenetre);
+  
   
 Fonctions du module d'analyse fréquentielle:
 
@@ -36,53 +59,66 @@ Fonctions du module d'analyse fréquentielle:
 Fonctions du module du cryptage par substitution:
 
   void CryptageSubstitution(gchar TexteCrypte[], gchar* TexteClair, gchar cle[]);
+  
   -C'est la fonction qui va effectuer un cryptage par substitution sur un texte clair.
  
  void GenereCle(gchar T[]);
+  
   -Cette procédure permet de génerer une clé(alphabet) aléatoirement dans le tableau T.
  
  int *tirage(int nombre, int min, int max);
+  
   -Cette fonction permet "nombre" nombres dans l'intervalle "min"-"max".
  
  int Ascii0_25(int nbr);
+  
   -Cette fonction prend le code ascii d'une lettre en caractere et la renvoyer dans [0;25]
   
 Fonctions du module du décryptage par substitution:
 
   void RemplacerCara(gchar* texte,gchar C1,gchar C2);
+  
   -Fonction qui vas remplacer le caractere C1 du texte ou de la clef par le caractere C2
   
   void CreeTabOccA(gchar TabOcc[],ANALYSE analyseTexte);
+  
   -remplit le tableau 'TabOcc' avec la liste des caractère du texte (et donc de l'analyse 'analyseTexte') trié par ordre 
   de fréquence décroissante. 
   
   void CreeTabOccRL(gchar TabOcc[],RESSOURCESLANGUE ressourceLangue);
+  
   -remplit le tableau 'TabOcc' avec la liste des caractère de la ressource 'ressourceLangue' trié par ordre de fréquence 
   décroissante.
   
   void DecryptageSubstitution(gchar TexteDecrypte[],gchar TexteCrypte[],gchar cle[]);
+  
   -Fonction principale appeleantles autres fonction de décryptage.
   
   gchar RechercheAnalyse(ANALYSE a,gchar car,gchar* fait);
+  
   -Permet de conjecturer quel caractère nous allons remplacer dans le texte en utilisant les digrammes de l'analyse 'a', 
   un tableau de caractère 'fait[]' permettant de savoir quelle caractères ont été déja conjecturé et le caractère 'car': 
   l'autre caractère du digramme.
   
   gchar RechercheRessources(RESSOURCESLANGUE a,gchar car,gchar* fait);
+  
   -Permet de conjecturer avec quel caractère nous allons remplacer le caractère crypté dans le texte en utilisant 
   les digrammes de la ressource 'a', un tableau de caractère 'fait[]' permettant de savoir quelle caractères ont été 
   déja conjecturé et le caractère 'car': l'autre caractère du digramme.
   
   ANALYSE Remplace(ANALYSE a,gchar car,gchar nvx);
+  
   -Cette fonction remplace le caractere crypté 'car' par le caractere décrypté 'nvx' dans la structure analyse afin 
   de peremettre aux fonctions RechercheAnalyse et RechercheTri de ne pas utiliser les digrammes et trigrammes dejà utilisé 
   pour le décryptage.
 
   void InitTableau(gchar* TexteClair,gchar TabOccA[],gchar TabOccRL[],gchar cle[]);
+  
   - La fonction qui permet de conjecturer le premier caractère du décryptage et donc le carctère quiapparait le plus 
   dans le texte .
   
   gchar RechercheTri(gchar* TexteCrypte,gchar* cle,ANALYSE a,RESSOURCESLANGUE a2, gchar car,gchar car2,gchar* fait);
+  
   -Fonction qui permet de conjecturer quel caractère nous allons remplacer dans le texte en utilisant les trigrammes 
   de l'analyse 'a', le tableau 'fait[]' permettant de savoir quelle caractères ont été déja conjecturé et les caractères 'car'
   et 'car2' : les autres caractères du trigramme.
@@ -93,27 +129,66 @@ Fonctions du module du décryptage par substitution:
 Fonctions du module du cryptage par la méthode de vigenère: 
 
   void CryptageVigenere(gchar* resultat, gchar* TexteClair, gchar* Cle)
+  
   -Cette fonction va effectuer un cryptage par vigenere sur un texte clair.
   
 Fonctions du module du décryptage par la méthode de vigenère:
 
   int pgcd(int a, int b);
-    
+  
+  -calcul le pgcd de deux nombres passer en argument.  
+  
   int Kasiski(ANALYSE a, gchar* texteCrypte);
+  
+  -fonction qui conjecture la taille de la clé a l'aide du test de Kasiski ou d'une itération manuel
   void indiceMutuelle(int cle[], int kasiski, ANALYSE freq, RESSOURCESLANGUE prob, gchar safecle[]);
+  
+  -cette fonction détermine les valeurs de chacun des caractères composant le mot clé.
+  
   void Decrypte(char resultat[],char* texteCrypte,gchar cle[], int kasiski);
+  
+  cette fonction soutrait de manière cyclique les valeurs de la clé au texte crypté afin de déchiffrer le texte.
+  
   void DecryptageVigenere(gchar* TexteDecrypte, gchar* TexteCrypte,gchar savecle[]);
+  
+  Cette fonction dite "principale" appel les fonctions détaillées au dessus pour déchiffrer un texte crypter par le
+  chiffrement de vigenère.
   
 Fonction anexe:
 
-  void RetirerToutCarSpec(gchar chaine[], gchar copy[]);
-  void RetirerCarSpecMajuscule(gchar chaine[], gchar copy[]);
-  void LireFichier(gchar TexteClaire[] ,int TailleMax ,const gchar* chemin);
-  void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte);
-  RESSOURCESLANGUE ChargerRessources();
-  void RemplacerCleSubstitution(DOUBLEC *Donnees,gchar C1,gchar C2);
-  ANALYSE tri(ANALYSE a);	
-  void RetourALaLigne(gchar output[],gchar input[]);
-  void DechiffreSubstitution(gchar text[],gchar cle[]);
+  void RetirerToutCarSpec(gchar chaine[], gchar copy[]); \\
   
+  -Enleve tout les caractères spéciaux présent dans une chaine de caractère. \\
+  
+  void RetirerCarSpecMajuscule(gchar chaine[], gchar copy[]); \\
+  
+  - Enleve tout les espaces et majuscules présent dans une chaine de caractère. \\
+  
+  void LireFichier(gchar TexteClaire[] ,int TailleMax ,const gchar* chemin); \\
+  
+  Cette fonction permet de lire un fichier et de mettre le contenue du fichier dans texteclaire. \\
+  
+  void ConvertisseurTableau(gchar T[],int *TailleTexte,gchar* Texte); \\
+  
+  Cette fonction appel les fonctions "RetirerToutCarSpec" et "RetirerCarSpecMajuscule" et retire la ponctuation.\\
+  
+  RESSOURCESLANGUE ChargerRessources(); \\
+  
+  Cette fonction remplie la structure RESSOURCESLANGUE en fonction de la langue choisie. \\
+  
+  void RemplacerCleSubstitution(DOUBLEC *Donnees,gchar C1,gchar C2); \\
+  
+  Cette fonction remplace le caractères C1 par C2 dans la clé. \\
+  
+  ANALYSE tri(ANALYSE a); \\
+  
+  cette fonction trie les digrammes et trigrammes stockées dans une structure analyse. \\
+  
+  void RetourALaLigne(gchar output[],gchar input[]); \\
+  
+  Cette fonction permet un meilleur affichage des résultats dans les menus finaux.\\
+  
+  void DechiffreSubstitution(gchar text[],gchar cle[]); \\
+  
+  Cette fonction remplace les caractères du texte par leurs caractères correspondants stocké dans la clé. \\ 
   
