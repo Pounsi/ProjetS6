@@ -234,7 +234,7 @@ Elle nous semblait donc la plus adaptée au dévelopement de notre application.
 	l'ensemble des fonctionnnalités demandées par le client ont été réalisées.\\ 
 	Les commandes pour compiler et exécuter sont les suivantes:\\
 	-compilation: make all\\
-	-execution:make run\\ \\
+	-execution: make run\\ \\
 	
 	
 	Nous souhaitions avoir une application complète qui puisse tourner sur des ordinateurs 
@@ -256,8 +256,13 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 	\\
 	
 	\subsection{Analyse fréquentielle}
-	-probléme de segfault du à la gestion de la mémoire: remplace "gchar* exemple" par "gchar exemple[10]"\\
-	-PROBLEME AVEC STRCPY REMPLACE PAR BOUCLE
+	-problème de segfault du à la gestion de la mémoire: remplacer "gchar* exemple" par "gchar exemple[10]"\\
+	-algo de tri des digrammes et trigrammes: problème avec strcpy remplacé par une boucle ou l'on copie caractere par caractere.
+	
+	\subsection{Cryptage Vigenère}
+	-problème de modulo 26 pour avoir "c" entre 0 et 25. Solution: soustraire 26 a "c".
+	\subsection{Cryptage Substitution}
+	-
 	\subsection{Décryptage Vigenère}
 	Problème ? la conjecture de la taille de la clé est parfois fausse (fonctionne mal lorsque le rapport
 		texte/clé est trop petit ou conjecture le double de la cle initiale (ex: clecle)).
