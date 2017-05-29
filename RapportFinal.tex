@@ -97,8 +97,8 @@ les estimations faites dans le cahier des charges.
 	
 	
 	Le but du projet est donc de développer un logiciel pour automatiser le décryptage d'un texte.
-  Le produit est réalisé afin d'être accessible à tous types de clients et a été crée dans un esprit de simplicité.\\
-  Ainsi, le client peut crypter ou decrypter un texte ou fichier et ce par methode de Substitution ou Vigenère.
+  Le produit est réalisé afin d'être accessible à tous types de clients.\\
+  Ainsi, le client peut crypter ou decrypter un texte ou fichier et ce par méthode de Substitution ou Vigenère.
   Mais aussi, il lui est possible d'effectuer independamment une analyse frequentielle sur un texte donné afin d'obtenir
 des informations telles que la fréquence d'apparition de chaque lettre ou sa taille.
 	
@@ -132,7 +132,7 @@ des informations telles que la fréquence d'apparition de chaque lettre ou sa ta
 Présentation des modules de l'organigramme. \\
 
 	Notre organigramme se décompose en six modules: un module d'interface graphique, un d'analyse fréquentielle, un de cryptage 
-  par substitution, un de décryptage par substitution,un de cryptage par la methode de vigenère et un de décryptage par méthode 
+  par substitution, un de décryptage par substitution,un de cryptage par la méthode de vigenère et un de décryptage par méthode 
   de vigenère. \\
 
 	Le module d'interface graphique est le centre de notre programme dans le sens où il est le seul qui voit ses 
@@ -264,10 +264,13 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 	\subsection{Cryptage Substitution}
 	-
 	\subsection{Décryptage Vigenère}
-	Problème ? la conjecture de la taille de la clé est parfois fausse (fonctionne mal lorsque le rapport
+	Problème : la conjecture de la taille de la clé est parfois fausse (fonctionne mal lorsque le rapport
 		texte/clé est trop petit ou conjecture le double de la cle initiale (ex: clecle)).
-		Solution: Itération manuel pour trouver la taille de la clé.\\
+		Solution mise en place : Itération manuel pour trouver la taille de la clé.\\
 		=> Permet d'augmenter considérablement le taux de réussite de Cryptanalyse d'un texte \\ \\
+	Problème : utilisation d'une variable static pour itérer la taille de la clé : elle n'est pas remise
+	a zéro a chaque décryptage.
+	Solution : déclarer le static en variable globale.
 	
 	\subsection{Décryptage substitution}
 	 -Nous avons sous-estimé le nombre de lignes attribuées au module de cryptage de substitution.
@@ -281,20 +284,16 @@ consomme trop de mémoire ou de temps processeur. \\ \\
 		
 		\subsection{Spécifications}
 		Des approximations et des erreurs de jugement sur le cahier des spécifications ont conduit à certains changements ou problèmes:\\
-		-changement de la structure (rajout de champs et de fonctions ainsi que la division de certaines fonctions en plusieurs
-		 petites fonctions).\\
-		
-    -\\
+		-changement de structure(ajouts/modifications de champs). \\
+		-ajout de la structure double c qui permet de stocker deux caractères
+		-ajout de fonctions complémentaire ainsi que division de certaines fonctions trop grosses en plusieurs plus petites.\\
 		
     -\\ \\
 		
-
-		Le découpage technique des modules s'est fait en fonction des fonctionnalités, chacune de ces dernières correspondant 
+	Le découpage technique des modules s'est fait en fonction des fonctionnalités, chacune de ces dernières correspondant 
     à un module.
 		
 		\subsection{Tests (unitaires)}
-??Tests faits a la fin pour tester chaque module ou plutot les fonctions le composant?? 		
-
 Les tests permettent de voir comment le logiciel réagit lors de futures améliorations ou d'une éventuelle maintenance. \\ 
  
 Nous avons décidé d'utiliser Cunit qui est un système pour l'écriture, l'administration et l'exécution de tests unitaires
@@ -312,7 +311,7 @@ Les résultats des tests unitaires sont les suivants:\\ \\
 	pour executer les tests : make test
 	\section{Organisation interne et affectation des tâches}
 	L'organisation de l'équipe est une chose importante pour le bon fonctionnement du
-  projet et le déroulement du codage, et est faite selon nos capacités et nos disponibilités.  \\ 
+  projet et le déroulement du codag, et est faite selon nos capacités et nos disponibilités.  \\ 
 		 \begin{center}\includegraphics[scale=0.5]{tableau_tache_final.jpg}\end{center}
 		 EXPLICATIONS SUR TABLEAU DES TACHES \\ 
 		
@@ -344,10 +343,13 @@ d'avancer efficacement dans la réalisation du projet.
 	\section{Conclusion}
 	-des choix à changer \\
 	->au niveau des spécifications et des fonctions \\ \\
+	->Rajout d'un fichier dictionnaire avec les mots les plus courants de la langue francaise pour fluidifier
+	le décryptage substitution.
+	->Approfondissement au niveau de la méthode de vérification de la conjecture du test de Kasiski. 
 	
 	-critique du projet \\
-	->Manque de réfléxion ou d'approfondissement de certaines notions à des moments \\
-	->?????? \\ \\
+	->Manque de réfléxion  certaines notions à des moments \\
+	-  \\ \\
 	
 	
 		
@@ -360,8 +362,7 @@ d'avancer efficacement dans la réalisation du projet.
 de base ont été implémentées et fonctionnent correctement mais il existe quelques
 améliorations qui pourraient véritablement aboutir à une version "2.0" intéressante. \\
 Quelques exemples d'améliorations pourraient être ajoutées :
--Vigenère : ajout d'informations supplémentaires qui permettent d'aider/améliorer le décryptage 
-(exemple : on connait déja la taille de la clé).
+-Vigenère : ajout d'informations supplémentaires qui permettent d'aider/améliorer le décryptage (exemple : la taille de la clé).
 -permettre à l'utilisateur de rentrer un type de texte (poéme, roman..) pour aider au décryptage \\
 -plus de langues disponibles \\
 -plus de cryptages/décryptages différents \\
@@ -370,10 +371,10 @@ Quelques exemples d'améliorations pourraient être ajoutées :
 
 	
 	
-Ce projet d'une durée d'un semestre (et plus précisement de 16 semaines) est une vraie expérience.
+Ce projet d'une durée d'un semestre (et plus précisement de 16 semaines) est une vraie expérience en groupe.
 Cela a été enrichissant d'un point de vue personnel et collectif:
-il nous a apporté beaucoup, tant au
-niveau technique qu’en terme de gestion de projet.  \\  \\
+il nous a apporté beaucoup, au
+niveau technique mais surtout en terme de gestion de projet.  \\  \\
 Nous connaissons maintenant l'importance du découpage d'un projet en plusieurs étapes: cahier des charges, spécifications, codage..
 C'est un projet en "conditions d'entreprise" qui nous servira dans le futur.
 C’est la première fois que nous travaillons avec un groupe aussi nombreux sur un projet avec des caractéristiques bien définies. \\ \\
